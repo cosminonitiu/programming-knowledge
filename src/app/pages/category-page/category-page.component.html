@@ -1,0 +1,25 @@
+@if(!category || !subcategory) {
+    <div class="not-found">
+        <h1>Topic not found</h1>
+        <p>The category or subcategory you're looking for doesn't exist.</p>
+    </div>
+} @else {
+    <div class="navigation">
+        <div class="navigation-container">
+          <span class="cursor-pointer" (click)="categoryClick()">{{category.name}}</span>
+          <span>/</span>
+          <span class="current">{{subcategory.name}}</span>
+        </div>
+        <h1>{{subcategory.name}}</h1>
+        <p>{{subcategory.description}}</p>
+    </div>
+    <div class="scroll-container">
+        @if(topics.length > 0) {
+            <app-topic-grid [topics]="topics" [category]="category" [subcategory]="subcategory"></app-topic-grid>
+        } @else {
+            <div class="no-items">
+                <p>No topics available yet.</p>
+            </div>
+        }
+    </div>
+}

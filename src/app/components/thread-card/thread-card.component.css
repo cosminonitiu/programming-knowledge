@@ -1,0 +1,28 @@
+.subcard {
+    border-radius: 0.5rem; 
+    border: 1px solid var(--border);
+    height: 100%; 
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+}
+.subcard .header {
+    display: flex; 
+    padding: 1.5rem; 
+    padding-bottom: 0.5rem; 
+    margin-top: 0.375rem; 
+    flex-direction: column; 
+}
+.subcard .header div {
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 600; 
+    letter-spacing: -0.025em; 
+    line-height: 1.5rem;
+}
+.subcard .body {
+    padding: 1.5rem; 
+    padding-top: 0; 
+}
+.subcard .body p {
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+}

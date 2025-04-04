@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(222.2, 84%, 4.9%);
+
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(222.2, 84%, 4.9%);
+
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(222.2, 84%, 4.9%);
+
+    --primary: hsl(222.2, 47.4%, 11.2%);
+    --primary-foreground: hsl(210, 40%, 98%);
+
+    --secondary: hsl(210, 40%, 96.1%);
+    --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+
+    --muted: hsl(210, 40%, 96.1%);
+    --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+
+    --accent: hsl(210, 40%, 96.1%);
+    --accent-foreground: hsl(222.2, 47.4%, 11.2%);
+
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(210, 40%, 98%);
+
+    --border: hsl(214.3, 31.8%, 91.4%);
+    --input: hsl(214.3, 31.8%, 91.4%);
+    --ring: hsl(222.2, 84%, 4.9%);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: hsl(222, 47%, 11%);
+    --sidebar-foreground: hsl(210, 40%, 98%);
+    --sidebar-primary: hsl(217.2, 91.2%, 59.8%);
+    --sidebar-primary-foreground: hsl(222.2, 47.4%, 11.2%);
+    --sidebar-accent: hsl(217.2, 32.6%, 17.5%);
+    --sidebar-accent-foreground: hsl(210, 40%, 98%);
+    --sidebar-border: hsl(217.2, 32.6%, 17.5%);
+    --sidebar-ring: hsl(224.3, 76.3%, 48%);
+}
+
+.dark {
+    --background: hsl(222.2, 84%, 4.9%);
+    --foreground: hsl(210, 40%, 98%);
+
+    --card: hsl(222.2, 84%, 4.9%);
+    --card-foreground: hsl(210, 40%, 98%);
+
+    --popover: hsl(222.2, 84%, 4.9%);
+    --popover-foreground: hsl(210, 40%, 98%);
+
+    --primary: hsl(210, 40%, 98%);
+    --primary-foreground: hsl(222.2, 47.4%, 11.2%);
+
+    --secondary: hsl(217.2, 32.6%, 17.5%);
+    --secondary-foreground: hsl(210, 40%, 98%);
+
+    --muted: hsl(217.2, 32.6%, 17.5%);
+    --muted-foreground: hsl(215, 20.2%, 65.1%);
+
+    --accent: hsl(217.2, 32.6%, 17.5%);
+    --accent-foreground: hsl(210, 40%, 98%);
+
+    --destructive: hsl(0, 62.8%, 30.6%);
+    --destructive-foreground: hsl(210, 40%, 98%);
+
+    --border: hsl(217.2, 32.6%, 17.5%);
+    --input: hsl(217.2, 32.6%, 17.5%);
+    --ring: hsl(212.7, 26.8%, 83.9%);
+    --sidebar-background: hsl(240, 5.9%, 10%);
+    --sidebar-foreground: hsl(240, 4.8%, 95.9%);
+    --sidebar-primary: hsl(224.3, 76.3%, 48%);
+    --sidebar-primary-foreground: hsl(0, 0%, 100%);
+    --sidebar-accent: hsl(240, 3.7%, 15.9%);
+    --sidebar-accent-foreground: hsl(240, 4.8%, 95.9%);
+    --sidebar-border: hsl(240, 3.7%, 15.9%);
+    --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+}
+
+/* Tailwind custom colors*/
+.text-sidebar-foreground {
+    color: var(--sidebar-foreground);
+}
+.bg-sidebar {
+    background-color: var(--sidebar-background);
+}
+.border-sidebar-border {
+    border-color: var(--sidebar-border);
+}
+.bg-sidebar-accent {
+    background-color: var(--sidebar-accent);
+}
+.bg-sidebar-primary {
+    background-color: var(--sidebar-primary);
+}
+.text-sidebar-primary-foreground {
+    color: var(--sidebar-primary-foreground);
+}
+.text-card-foreground {
+    color: var(--card-foreground)
+}
+.bg-card {
+    background-color: var(--card);
+}
+.bg-gray-800-900 {
+    background: rgb(31,41,55);
+    background: linear-gradient(90deg, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%);
+}
+.bg-gray-100 {
+    background-color: oklch(96.7% 0.003 264.542);
+}
+.blue-to-purple-text {
+    background: -webkit-linear-gradient(#4C6EF5, #6f42c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-muted-foreground {
+    color: var(--muted-foreground);
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+/* Tailwind custom colors*/
+
+* {
+    border-color: var(--border);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.topic-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

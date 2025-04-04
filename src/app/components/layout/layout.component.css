@@ -1,0 +1,23 @@
+.layout {
+    display: flex; 
+    min-height: 100vh; 
+    background-color: #F9FAFB; 
+}
+.layout main {
+    padding: 1rem; 
+    flex: 1 1 0%; 
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; 
+    transition-duration: 300ms; 
+}
+.layout main .router-container {
+    max-width: 80rem; 
+    margin: auto;
+}
+
+@media (min-width: 768px) { 
+    .layout main {
+        padding: 2rem; 
+    }
+}

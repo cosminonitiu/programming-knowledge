@@ -1,0 +1,5 @@
+<div class="card-grid">
+    @for (thread of threads; track $index) {
+        <app-thread-card [thread]="thread" (click)="handleThreadClick(thread)"/>
+    }
+</div>

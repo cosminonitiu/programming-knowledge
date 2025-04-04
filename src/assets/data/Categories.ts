@@ -667,6 +667,822 @@ export const categories_mock: Category[] = [
             }
           ]
         },
+        {
+          id: "csharpmedior",
+          name: "C# - Medior",
+          description: "Independent C# developers delving in",
+          topics: [
+            {
+              id: "covacontra",
+              title: "Covariance and Contravariance",
+              description: "Covariance and contravariance support for method groups allows for matching method signatures with delegate types.",
+              threads: [
+                {
+                  id: "covariance",
+                  title: "Covariance",
+                  contentPreview: "Covariance enables implicit conversion of an array of a more derived type to a less derived type. ",
+                  contentPath: "csharpmedior/covacontra/covariance"
+                },
+                {
+                  id: "contravariance",
+                  title: "Contravariance",
+                  contentPreview: "Contravariance is the in keyword and it denotes input types, usually in delegates. The principle is the same, it means that the delegate can accept more derived class.",
+                  contentPath: "csharpmedior/covacontra/contravariance"
+                }
+              ]
+            },
+            {
+              id: "reflection",
+              title: "Reflection",
+              description: "Reflection in .NET is a powerful feature that allows runtime inspection of assemblies, types, and their members (such as methods, fields, properties, and events).",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Overview",
+                  contentPreview: "Scenarios, Usefules and Definition",
+                  contentPath: "csharpmedior/reflection/overview"
+                }
+              ]
+            },
+            {
+              id: "memorymanagement",
+              title: "",
+              description: "",
+              threads: [
+                {
+                  id: "stackheap",
+                  title: "Stack and Heap",
+                  contentPreview: "Overview of the 2 memory allocations available",
+                  contentPath: "csharpmedior/memorymanagement/stackheap"
+                },
+                {
+                  id: "refvaluetypes",
+                  title: "Reference and Value Types",
+                  contentPreview: "Types that stay on the heap or on the stack",
+                  contentPath: "csharpmedior/memorymanagement/refvaluetypes"
+                },
+                {
+                  id: "using",
+                  title: "Using keyword",
+                  contentPreview: "The usingstatement defines a scope at the end of which an object is disposed",
+                  contentPath: "csharpmedior/memorymanagement/using"
+                },
+                {
+                  id: "garbcollector",
+                  title: "Garbage Collector",
+                  contentPreview: "Automatically reclaims memory occupied by unreachable objects, freeing developers from manually deallocating memory and helping to avoid memory leaks.",
+                  contentPath: "csharpmedior/memorymanagement/garbcollector"
+                },
+                {
+                  id: "refandout",
+                  title: "Ref keyword,Out keword",
+                  contentPreview: "The ref and out keywords in C# are used to pass arguments by reference instead of by value. They allow methods to modify the value of the arguments passed to them",
+                  contentPath: "csharpmedior/memorymanagement/refandout"
+                },
+                {
+                  id: "boxing",
+                  title: "Boxing and Unboxing",
+                  contentPreview: "Boxing and unboxing are mechanisms in C# that allow value types (e.g., int, struct) to be treated as reference types (object) and vice versa. ",
+                  contentPath: "csharpmedior/memorymanagement/boxing"
+                },
+                {
+                  id: "varanddynamic",
+                  title: "Var keyword vs Dynamic",
+                  contentPreview: "Both var and dynamic are used for variable declaration in C#, but they serve different purposes and behave differently at compile time and runtime",
+                  contentPath: "csharpmedior/memorymanagement/varanddynamic"
+                },
+                {
+                  id: "typeerasure",
+                  title: "Type Erasure",
+                  contentPreview: "Type erasure is a concept commonly associated with generics in programming languages like Java and C#.",
+                  contentPath: "csharpmedior/memorymanagement/typeerasure"
+                },
+                {
+                  id: "stringbuilder",
+                  title: "String vs StringBuilder",
+                  contentPreview: "In C#, string and StringBuilder are both used to work with text, but they have different characteristics and use cases.",
+                  contentPath: "csharpmedior/memorymanagement/stringbuilder"
+                }
+              ]
+            },
+            {
+              id: "dependencyinjection",
+              title: "Definition of Dependency Injection (DI)",
+              description: "Dependency Injection (DI) is a design pattern and technique in software development that enables the decoupling of components by injecting an object's dependencies from the outside, rather than having the object create or obtain them itself. ",
+              threads: [
+                {
+                  id: "definition",
+                  title: "Definition",
+                  contentPreview: "The basics of DI",
+                  contentPath: "csharpmedior/dependencyinjection/definition"
+                },
+                {
+                  id: "iocvsdep",
+                  title: "Inversion of Control (IoC) vs. Dependency Injection",
+                  contentPreview: "Although the terms are often used interchangeably, Inversion of Control (IoC) and Dependency Injection (DI) refer to related but distinct concepts in software design. ",
+                  contentPath: "csharpmedior/dependencyinjection/iocvsdep"
+                },
+                {
+                  id: "benefits",
+                  title: "Benefits of DI",
+                  contentPreview: "Dependency Injection (DI) offers numerous advantages in modern software development.",
+                  contentPath: "csharpmedior/dependencyinjection/benefits"
+                },
+                {
+                  id: "constructorin",
+                  title: "Constructor Injection",
+                  contentPreview: "Constructor Injection is the most common form of Dependency Injection (DI) in C#. It involves providing all required dependencies to a class through its constructor. ",
+                  contentPath: "csharpmedior/dependencyinjection/constructorin"
+                },
+                {
+                  id: "propertyin",
+                  title: "Property (Setter) Injection",
+                  contentPreview: "Property Injection involves exposing dependencies as public properties with setters. The DI container (or calling code) sets these properties after the object is created.",
+                  contentPath: "csharpmedior/dependencyinjection/propertyin"
+                },
+                {
+                  id: "methodin",
+                  title: "Method Injection",
+                  contentPreview: "Method Injection is a dependency injection (DI) technique where dependencies are provided as parameters to a method rather than through a constructor or property.",
+                  contentPath: "csharpmedior/dependencyinjection/methodin"
+                },
+                {
+                  id: "factoryin",
+                  title: "Factory Injection",
+                  contentPreview: "Factory Injection involves supplying a class with a factory object or a delegate that creates instances of a dependency.",
+                  contentPath: "csharpmedior/dependencyinjection/factoryin"
+                },
+                {
+                  id: "dip",
+                  title: "Dependency Inversion Principle (DIP)",
+                  contentPreview: "Both high-level and low-level modules should depend on abstractions (e.g., interfaces or abstract classes) rather than concrete implementations.",
+                  contentPath: "csharpmedior/dependencyinjection/dip"
+                },
+                {
+                  id: "srp",
+                  title: "Single Responsibility Principle (SRP)",
+                  contentPreview: "A class should have only one responsibility and, therefore, only one reason to change. This means that each class or module should focus on a single part of the functionality provided by the software.",
+                  contentPath: "csharpmedior/dependencyinjection/srp"
+                },
+                {
+                  id: "builtincontainer",
+                  title: "Built-In .NET DI Container",
+                  contentPreview: "A framework-provided container designed to manage the instantiation and lifetime of objects (services) in a decoupled, testable manner.",
+                  contentPath: "csharpmedior/dependencyinjection/builtincontainer"
+                },
+                {
+                  id: "thirdparcontainers",
+                  title: "Third-Party DI Containers",
+                  contentPreview: "Popular Third-Party DI Containers",
+                  contentPath: "csharpmedior/dependencyinjection/thirdparcontainers"
+                },
+                {
+                  id: "containerconfig",
+                  title: "Container Configuration in Dependency Injection",
+                  contentPreview: "Container configuration is the process of setting up and customizing a Dependency Injection (DI) container to manage the creation, lifetime, and dependencies of objects in your application.",
+                  contentPath: "csharpmedior/dependencyinjection/containerconfig"
+                },
+                {
+                  id: "mediatr",
+                  title: "MediatR",
+                  contentPreview: "MediatR centralizes communication between objects by acting as an intermediary. Instead of components directly calling each other, they send requests or notifications to MediatR, which then routes them to the appropriate handlers.",
+                  contentPath: "csharpmedior/dependencyinjection/mediatr"
+                },
+                {
+                  id: "lifetimes",
+                  title: "Transient, Scoped, and Singleton Lifetimes",
+                  contentPreview: "In the context of Dependency Injection (DI) in .NET, understanding service lifetimes is crucial for building efficient, scalable, and memory-safe applications. ",
+                  contentPath: "csharpmedior/dependencyinjection/lifetimes"
+                },
+                {
+                  id: "managingscope",
+                  title: "Managing Scope",
+                  contentPreview: "Managing scope refers to defining and controlling the lifetime boundaries within which services are created, used, and disposed.",
+                  contentPath: "csharpmedior/dependencyinjection/managingscope"
+                },
+                {
+                  id: "disposal",
+                  title: "Disposal of Services",
+                  contentPreview: "Many services hold unmanaged resources (or managed wrappers around unmanaged resources) that need to be explicitly released. Failure to do so can lead to resource exhaustion.",
+                  contentPath: "csharpmedior/dependencyinjection/disposal"
+                },
+                {
+                  id: "interception",
+                  title: "Interception and Decorators",
+                  contentPreview: "Interception and Decorators are advanced techniques used in .NET to extend or modify the behavior of objects without changing their code. ",
+                  contentPath: "csharpmedior/dependencyinjection/interception"
+                },
+                {
+                  id: "lazyinject",
+                  title: "Lazy Injection and Factory Delegates",
+                  contentPreview: "Lazy Injection and Factory Delegates are advanced dependency injection techniques in .NET that provide flexible and efficient ways to manage object creation.",
+                  contentPath: "csharpmedior/dependencyinjection/lazyinject"
+                },
+                {
+                  id: "circulardep",
+                  title: "Handling Circular Dependencies",
+                  contentPreview: "Circular dependencies occur when two or more services depend on each other, either directly or indirectly, creating a loop that can complicate or break the DI resolution process. ",
+                  contentPath: "csharpmedior/dependencyinjection/circulardep"
+                },
+                {
+                  id: "conditionalregis",
+                  title: "Conditional Registration",
+                  contentPreview: "Conditional Registration is a pattern where the DI container selects among multiple potential service implementations based on conditions determined at registration time or runtime. ",
+                  contentPath: "csharpmedior/dependencyinjection/conditionalregis"
+                },
+                {
+                  id: "customdi",
+                  title: "Custom DI Container Implementations",
+                  contentPreview: "Custom DI containers are often created to gain fine-grained control over object creation, lifetime management, and resolution behavior, or simply to understand the internal workings of DI. ",
+                  contentPath: "csharpmedior/dependencyinjection/customdi"
+                },
+                {
+                  id: "diasync",
+                  title: "Asynchronous Programming and DI",
+                  contentPreview: "DI containers resolve dependencies at runtime. When resolving services that support asynchronous operations, the DI container should correctly handle both synchronous and asynchronous lifecycles.",
+                  contentPath: "csharpmedior/dependencyinjection/diasync"
+                },
+                {
+                  id: "diasp",
+                  title: "DI in ASP.NET Core",
+                  contentPreview: "ASP.NET Core has dependency injection (DI) built into its core framework, making it a first-class citizen in the design of modern web applications.",
+                  contentPath: "csharpmedior/dependencyinjection/diasp"
+                },
+                {
+                  id: "didesktmobile",
+                  title: "DI in Desktop and Mobile Applications",
+                  contentPreview: "In these environments, DI enhances modularity, testability, and maintainability, especially in architectures like MVVM (Model-View-ViewModel) used in WPF, UWP, and Xamarin.",
+                  contentPath: "csharpmedior/dependencyinjection/didesktmobile"
+                },
+                {
+                  id: "microservicedi",
+                  title: "Microservices and DI",
+                  contentPreview: "Dependency Injection plays a vital role in this architecture by promoting modularity, improving testability, and managing service lifetimes within each microservice.",
+                  contentPath: "csharpmedior/dependencyinjection/microservicedi"
+                },
+                {
+                  id: "testmockdi",
+                  title: "Testing and Mocking with DI",
+                  contentPreview: "Dependency Injection (DI) greatly enhances testability by decoupling components from their concrete dependencies. ",
+                  contentPath: "csharpmedior/dependencyinjection/testmockdi"
+                },
+                {
+                  id: "performance",
+                  title: "Performance Considerations",
+                  contentPreview: "While Dependency Injection (DI) offers numerous benefits in terms of decoupling, testability, and maintainability, it is important to be aware of its potential performance implications. ",
+                  contentPath: "csharpmedior/dependencyinjection/performance"
+                }
+              ]
+            },
+            {
+              id: "realtimedata",
+              title: "TCP/IP and UDP Socket Programming",
+              description: "",
+              threads: [
+                {
+                  id: "tcpudpprogam",
+                  title: "Socket programming in .NET is primarily done using the classes in the System.Net.Sockets namespace. Two of the most common protocols for network communication are TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), each serving different needs",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/realtimedata/tcpudpprogam"
+                },
+                {
+                  id: "http2",
+                  title: "HTTP/HTTPS and HTTP/2",
+                  contentPreview: "With the introduction of HTTP/2, significant performance improvements were achieved by addressing limitations in the older HTTP/1.x protocols.",
+                  contentPath: "csharpmedior/realtimedata/http2"
+                },
+                {
+                  id: "websockets",
+                  title: "WebSockets",
+                  contentPreview: "WebSockets are a protocol (defined in RFC 6455) that allows a persistent connection between a client (typically a web browser) and a server, enabling both parties to send data at any time.",
+                  contentPath: "csharpmedior/realtimedata/websockets"
+                },
+                {
+                  id: "sse",
+                  title: "Server-Sent Events (SSE)",
+                  contentPreview: "Server-Sent Events (SSE) are a standard allowing servers to push real-time updates to clients over a single, long-lived HTTP connection.",
+                  contentPath: "csharpmedior/realtimedata/sse"
+                },
+                {
+                  id: "signalr",
+                  title: "SignalR in ASP.NET Core",
+                  contentPreview: "SignalR is a high-level abstraction for real-time communication in ASP.NET Core. It simplifies the process of adding real-time web functionality to applications, enabling server-side code to push content instantly to connected clients.",
+                  contentPath: "csharpmedior/realtimedata/signalr"
+                },
+                {
+                  id: "rx",
+                  title: "Reactive Extensions (Rx)",
+                  contentPreview: "Reactive Extensions (Rx) is a powerful library for composing asynchronous and event-based programs using observable sequences and LINQ-style query operators. ",
+                  contentPath: "csharpmedior/realtimedata/rx"
+                },
+                {
+                  id: "async",
+                  title: "Async/Await Pattern",
+                  contentPreview: "The async/await pattern is a cornerstone of modern asynchronous programming in .NET.",
+                  contentPath: "csharpmedior/realtimedata/async"
+                },
+                {
+                  id: "paralleltpl",
+                  title: "Parallel Programming and TPL",
+                  contentPreview: "The Task Parallel Library (TPL) is a core component of .NET for parallel and asynchronous programming. ",
+                  contentPath: "csharpmedior/realtimedata/paralleltpl"
+                },
+                {
+                  id: "messagequeue",
+                  title: "Message Queues and Brokers",
+                  contentPreview: "Message queues and brokers are critical components for building distributed, decoupled, and scalable systems. ",
+                  contentPath: "csharpmedior/realtimedata/messagequeue"
+                },
+                {
+                  id: "eventsourcing",
+                  title: "Event Sourcing and CQRS",
+                  contentPreview: "Event Sourcing and Command Query Responsibility Segregation (CQRS) are complementary architectural patterns that help build scalable, maintainable, and auditable systems. ",
+                  contentPath: "csharpmedior/realtimedata/eventsourcing"
+                },
+                {
+                  id: "pubsub",
+                  title: "Publish/Subscribe Patterns",
+                  contentPreview: "Publish/Subscribe Patterns",
+                  contentPath: "csharpmedior/realtimedata/pubsub"
+                },
+                {
+                  id: "lowlatency",
+                  title: "Low-Latency Data Processing",
+                  contentPreview: "The goal is to process and deliver data with minimal delay, often measured in milliseconds or microseconds.",
+                  contentPath: "csharpmedior/realtimedata/lowlatency"
+                },
+                {
+                  id: "loadbala",
+                  title: "Load Balancing and Scaling",
+                  contentPreview: "The process of distributing incoming network traffic or workloads evenly across multiple servers or instances. ",
+                  contentPath: "csharpmedior/realtimedata/loadbala"
+                },
+                {
+                  id: "bufferingthrottle",
+                  title: "Buffering, Throttling, and Backpressure",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/realtimedata/bufferingthrottle"
+                },
+                {
+                  id: "realtimeanal",
+                  title: "Real-Time Analytics and Monitoring",
+                  contentPreview: "Real-time analytics involves the continuous processing and analysis of data as it arrives, with minimal latency, to generate timely insights.",
+                  contentPath: "csharpmedior/realtimedata/realtimeanal"
+                },
+                {
+                  id: "sensorandiot",
+                  title: "Sensor and IoT Data Acquisition",
+                  contentPreview: "IoT (Internet of Things) data acquisition is the process of interfacing with physical sensors and devices to collect real-world data (e.g., temperature, humidity, motion) and transmit it for further processing.",
+                  contentPath: "csharpmedior/realtimedata/sensorandiot"
+                },
+                {
+                  id: "financialtrading",
+                  title: "Financial and Trading Systems",
+                  contentPreview: "Execution and data processing delays must be minimized to capture market opportunities.",
+                  contentPath: "csharpmedior/realtimedata/financialtrading"
+                },
+                {
+                  id: "gaming",
+                  title: "Gaming and Interactive Applications",
+                  contentPreview: "Fast response times are crucial for real-time interactions, whether for game physics, rendering, or input handling.",
+                  contentPath: "csharpmedior/realtimedata/gaming"
+                },
+                {
+                  id: "webrtc",
+                  title: "WebRTC Integration in .NET",
+                  contentPreview: "Enables peer-to-peer communication without the need for plugins.",
+                  contentPath: "csharpmedior/realtimedata/webrtc"
+                },
+                {
+                  id: "edgecomputing",
+                  title: "Edge Computing and Real-Time Processing",
+                  contentPreview: "Edge computing refers to the practice of processing data near the data source instead of sending it all to a centralized cloud. This reduces latency, saves bandwidth, and often enhances data security.",
+                  contentPath: "csharpmedior/realtimedata/edgecomputing"
+                },
+                {
+                  id: "realtimeml",
+                  title: "Real-Time Machine Learning",
+                  contentPreview: "nvolves training machine learning models on a complete, static dataset. Models are retrained periodically as new data accumulates.",
+                  contentPath: "csharpmedior/realtimedata/realtimeml"
+                },
+                {
+                  id: "distributedsystems",
+                  title: "Distributed Systems and Consistency",
+                  contentPreview: "Distributed systems consist of multiple autonomous components that communicate over a network to achieve a common goal. ",
+                  contentPath: "csharpmedior/realtimedata/distributedsystems"
+                }
+              ]
+            },
+            {
+              id: "exceptions",
+              title: "",
+              description: "",
+              threads: [
+                {
+                  id: "recoverable",
+                  title: "Recoverable Exceptions",
+                  contentPreview: "These are errors that can be gracefully handled, allowing the application to continue running.",
+                  contentPath: "csharpmedior/exceptions/recoverable"
+                },
+                {
+                  id: "definition",
+                  title: "Definition of Exceptions",
+                  contentPreview: "Exceptions in .NET are objects that represent errors or unexpected conditions that occur during the execution of a program.",
+                  contentPath: "csharpmedior/exceptions/definition"
+                },
+                {
+                  id: "hierarchy",
+                  title: "Exception Hierarchy in .NET",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/exceptions/hierarchy"
+                },
+                {
+                  id: "trycatch",
+                  title: "try-catch-finally Blocks",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/exceptions/trycatch"
+                },
+                {
+                  id: "nestedtry",
+                  title: "Nested try-catch Blocks",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/exceptions/nestedtry"
+                },
+                {
+                  id: "exceptionfilters",
+                  title: "Using Exception Filters",
+                  contentPreview: "Exception filters allow you to specify a boolean condition using a when clause on a catch block. The catch block is executed only if the condition evaluates to true. If it evaluates to false, the exception is not caught by that block, and the runtime continues searching for another handler.",
+                  contentPath: "csharpmedior/exceptions/exceptionfilters"
+                },
+                {
+                  id: "rethrow",
+                  title: "Rethrowing Exceptions",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/exceptions/rethrow"
+                },
+                {
+                  id: "customexcep",
+                  title: "Creating Custom Exception Classes",
+                  contentPreview: "Represent errors that are specific to your application's business logic (e.g., InsufficientFundsException, OrderNotFoundException).",
+                  contentPath: "csharpmedior/exceptions/customexcep"
+                },
+                {
+                  id: "propagation",
+                  title: "Propagation",
+                  contentPreview: "When a method is invoked, a new frame is added to the call stack. If an exception is thrown, the runtime begins unwinding the stack, looking for a catch block that can handle the exception.",
+                  contentPath: "csharpmedior/exceptions/propagation"
+                },
+                {
+                  id: "swalla",
+                  title: "Swallowing vs. Propagating Exceptions",
+                  contentPreview: "Swallowing an exception means catching it and then not rethrowing it, effectively preventing the exception from propagating further up the call stack.",
+                  contentPath: "csharpmedior/exceptions/swalla"
+                },
+                {
+                  id: "async",
+                  title: "Async/Await Exception Handling",
+                  contentPreview: "When an async method throws an exception, the exception is captured and stored in the returned Task or Task<T>. It does not immediately crash the application or propagate up the call stack.",
+                  contentPath: "csharpmedior/exceptions/async"
+                },
+                {
+                  id: "aggregate",
+                  title: "Handling AggregateException",
+                  contentPreview: "AggregateException is an exception type that encapsulates multiple exceptions into a single object. It is typically thrown when one or more tasks in a parallel operation (or asynchronous operation) fail.",
+                  contentPath: "csharpmedior/exceptions/aggregate"
+                },
+                {
+                  id: "logging",
+                  title: "Exception Logging",
+                  contentPreview: "Capture the exception message, stack trace, inner exceptions, and contextual data to understand the cause and context of errors.",
+                  contentPath: "csharpmedior/exceptions/logging"
+                },
+                {
+                  id: "applevel",
+                  title: "Application-Level Handlers",
+                  contentPreview: "Captures exceptions that are not caught in any try-catch block on non-UI threads. It acts as a last-resort handler before the application terminates.",
+                  contentPath: "csharpmedior/exceptions/applevel"
+                },
+                {
+                  id: "middleware",
+                  title: "Middleware in .NET",
+                  contentPreview: "To catch unhandled exceptions thrown during the processing of HTTP requests, log them, and generate appropriate HTTP responses (such as error pages or JSON error messages).",
+                  contentPath: "csharpmedior/exceptions/middleware"
+                },
+                {
+                  id: "cost",
+                  title: "Cost of Exceptions",
+                  contentPreview: "When an exception is thrown, a new exception object is allocated on the managed heap. This involves memory allocation and, potentially, the collection of a stack trace, which can be expensive.",
+                  contentPath: "csharpmedior/exceptions/cost"
+                },
+                {
+                  id: "disclosure",
+                  title: "Information Disclosure",
+                  contentPreview: "The leakage of internal application details (such as file paths, configuration settings, database schemas, or system internals) that can be exploited by malicious actors to gain insights into the application’s structure, security weaknesses, or operational environment.",
+                  contentPath: "csharpmedior/exceptions/disclosure"
+                },
+                {
+                  id: "secure",
+                  title: "Securing Exception Data",
+                  contentPreview: "Only expose minimal, non-sensitive information in error messages displayed to users. Detailed technical data should be logged securely but not shown externally.",
+                  contentPath: "csharpmedior/exceptions/secure"
+                }
+              ]
+            },
+            {
+              id: "httpsessions",
+              title: "HTTP Sessions",
+              description: "All about HTTP Communications the right way",
+              threads: [
+                {
+                  id: "httprequest",
+                  title: "HTTP Request/Response Model",
+                  contentPreview: "HTTP methods (also called verbs) specify the desired action to be performed on a resource (e.g., a web page, an API endpoint)",
+                  contentPath: "csharpmedior/httpsessions/httprequest"
+                },
+                {
+                  id: "http23",
+                  title: "HTTP/2 and HTTP/3 Basics",
+                  contentPreview: "The evolution from HTTP/1.1 to HTTP/2 and HTTP/3 aims to address long-standing performance and security challenges in web communication. Both HTTP/2 and HTTP/3 introduce significant improvements over HTTP/1.1.",
+                  contentPath: "csharpmedior/httpsessions/http23"
+                },
+                {
+                  id: "httpclient",
+                  title: "HttpClient Overview",
+                  contentPreview: "The HttpClient class is a high-level API for sending and receiving HTTP requests and responses in .NET applications. It simplifies creating, sending, and processing HTTP requests, whether you're consuming REST APIs, web pages, or other HTTP-based services.",
+                  contentPath: "csharpmedior/httpsessions/httpclient"
+                },
+                {
+                  id: "serialization",
+                  title: "Serialization and Deserialization",
+                  contentPreview: "When building HTTP-based applications (e.g., REST APIs or consuming external services), serialization (converting in-memory objects to textual or binary formats) and deserialization (converting data back to objects) are essential processes. ",
+                  contentPath: "csharpmedior/httpsessions/serialization"
+                },
+                {
+                  id: "middleware",
+                  title: "Middleware",
+                  contentPreview: "In ASP.NET Core, middleware are components that form a pipeline to handle incoming HTTP requests and outgoing responses.",
+                  contentPath: "csharpmedior/httpsessions/middleware"
+                },
+                {
+                  id: "routing",
+                  title: "Routing",
+                  contentPreview: "Routing in ASP.NET Core is the process of matching incoming HTTP requests to the correct endpoint (controller action, Razor Page, or other handler). ",
+                  contentPath: "csharpmedior/httpsessions/routing"
+                },
+                {
+                  id: "modelbinding",
+                  title: "Model Binding and Validation",
+                  contentPreview: "In ASP.NET Core, model binding automatically converts incoming HTTP request data (from route values, query strings, form fields, JSON bodies, etc.) into C# objects. Validation then checks these objects against defined rules, ensuring the data is valid before your application processes it.",
+                  contentPath: "csharpmedior/httpsessions/modelbinding"
+                },
+                {
+                  id: "statemanage",
+                  title: "State Management Concepts",
+                  contentPreview: "Because HTTP is stateless by default, the server does not automatically keep track of user data or session information between individual HTTP requests. Each request is treated as independent, with no built-in memory of previous requests. State management techniques allow you to persist user data or application data across multiple requests, creating a sense of continuity.",
+                  contentPath: "csharpmedior/httpsessions/statemanage"
+                },
+                {
+                  id: "sessionconfig",
+                  title: "Session Configuration",
+                  contentPreview: "HTTP is inherently stateless, but many web applications need to temporarily store user-specific data (e.g., a shopping cart, preferences, or temporary login tokens). Sessions allow you to associate data with a specific client across multiple requests. In ASP.NET Core, you can use the built-in session middleware and the ISession interface to manage session data.",
+                  contentPath: "csharpmedior/httpsessions/sessionconfig"
+                },
+                {
+                  id: "sessionlifetime",
+                  title: "Session Lifetimes",
+                  contentPreview: "Sessions in ASP.NET Core allow you to store temporary user-specific data across multiple requests. However, this data doesn’t persist indefinitely. You can control how long a session remains active with expiration settings. You also have the option to clear or abandon sessions when they’re no longer needed.",
+                  contentPath: "csharpmedior/httpsessions/sessionlifetime"
+                },
+                {
+                  id: "whycaching",
+                  title: "Why Caching Matters",
+                  contentPreview: "Caching is a strategy to store data in a way that enables faster access on subsequent requests. ",
+                  contentPath: "csharpmedior/httpsessions/whycaching"
+                },
+                {
+                  id: "responsedatacaching",
+                  title: "Response Caching vs. Data Caching",
+                  contentPreview: "Caching strategies in web applications can take different forms, generally falling into response-level caching (where the entire HTTP response is cached and reused) and data-level caching (where raw data or computed objects are cached on the server side). Understanding both approaches helps you design a more performant and scalable application.",
+                  contentPath: "csharpmedior/httpsessions/responsedatacaching"
+                },
+                {
+                  id: "cachingasp",
+                  title: "Caching in ASP.NET Core",
+                  contentPreview: "Caching helps reduce data retrieval costs, speed up response times, and improve scalability in your applications. ASP.NET Core offers built-in support for two primary caching models",
+                  contentPath: "csharpmedior/httpsessions/cachingasp"
+                },
+                {
+                  id: "expirationeviction",
+                  title: "Expiration and Eviction Policies",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/expirationeviction"
+                },
+                {
+                  id: "outputcache",
+                  title: "Output Caching",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/outputcache"
+                },
+                {
+                  id: "distributedcaching",
+                  title: "Distributed Caching",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/distributedcaching"
+                },
+                {
+                  id: "cacheinvalidstrategy",
+                  title: "Cache Invalidation Strategies",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/cacheinvalidstrategy"
+                },
+                {
+                  id: "cachestampedeprevention",
+                  title: "Cache Stampede Prevention",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/cachestampedeprevention"
+                },
+                {
+                  id: "contentnegotation",
+                  title: "Content Negotiation",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/contentnegotation"
+                },
+                {
+                  id: "httpcompression",
+                  title: "HTTP Compression",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/httpcompression"
+                },
+                {
+                  id: "chunkedtransfer",
+                  title: "Chunked Transfer Encoding",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/chunkedtransfer"
+                },
+                {
+                  id: "websockets",
+                  title: "WebSockets and SignalR",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/websockets"
+                },
+                {
+                  id: "httpstls",
+                  title: "HTTPS and TLS",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/httpstls"
+                },
+                {
+                  id: "auth",
+                  title: "Authentication/Authorization",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/auth"
+                },
+                {
+                  id: "xsscsrf",
+                  title: "Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF)",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/xsscsrf"
+                },
+                {
+                  id: "apikeys",
+                  title: "API Keys, HMAC, and other Auth Schemes",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/apikeys"
+                },
+                {
+                  id: "graphql",
+                  title: "GraphQL on ASP.NET Core",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/graphql"
+                },
+                {
+                  id: "grpc",
+                  title: "gRPC in .NET",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/grpc"
+                },
+                {
+                  id: "realtimeservices",
+                  title: "Realtime Services",
+                  contentPreview: "",
+                  contentPath: "csharpmedior/httpsessions/realtimeservices"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "csharpsenior",
+          name: "C# - Senior",
+          description: "Abstract and higher level architectural topics",
+          topics: [
+            {
+              id: "architecture",
+              title: "Architecture",
+              description: "Design guidelines when defining your C# project at a high-level",
+              threads: [
+                {
+                  id: "clean",
+                  title: "Clean Architecture",
+                  contentPreview: "Clean Architecture is an architectural pattern that separates the concerns of different parts of an application. It aims to make systems more maintainable and scalable by clearly separating different layers, such as business logic, data access, and user interfaces.",
+                  contentPath: "csharpsenior/architecture/clean"
+                },
+                {
+                  id: "solid",
+                  title: "SOLID",
+                  contentPreview: "The SOLID principles are a set of five design principles intended to make software more understandable, flexible, and maintainable. These principles can be applied in the context of object-oriented programming, and they align well with creating high-quality systems in .NET.",
+                  contentPath: "csharpsenior/architecture/solid"
+                },
+                {
+                  id: "cqrs",
+                  title: "CQRS",
+                  contentPreview: "CQRS is an architectural pattern that separates the handling of commands (write operations) and queries (read operations).",
+                  contentPath: "csharpsenior/architecture/cqrs"
+                },
+                {
+                  id: "eventsourcing",
+                  title: "Event Sourcing",
+                  contentPreview: "Event Sourcing is an architectural pattern where state changes are captured as a sequence of events. Instead of storing just the current state of an entity in a database, the system stores all the events that lead to the current state. ",
+                  contentPath: "csharpsenior/architecture/eventsourcing"
+                },
+                {
+                  id: "middleware",
+                  title: "Middleware",
+                  contentPreview: "Middleware in ASP.NET Core is software that's assembled into an application pipeline to handle requests and responses. Each component in the middleware pipeline is responsible for invoking the next component in the sequence or short-circuiting the chain if necessary. Middleware components can perform a variety of tasks, such as authentication, routing, session management, and logging.",
+                  contentPath: "csharpsenior/architecture/middleware"
+                }
+              ]
+            },
+            {
+              id: "threading",
+              title: "Threading",
+              description: "In Depth about Threading and Parallel Programming",
+              threads: [
+                {
+                  id: "introduction",
+                  title: "Introduction to Threading",
+                  contentPreview: "Threading allows your application to run multiple blocks of code at the same time (or in parallel if your system has multiple CPU cores).",
+                  contentPath: "csharpsenior/threading/introduction"
+                },
+                {
+                  id: "threadmanage",
+                  title: "Thread Creation and Management",
+                  contentPreview: "Thread creation in C# gives you fine-grained control over how and when your code executes. In modern C#, you’ll often use Tasks or async/await for simplicity. However, understanding low-level thread creation remains valuable for complex or legacy scenarios.",
+                  contentPath: "csharpsenior/threading/threadmanage"
+                },
+                {
+                  id: "threadsync",
+                  title: "Thread Synchronization",
+                  contentPreview: "When multiple threads access shared resources, the order in which they operate can affect the outcome. ",
+                  contentPath: "csharpsenior/threading/threadsync"
+                },
+                {
+                  id: "threadcommun",
+                  title: "Thread Communication",
+                  contentPreview: "When multiple threads need to coordinate their work, they must communicate. In C#, thread communication typically happens through shared state (e.g., shared variables) or messaging (e.g., signaling with events or passing messages via thread-safe data structures). Proper communication ensures that each thread knows when it can safely proceed without causing data corruption or race conditions.",
+                  contentPath: "csharpsenior/threading/threadcommun"
+                },
+                {
+                  id: "threadpools",
+                  title: "Thread Pools and Task Parallelism",
+                  contentPreview: "Manually creating and managing threads can get complicated—especially when you have many short-lived tasks. The Thread Pool and Task Parallel Library (TPL) in C# are designed to simplify handling multiple tasks without the overhead of constantly spinning up new threads.",
+                  contentPath: "csharpsenior/threading/threadpools"
+                },
+                {
+                  id: "concurrpatterns",
+                  title: "Concurrency Patterns",
+                  contentPreview: "Concurrency patterns are high-level approaches or “blueprints” that help structure and coordinate multiple threads or tasks. Using these patterns effectively can simplify the complexity of multithreaded and asynchronous code.",
+                  contentPath: "csharpsenior/threading/concurrpatterns"
+                },
+                {
+                  id: "advancedthreading",
+                  title: "Advanced Threading Techniques",
+                  contentPreview: "Once you understand the fundamentals of threads, synchronization, and the higher-level abstractions (like Task and Parallel), you’re ready to explore advanced threading techniques. These techniques allow you to fine-tune performance, manage complex concurrency scenarios, and write more efficient, scalable applications.",
+                  contentPath: "csharpsenior/threading/advancedthreading"
+                }
+              ]
+            },
+            {
+              id: "async",
+              title: "Asynchronous Programming",
+              description: "In Depth about Asynchronous Programming",
+              threads: [
+                {
+                  id: "introduction",
+                  title: "Introduction to asynchronous programming",
+                  contentPreview: "This feature allows developers to perform non-blocking operations without the complex code traditionally associated with asynchronous programming, such as callbacks or manual thread management",
+                  contentPath: "csharpsenior/async/introduction"
+                },
+                {
+                  id: "errorhandle",
+                  title: "Handling Errors in Tasks",
+                  contentPreview: "In asynchronous programming with C#, when a method returns a Task or Task<T>, exceptions should be handled within the task to avoid unhandled exceptions that can crash the application. ",
+                  contentPath: "csharpsenior/async/errorhandle"
+                }
+              ]
+            }
+          ]
+        }
       ],
     },
     {

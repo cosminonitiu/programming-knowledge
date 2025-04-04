@@ -76,7 +76,7 @@
   You can implement `IEnumerable<T>` by manually writing an enumerator class that tracks iteration state.
 - **Using `yield return`:**  
   This is the preferred approach for its simplicity. It automatically handles the creation of the enumerator state machine.
-  ```csharp
+  ```typescript
   public IEnumerable<int> GetNumbers()
   {
       for (int i = 0; i < 10; i++)

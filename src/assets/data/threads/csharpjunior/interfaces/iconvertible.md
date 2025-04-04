@@ -4,7 +4,7 @@
 - **Namespace:**  
   `System`
 - **Interface Signature:**
-  ```csharp
+  ```typescript
   public interface IConvertible
   {
       TypeCode GetTypeCode();
@@ -50,7 +50,7 @@ These types use IConvertible methods to parse or format values according to the 
 **Usage with Convert.ChangeType:**
 The static Convert.ChangeType method uses IConvertible to convert an object to a specified type dynamically:
 
-```csharp
+```typescript
 object value = "123";
 int number = (int)Convert.ChangeType(value, typeof(int), CultureInfo.InvariantCulture);
 ```

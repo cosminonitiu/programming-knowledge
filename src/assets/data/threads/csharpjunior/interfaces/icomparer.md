@@ -6,7 +6,7 @@
 - **Definition:**  
   An interface that defines a method for comparing two objects. It is used by non-generic collections and sorting methods that require ordering.
 - **Key Method:**  
-  ```csharp
+  ```typescript
   int Compare(object x, object y);
   ```
 
@@ -27,7 +27,7 @@ A generic version that provides type safety, preventing the need for casting and
 
 **Key Method:**
 
-```csharp
+```typescript
 int Compare(T x, T y);
 ```
 **Return Values:**
@@ -60,7 +60,7 @@ An interface that defines methods for comparing objects for equality and generat
 
 **Key Methods:**
 
-```csharp
+```typescript
 bool Equals(object x, object y);
 int GetHashCode(object obj);
 ```
@@ -79,7 +79,7 @@ A generic version of IEqualityComparer that offers type-safe equality comparison
 
 **Key Methods:**
 
-```csharp
+```typescript
 bool Equals(T x, T y);
 int GetHashCode(T obj);
 ```

@@ -6,7 +6,7 @@
 - **Definition:**  
   The `ISerializable` interface allows an object to control its own serialization and deserialization. It defines a single method, `GetObjectData`, which is used to populate a `SerializationInfo` object with the data needed to serialize the object.
 - **Core Method:**
-  ```csharp
+  ```typescript
   void GetObjectData(SerializationInfo info, StreamingContext context);
   ```
 
@@ -32,13 +32,13 @@ During deserialization, the formatter looks for a special constructor that takes
 **Deserialization Constructor:**
 Classes that implement ISerializable must provide a constructor with the following signature:
 
-```csharp
+```typescript
 protected MyClass(SerializationInfo info, StreamingContext context)
 ```
 This constructor extracts the serialized data from the SerializationInfo and initializes the object accordingly.
 
 **Example Implementation**
-```csharp
+```typescript
 [Serializable]
 public class Employee : ISerializable
 {
@@ -78,7 +78,7 @@ The IDeserializationCallback interface provides a method that is called when the
 
 **Core Method:**
 
-```csharp
+```typescript
 void OnDeserialization(object sender);
 ```
 **Purpose and Use Cases**
@@ -99,7 +99,7 @@ After the deserialization of an object graph is complete, the runtime calls the 
 This method is invoked after the entire object graph has been restored, ensuring that dependencies between objects are resolved.
 
 **Example Implementation**
-```csharp
+```typescript
 [Serializable]
 public class Department : IDeserializationCallback
 {

@@ -7,7 +7,7 @@
   
 ### Key Member
 - **Event:**  
-  ```csharp
+  ```typescript
   event PropertyChangedEventHandler PropertyChanged;
   ```
 
@@ -19,7 +19,7 @@ Data-bound UI elements listen for the PropertyChanged event. When the event is r
 
 Implementation Example:
 
-```csharp
+```typescript
 public class Person : INotifyPropertyChanged
 {
     private string _name;
@@ -62,7 +62,7 @@ Notifies clients that a collection has changed, typically used with data-binding
 **Key Member**
 Event:
 
-```csharp
+```typescript
 event NotifyCollectionChangedEventHandler CollectionChanged;
 ```
 This event provides detailed information about the changes, such as items added, removed, or the entire collection reset.
@@ -95,11 +95,11 @@ bool HasErrors { get; } – Indicates whether the object has validation errors.
 
 Event:
 
-```csharp
+```typescript
 event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;```
 **Methods**:
 
-```csharp
+```typescript
 IEnumerable GetErrors(string propertyName);
 ```
 This method returns the validation errors for a specified property or for the entire object if the property name is null or empty.
@@ -128,7 +128,7 @@ Similar to INotifyPropertyChanged, but it notifies clients before a property val
 Key Member
 Event:
 
-```csharp
+```typescript
 event PropertyChangingEventHandler PropertyChanging;```
 **How It Works
 Pre-Change Notification:**
@@ -136,7 +136,7 @@ The event is raised before the property’s value is updated, allowing listeners
 
 Example:
 
-```csharp
+```typescript
 public class Person : INotifyPropertyChanging, INotifyPropertyChanged
 {
     private string _name;
@@ -188,7 +188,7 @@ These interfaces are integral to the implementation of the async/await pattern i
 **Definition:**
 Declares a single method:
 
-```csharp
+```typescript
 void OnCompleted(Action continuation);```
 This method is used to schedule a continuation when the awaitable operation completes.
 
@@ -196,7 +196,7 @@ This method is used to schedule a continuation when the awaitable operation comp
 **Definition:**
 Extends INotifyCompletion by adding critical notification capabilities:
 
-```csharp
+```typescript
 void UnsafeOnCompleted(Action continuation);
 ```
 This method allows scheduling a continuation with reduced security checks, which is useful in performance-critical scenarios.

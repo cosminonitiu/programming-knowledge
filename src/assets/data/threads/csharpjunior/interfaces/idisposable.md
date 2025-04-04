@@ -3,7 +3,7 @@
 ### Definition
 - **IDisposable Interface:**  
   Declares a single method, `Dispose()`, which should be called when an object is no longer needed to free up unmanaged resources.
-  ```csharp
+  ```typescript
   public interface IDisposable
   {
       void Dispose();

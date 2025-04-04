@@ -3,7 +3,7 @@
 ### Definition and Purpose
 - **Definition:**  
   `ICloneable` declares one method:
-  ```csharp
+  ```typescript
   public interface ICloneable
   {
       object Clone();
@@ -50,7 +50,7 @@ In applications where you need to create copies of complex objects (e.g., config
 Scenario:
 The Prototype Pattern, which relies on cloning to create new instances, often makes use of ICloneable. By providing a Clone() method, objects can be duplicated to create new instances with the same state, then modified as needed.
 
-```csharp
+```typescript
 public class Employee : ICloneable
 {
     public int Id { get; set; }
@@ -85,7 +85,7 @@ public class EmployeeDeepClone : ICloneable
 Usage:
 Consumers call Clone() to get a new instance:
 
-```csharp
+```typescript
 Employee original = new Employee { Id = 1, Name = "Alice", Dept = new Department { DepartmentName = "HR" } };
 Employee copy = (Employee)original.Clone();
 ```

@@ -92,7 +92,7 @@
 ### Performance Optimization
 - **Capacity Planning:**  
   When instantiating a dictionary, provide an estimated capacity if possible. This minimizes the number of resizes and rehashing operations.
-  ```csharp
+  ```typescript
   var dictionary = new Dictionary<string, int>(100);
   ```
 

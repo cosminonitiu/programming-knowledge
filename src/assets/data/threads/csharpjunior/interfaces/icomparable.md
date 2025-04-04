@@ -31,7 +31,7 @@
   To enable sorting of collections using built-in algorithms and LINQ methods.
 
   ### Example Implementation
-```csharp
+```typescript
 public class Employee : IComparable<Employee>, IEquatable<Employee>
 {
     public int Id { get; }

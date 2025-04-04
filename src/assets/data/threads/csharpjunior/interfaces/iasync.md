@@ -9,7 +9,7 @@
 
 ### Key Member
 - **Method:**
-  ```csharp
+  ```typescript
   ValueTask DisposeAsync();
   ```
 
@@ -24,7 +24,7 @@ When an object implementing IAsyncDisposable is disposed of, its DisposeAsync() 
 **Integration with Using Declarations:**
 C# 8.0 introduced the await using statement, which ensures that DisposeAsync() is called automatically at the end of the scope:
 
-```csharp
+```typescript
 await using (var resource = new AsyncResource())
 {
     // Use the resource
@@ -52,7 +52,7 @@ Represents an asynchronous sequence that can be iterated using await foreach.
 
 **Core Member:**
 
-```csharp
+```typescript
 IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default);```
 This method returns an IAsyncEnumerator<T>, which allows asynchronous iteration.
 
@@ -64,21 +64,21 @@ Provides the mechanism for asynchronously iterating over a sequence.
 
 **Property:
 **
-```csharp
+```typescript
 T Current { get; }
 ```
 Retrieves the current element in the sequence.
 
 **Method**:
 
-```csharp
+```typescript
 ValueTask<bool> MoveNextAsync();
 ```
 Asynchronously advances the enumerator to the next element. Returns a ValueTask<bool> that yields true if there are more elements.
 
 **Method**:
 
-```csharp
+```typescript
 ValueTask DisposeAsync();
 ```
 Asynchronously releases resources used by the enumerator.
@@ -91,7 +91,7 @@ When you write an iterator method using yield return with asynchronous behavior 
 Similar to their synchronous counterparts, asynchronous iterators delay execution until the iteration begins. With await foreach, each iteration waits for the asynchronous operation to complete before proceeding to the next element.
 
 Example Usage
-```csharp
+```typescript
 public async IAsyncEnumerable<int> GetNumbersAsync()
 {
     for (int i = 0; i < 10; i++)

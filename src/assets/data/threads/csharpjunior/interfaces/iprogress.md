@@ -4,7 +4,7 @@
 - **Namespace:**  
   `System`
 - **Interface Signature:**
-  ```csharp
+  ```typescript
   public interface IProgress<in T>
   {
       void Report(T value);
@@ -55,7 +55,7 @@ The download method accepts an IProgress<int> parameter and calls Report with th
 
 Example:
 
-```csharp
+```typescript
 public async Task DownloadFileAsync(string url, IProgress<int> progress)
 {
     // Simulated download loop

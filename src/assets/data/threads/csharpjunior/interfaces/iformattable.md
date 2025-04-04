@@ -7,7 +7,7 @@
   `IFormattable` defines a method that supports customized formatting of the value of an object.
   
 ### Signature
-```csharp
+```typescript
 public interface IFormattable
 {
     string ToString(string format, IFormatProvider formatProvider);
@@ -25,7 +25,7 @@ Built-in types like Int32, Double, DateTime, and Decimal implement IFormattable.
 Custom types can implement it to provide meaningful formatting based on format strings.
 
 Example
-```csharp
+```typescript
 public class Product : IFormattable
 {
     public string Name { get; set; }
@@ -48,7 +48,7 @@ public class Product : IFormattable
 }
 ```
 Usage
-```csharp
+```typescript
 var p = new Product { Name = "Laptop", Price = 999.99m };
 Console.WriteLine(p.ToString("P", CultureInfo.GetCultureInfo("en-US")));  // "$999.99"
 ```
@@ -62,7 +62,7 @@ System
 Provides custom string formatting for objects beyond the default behaviors of .NET.
 
 **Signature**
-```csharp
+```typescript
 public interface ICustomFormatter
 {
     string Format(string format, object arg, IFormatProvider formatProvider);
@@ -77,7 +77,7 @@ How It Works**
 The Format method is called when string.Format or ToString is invoked with a format provider that implements ICustomFormatter.
 
 Example: Custom Hex Formatter
-```csharp
+```typescript
 public class HexFormatter : IFormatProvider, ICustomFormatter
 {
     public object GetFormat(Type formatType)
@@ -96,7 +96,7 @@ public class HexFormatter : IFormatProvider, ICustomFormatter
 }
 ```
 Usage
-```csharp
+```typescript
 int value = 255;
 Console.WriteLine(string.Format(new HexFormatter(), "{0:H}", value)); // "0xFF"
 ```

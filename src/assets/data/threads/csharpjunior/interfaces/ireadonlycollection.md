@@ -17,7 +17,7 @@
   Helps enforce immutability by exposing only read operations, ensuring that the collection's state remains unchanged by external consumers.
 
 ### Example Usage
-```csharp
+```typescript
 public class ProductCatalog
 {
     private List<Product> _products = new List<Product>();
@@ -52,7 +52,7 @@ Use IReadOnlyList<T> when you need both enumeration and the ability to access el
 Commonly used in APIs that return lists of items which should not be altered by the consumer.
 
 Example Usage
-```csharp
+```typescript
 public class Order
 {
     private List<OrderItem> _items = new List<OrderItem>();
@@ -95,7 +95,7 @@ Return dictionaries that map configuration keys to values without allowing modif
 **Caching and Lookup Tables:**
 Provide a read-only view of data that has been loaded and should remain constant throughout the application lifecycle.
 
-```csharp
+```typescript
 public class ConfigurationManager
 {
     private Dictionary<string, string> _settings = new Dictionary<string, string>

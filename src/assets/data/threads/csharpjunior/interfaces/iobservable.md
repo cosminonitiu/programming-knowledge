@@ -6,7 +6,7 @@
 - **Definition:**  
   `IObservable<T>` represents a provider that can push notifications (data, errors, and completion signals) to observers.
 - **Core Member:**  
-  ```csharp
+  ```typescript
   IDisposable Subscribe(IObserver<T> observer);
   ```
 
@@ -22,7 +22,7 @@ IObserver<T> represents a consumer that receives notifications from an IObservab
 
 **Core Methods:**
 
-```csharp
+```typescript
 void OnNext(T value);
 void OnError(Exception error);
 void OnCompleted();

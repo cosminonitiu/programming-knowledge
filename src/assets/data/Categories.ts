@@ -706,8 +706,8 @@ export const categories_mock: Category[] = [
             },
             {
               id: "memorymanagement",
-              title: "",
-              description: "",
+              title: "Memory Management",
+              description: "From Stack to Heap to Advanced Design Options",
               threads: [
                 {
                   id: "stackheap",
@@ -1075,8 +1075,8 @@ export const categories_mock: Category[] = [
             },
             {
               id: "exceptions",
-              title: "",
-              description: "",
+              title: "Exceptions",
+              description: "Exception Handling, Propagation and Advanced Handling",
               threads: [
                 {
                   id: "recoverable",

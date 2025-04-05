@@ -12,6 +12,455 @@ export const categories_mock: Category[] = [
           name: "General Frontend",
           description: "General Native Frontend Concepts",
           topics: []
+        },
+        {
+          id: "angular",
+          name: "Angular",
+          description: "Angular 19 Udpated Knowledge",
+          topics: [
+            {
+              id: "architecture",
+              title: "Architecture",
+              description: "Architecture topics",
+              threads: [
+                {
+                  id: "ngmodule",
+                  title: "NgModule",
+                  contentPreview: "Basic aggregation of Angular components and imports",
+                  contentPath: "angular/architecture/ngmodule"
+                },
+                {
+                  id: "loadflow",
+                  title: "Angular Loading Flow",
+                  contentPreview: "",
+                  contentPath: "angular/architecture/loadflow"
+                },
+                {
+                  id: "entrypoint",
+                  title: "Angular Entry Point",
+                  contentPreview: "Every Angular app consists of a file named angular.json. This file will contain all the configurations of the app.",
+                  contentPath: "angular/architecture/entrypoint"
+                },
+                {
+                  id: "aotjit",
+                  title: "Ahead of Time and Just in Time Compilation",
+                  contentPreview: "",
+                  contentPath: "angular/architecture/aotjit"
+                },
+                {
+                  id: "eagerlazyloading",
+                  title: "Eager and Lazy Loading",
+                  contentPreview: "",
+                  contentPath: "angular/architecture/eagerlazyloading"
+                },
+                {
+                  id: "resolvers",
+                  title: "Resolvers",
+                  contentPreview: "A resolver is a service that implements the Resolve<T> interface. It is used to retrieve data or perform computations prior to route activation.",
+                  contentPath: "angular/architecture/resolvers"
+                }
+              ]
+            },
+            {
+              id: "dependencyinjection",
+              title: "Dependency Injection in Angular",
+              description: "",
+              threads: [
+                {
+                  id: "whatisdi",
+                  title: "What is Dependency Injection",
+                  contentPreview: "Dependency Injection (DI) is a design pattern in Angular that allows objects (services, components, directives, etc.) to receive dependencies from an external source rather than creating them manually. This enhances modularity, maintainability, and testability.",
+                  contentPath: "angular/dependencyinjection/whatisdi"
+                },
+                {
+                  id: "registerservice",
+                  title: "Registering Services in Angular",
+                  contentPreview: "Services must be registered before they can be injected. Angular provides different ways to do this.",
+                  contentPath: "angular/dependencyinjection/registerservice"
+                },
+                {
+                  id: "injectionhierarchy",
+                  title: "Injection Hierarchy",
+                  contentPreview: "",
+                  contentPath: "angular/dependencyinjection/injectionhierarchy"
+                },
+                {
+                  id: "providers",
+                  title: "Providers",
+                  contentPreview: "",
+                  contentPath: "angular/dependencyinjection/providers"
+                },
+                {
+                  id: "testingdiffscenarios",
+                  title: "Testing and Different Scenarios",
+                  contentPreview: "",
+                  contentPath: "angular/dependencyinjection/testingdiffscenarios"
+                }
+              ]
+            },
+            {
+              id: "changedetection",
+              title: "Change Detection",
+              description: "Change Detection in Angular ensures the synchronization of the application state with the UI.",
+              threads: [
+                {
+                  id: "whatiscd",
+                  title: "What is Change Detection",
+                  contentPreview: "Change Detection in Angular ensures the synchronization of the application state with the UI.",
+                  contentPath: "angular/changedetection/whatiscd"
+                },
+                {
+                  id: "onpush",
+                  title: "OnPush ",
+                  contentPreview: "OnPush Strategy (Check Only When Inputs Change) Components only check for changes when input properties change (@Input()).",
+                  contentPath: "angular/changedetection/onpush"
+                },
+                {
+                  id: "cdprocess",
+                  title: "The Change Detection Process",
+                  contentPreview: "",
+                  contentPath: "angular/changedetection/cdprocess"
+                },
+                {
+                  id: "ngzone",
+                  title: "Angular ngZone",
+                  contentPreview: "Angular’s change detection is powered by Zone.js through the NgZone service. NgZone provides an execution context that automatically detects and responds to asynchronous events—ensuring that your view stays in sync with your data without manual intervention.",
+                  contentPath: "angular/changedetection/ngzone"
+                },
+                {
+                  id: "viewencaps",
+                  title: "View Encapsulation",
+                  contentPreview: "To scope CSS styles to a specific component, preventing style leakage and conflicts across the application.",
+                  contentPath: "angular/changedetection/viewencaps"
+                },
+                {
+                  id: "dominangular",
+                  title: "DOM in Angular",
+                  contentPreview: "Angular works directly with the real browser DOM. Unlike some frameworks (such as React) that use a Virtual DOM to manage updates, Angular interacts with the actual DOM but employs sophisticated change detection mechanisms to efficiently update views.",
+                  contentPath: "angular/changedetection/dominangular"
+                },
+                {
+                  id: "treeshaking",
+                  title: "Tree Shaking",
+                  contentPreview: "Tree shaking is a form of dead-code elimination that statically analyzes your code and “shakes off” parts that are never used (i.e., not referenced by any part of your application).",
+                  contentPath: "angular/changedetection/treeshaking"
+                },
+                {
+                  id: "ivy",
+                  title: "Ivy",
+                  contentPreview: "Ivy is Angular’s modern rendering engine and compilation pipeline. It transforms Angular templates and components into highly optimized JavaScript code that directly manipulates the DOM.",
+                  contentPath: "angular/changedetection/ivy"
+                }
+              ]
+            },
+            {
+              id: "basics",
+              title: "Basics",
+              description: "Base components of Angular",
+              threads: [
+                {
+                  id: "structuraldirectives",
+                  title: "Structural Directives",
+                  contentPreview: "Structural Directives modify the DOM by adding, removing, or manipulating elements dynamically. They change the structure of the HTML at runtime.",
+                  contentPath: "angular/basics/structuraldirectives"
+                },
+                {
+                  id: "attributedirectives",
+                  title: "Attribute Directives",
+                  contentPreview: "Attribute Directives modify the appearance or behavior of an element, component, or other directives.",
+                  contentPath: "angular/basics/attributedirectives"
+                },
+                {
+                  id: "lifecycles",
+                  title: "Lifecycle of components",
+                  contentPreview: "Every Angular component follows a lifecycle that consists of creation, update, and destruction phases. Angular provides lifecycle hooks that allow you to execute custom logic at different stages.",
+                  contentPath: "angular/basics/lifecycles"
+                },
+                {
+                  id: "viewchild",
+                  title: "ViewChild",
+                  contentPreview: "Both @ViewChild and @ViewChildren allow a component to query its view (the template) for elements, components, or directives.",
+                  contentPath: "angular/basics/viewchild"
+                },
+                {
+                  id: "smartdumbcomp",
+                  title: "Smart and Dumb Components",
+                  contentPreview: "State vs stateless components",
+                  contentPath: "angular/basics/smartdumbcomp"
+                },
+                {
+                  id: "asyncpipe",
+                  title: "Async pipe",
+                  contentPreview: "When you use the async pipe in a template expression (e.g., {{ data$ | async }}), Angular automatically subscribes to the Observable or Promise. When the data changes (a new value is emitted), Angular updates the view with the latest value.",
+                  contentPath: "angular/basics/asyncpipe"
+                },
+                {
+                  id: "ngcontainer",
+                  title: "ng container ng template ng content",
+                  contentPreview: "Angular provides several powerful constructs to control rendering and composition in your templates. Three key features are ng-container, ng-template, and ng-content. Each serves a distinct purpose in how you build and compose your views.",
+                  contentPath: "angular/basics/ngcontainer"
+                },
+                {
+                  id: "databinding",
+                  title: "Data Binding",
+                  contentPreview: "Angular’s data binding system is a core feature that connects your component’s data (the model) with its view (the template). This powerful mechanism lets you synchronize data in both directions—from the component to the view and back—while reducing boilerplate code and helping you build dynamic, responsive applications.",
+                  contentPath: "angular/basics/databinding"
+                },
+                {
+                  id: "decorators",
+                  title: "Decorators",
+                  contentPreview: "Decorators are a fundamental concept in TypeScript, and because Angular heavily relies on TypeScript, decorators have become an important element of Angular as well.",
+                  contentPath: "angular/basics/decorators"
+                }
+              ]
+            },
+            {
+              id: "rxjs",
+              title: "RxJs",
+              description: "RxJs Reactive Programming",
+              threads: [
+                {
+                  id: "fundamentals",
+                  title: "Fundamentals",
+                  contentPreview: "RxJS (Reactive Extensions for JavaScript) is a library that enables reactive programming by using Observables.",
+                  contentPath: "angular/rxjs/fundamentals"
+                },
+                {
+                  id: "subjects",
+                  title: "Subjects and Multicasting",
+                  contentPreview: "A Subject is a special type of Observable that acts both as an Observable and an Observer. ",
+                  contentPath: "angular/rxjs/subjects"
+                },
+                {
+                  id: "creationoper",
+                  title: "Creation Operators",
+                  contentPreview: "Creates an Observable that emits the arguments you pass and then completes.",
+                  contentPath: "angular/rxjs/creationoper"
+                },
+                {
+                  id: "transformationoper",
+                  title: "Transformation Operators",
+                  contentPreview: "Transforms each emission from the source Observable by applying a projection function.",
+                  contentPath: "angular/rxjs/transformationoper"
+                },
+                {
+                  id: "filteringoper",
+                  title: "Filtering Operators",
+                  contentPreview: "The filter() operator emits only those values that pass a given predicate (a function that returns a boolean).",
+                  contentPath: "angular/rxjs/filteringoper"
+                },
+                {
+                  id: "combinationoper",
+                  title: "Combination Operators",
+                  contentPreview: "Merge emissions from two or more Observables concurrently into a single Observable.",
+                  contentPath: "angular/rxjs/combinationoper"
+                },
+                {
+                  id: "errorhandlingoper",
+                  title: "Error Handling Operators",
+                  contentPreview: "Intercepts an error from the source Observable and returns a new Observable (which may emit replacement values, a fallback Observable, or simply complete).",
+                  contentPath: "angular/rxjs/errorhandlingoper"
+                },
+                {
+                  id: "utilityoper",
+                  title: "Utility Operators",
+                  contentPreview: "Perform side effects for notifications from the source Observable without altering the stream. Ideal for debugging or logging.",
+                  contentPath: "angular/rxjs/utilityoper"
+                },
+                {
+                  id: "schedulers",
+                  title: "Schedulers",
+                  contentPreview: "A Scheduler is an abstraction for controlling when a task or piece of code is executed.",
+                  contentPath: "angular/rxjs/schedulers"
+                },
+                {
+                  id: "advanced",
+                  title: "Advanced Topics",
+                  contentPreview: "",
+                  contentPath: "angular/rxjs/advanced"
+                },
+                {
+                  id: "patterns",
+                  title: "Best Practices and Patterns",
+                  contentPreview: "",
+                  contentPath: "angular/rxjs/patterns"
+                }
+              ]
+            },
+            {
+              id: "ngrx",
+              title: "NgRx",
+              description: "NgRx Store Management",
+              threads: [
+                {
+                  id: "core",
+                  title: "Core Concepts",
+                  contentPreview: "",
+                  contentPath: "angular/ngrx/core"
+                },
+                {
+                  id: "sideeffects",
+                  title: "Side Effects",
+                  contentPreview: "Reducers are pure functions that should only calculate the next state. Side effects (like API calls) must be handled separately.",
+                  contentPath: "angular/ngrx/sideeffects"
+                },
+                {
+                  id: "ngrxentity",
+                  title: "NgRx Entity",
+                  contentPreview: "It encourages storing your collection of items in a normalized format (i.e., a dictionary of entities and an array of entity IDs) to avoid data duplication and improve lookup performance.",
+                  contentPath: "angular/ngrx/ngrxentity"
+                },
+                {
+                  id: "metareducers",
+                  title: "Meta Reducers",
+                  contentPreview: "Meta-reducers are functions that take a reducer as input and return a new reducer. They act as middleware at the reducer level, modifying state or logging actions before (or after) the base reducer processes an action.",
+                  contentPath: "angular/ngrx/metareducers"
+                },
+                {
+                  id: "architecturalpatterns",
+                  title: "Architectural Patterns",
+                  contentPreview: "",
+                  contentPath: "angular/ngrx/architecturalpatterns"
+                },
+                {
+                  id: "testingngrx",
+                  title: "Testing with NgRx",
+                  contentPreview: "",
+                  contentPath: "angular/ngrx/testingngrx"
+                },
+                {
+                  id: "advanced",
+                  title: "Advanced Topics",
+                  contentPreview: "",
+                  contentPath: "angular/ngrx/advanced"
+                }
+              ]
+            },
+            {
+              id: "signals",
+              title: "Signals",
+              description: "New meta of Reactive Programming in Angular",
+              threads: [
+                {
+                  id: "signalintroduction",
+                  title: "Introduction to Angular Signals",
+                  contentPreview: "",
+                  contentPath: "angular/signals/signalintroduction"
+                },
+                {
+                  id: "interactionwithcd",
+                  title: "Integrations with Angular Change Detection",
+                  contentPreview: "",
+                  contentPath: "angular/signals/interactionwithcd"
+                },
+                {
+                  id: "underhood",
+                  title: "Under the hood",
+                  contentPreview: "",
+                  contentPath: "angular/signals/underhood"
+                }
+              ]
+            },
+            {
+              id: "testing",
+              title: "Testing",
+              description: "Testing in Angular",
+              threads: [
+                {
+                  id: "testintro",
+                  title: "Introduction to Angular Testing",
+                  contentPreview: "Catch errors early in development, which reduces the risk of regressions.",
+                  contentPath: "angular/testing/testintro"
+                },
+                {
+                  id: "unittest",
+                  title: "Unit Testing",
+                  contentPreview: "To test a component, you need to create a testing module that declares the component and any dependencies (like pipes, directives, and sub-components).",
+                  contentPath: "angular/testing/unittest"
+                },
+                {
+                  id: "reactivecode",
+                  title: "Reactive Code and RxJS",
+                  contentPreview: "",
+                  contentPath: "angular/testing/reactivecode"
+                },
+                {
+                  id: "integrationtest",
+                  title: "Integration Testing",
+                  contentPreview: "Unlike isolated unit tests, integration tests load real templates, resolve dependencies through Angular’s dependency injection, and simulate user interactions to validate the overall behavior.",
+                  contentPath: "angular/testing/integrationtest"
+                },
+                {
+                  id: "e2etest",
+                  title: "End-to-End (E2E) Testing",
+                  contentPreview: "E2E tests simulate complete user journeys, ensuring that all parts of your application (components, services, routing, and backend interactions) work together correctly.",
+                  contentPath: "angular/testing/e2etest"
+                },
+                {
+                  id: "bestpract",
+                  title: "Best Practices and Patterns",
+                  contentPreview: "",
+                  contentPath: "angular/testing/bestpract"
+                },
+                {
+                  id: "tools",
+                  title: "Tools and Resources",
+                  contentPreview: "",
+                  contentPath: "angular/testing/tools"
+                }
+              ]
+            },
+            {
+              id: "buildingblocks",
+              title: "Building Blocks",
+              description: "",
+              threads: [
+                {
+                  id: "interceptors",
+                  title: "Interceptors",
+                  contentPreview: "Interceptors are middleware-like services that implement Angular's HttpInterceptor interface. ",
+                  contentPath: "angular/buildingblocks/interceptors"
+                },
+                {
+                  id: "routing",
+                  title: "Routing",
+                  contentPreview: "Angular’s routing is provided by the RouterModule, which you import into your application’s module.",
+                  contentPath: "angular/buildingblocks/routing"
+                },
+                {
+                  id: "observables",
+                  title: "Observables",
+                  contentPreview: "An Observable is a stream of data that can emit multiple values over time. It is a core concept in reactive programming, especially in libraries like RxJS, which Angular heavily relies on.",
+                  contentPath: "angular/buildingblocks/observables"
+                }
+              ]
+            },
+            {
+              id: "tooling",
+              title: "Tooling",
+              description: "",
+              threads: [
+                {
+                  id: "angelements",
+                  title: "Angular Elements",
+                  contentPreview: "Angular Elements allow you to package Angular components as custom elements (web components) so they can be used in any web application—regardless of whether that application is built with Angular.",
+                  contentPath: "angular/tooling/angelements"
+                },
+                {
+                  id: "servicewebworkers",
+                  title: "Service and Web Workers",
+                  contentPreview: "Service workers are scripts that run in the background, separate from your web page, enabling features like offline support, background sync, push notifications, and caching of assets. They act as a proxy between your web application and the network.",
+                  contentPath: "angular/tooling/servicewebworkers"
+                },
+                {
+                  id: "miniuglification",
+                  title: "Minification and Uglification",
+                  contentPreview: "",
+                  contentPath: "angular/tooling/miniuglification"
+                }
+              ]
+            }
+          ]
         }
       ],
     },

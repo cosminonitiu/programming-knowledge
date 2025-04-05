@@ -50,6 +50,6 @@
     color: #4B5563; 
 }
 .scroll-container {
-    height: 82vh;
+    height: calc(100vh - 15rem);
     overflow-y: scroll;
 }

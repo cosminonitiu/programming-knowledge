@@ -16,7 +16,7 @@ Manually creating and managing threads can get complicated—especially when you
 ### Using ThreadPool
 You can queue work to the Thread Pool using `ThreadPool.QueueUserWorkItem`:
 
-```csharp
+```typescript
 using System;
 using System.Threading;
 
@@ -53,7 +53,7 @@ The Task Parallel Library (TPL) provides higher-level constructs for concurrency
 **Task**
 A Task represents an asynchronous operation. When you create and start a Task, the TPL decides how and when it runs—often on a Thread Pool thread under the hood.
 
-```csharp
+```typescript
 using System;
 using System.Threading.Tasks;
 
@@ -84,7 +84,7 @@ Wait() blocks the calling thread until the Task completes (not typically recomme
 **Returning Values with Tasks**
 A Task<TResult> can return a result:
 
-```csharp
+```typescript
 Task<int> calculationTask = Task.Run(() =>
 {
     // Some long-running calculation
@@ -98,7 +98,7 @@ Console.WriteLine($"Calculation result: {result}");
 **Task Continuations**
 You can chain tasks together using continuations:
 
-```csharp
+```typescript
 Task<string> task = Task.Run(() => "Task result")
     .ContinueWith(prevTask => 
     {
@@ -112,7 +112,7 @@ Tasks capture exceptions internally. If an exception occurs, it’s stored and r
 **Parallel Class**
 The Parallel class (part of the TPL) offers methods like Parallel.For, Parallel.ForEach, and Parallel.Invoke for data and task parallelism:
 
-```csharp
+```typescript
 using System;
 using System.Threading.Tasks;
 
@@ -152,7 +152,7 @@ These methods also leverage the Thread Pool behind the scenes.
 **async and await**
 While async/await is often associated with asynchronous I/O, it leverages the TPL under the hood. For I/O-bound tasks, async/await excels at freeing up threads rather than blocking them.
 
-```csharp
+```typescript
 static async Task Main()
 {
     int result = await ComputeAsync();

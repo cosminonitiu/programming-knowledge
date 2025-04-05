@@ -4,7 +4,7 @@
     background-color: #F9FAFB; 
 }
 .layout main {
-    padding: 1rem; 
+    padding: 2rem; 
     flex: 1 1 0%; 
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -12,12 +12,35 @@
     transition-duration: 300ms; 
 }
 .layout main .router-container {
-    max-width: 80rem; 
+    max-width: 100rem; 
     margin: auto;
 }
+
+.layout main .router-container .mobile-only {
+    display: block;
+    position: absolute;
+    bottom: 0.5rem;
+    cursor: pointer;
+}
+.layout main .router-container .mobile-only .toggle-button{
+    padding: 0.5rem; 
+    margin-bottom: 1rem; 
+    border-radius: 0.25rem; 
+    color: #374151; 
+    background-color: #ffffff; 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); 
+}
+.layout main .router-container .mobile-only .toggle-button:hover{
+    background-color: #F3F4F6; 
+}
+
+
 
 @media (min-width: 768px) { 
     .layout main {
         padding: 2rem; 
+    }
+    .layout main .router-container .mobile-only {
+        display: none;
     }
 }

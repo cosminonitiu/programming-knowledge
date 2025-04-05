@@ -11,7 +11,7 @@ Once you understand the fundamentals of threads, synchronization, and the higher
 
 ### Example
 
-```csharp
+```typescript
 private static volatile bool _flag = false;
 
 public static void Thread1()
@@ -47,7 +47,7 @@ Performance: Lock-free structures can greatly reduce contention and context-swit
 Responsiveness: If a thread holding a lock is delayed or paused, other threads can’t proceed. Lock-free algorithms circumvent that.
 
 Example: Using Interlocked for a Lock-Free Counter
-```csharp
+```typescript
 private static int _counter = 0;
 
 public static void IncrementCounter()
@@ -63,7 +63,7 @@ A SpinLock is a lightweight synchronization primitive that causes a thread to bu
 
 It’s useful in scenarios where wait times are expected to be extremely short, thereby avoiding the overhead of a context switch.
 
-```csharp
+```typescript
 using System.Threading;
 
 public class SpinLockExample
@@ -88,7 +88,7 @@ public class SpinLockExample
 **SpinWait**
 SpinWait is a more sophisticated approach to spinning, which can reduce CPU usage if the lock is not immediately available.
 
-```csharp
+```typescript
 public static void SpinWaitExample()
 {
     SpinWait spinWait = new SpinWait();
@@ -105,7 +105,7 @@ Overusing spinning can degrade performance. Always measure and use only if the c
 Overview**
 ThreadLocal<T> provides storage unique to each thread. It’s like having a separate variable per thread, which can reduce contention because no two threads are reading/writing the same memory.
 
-```csharp
+```typescript
 using System;
 using System.Threading;
 
@@ -141,7 +141,7 @@ Useful for caching or accumulating thread-specific data without synchronization 
 Barrier**
 A Barrier allows multiple threads to meet (or synchronize) at a certain point, ensuring all threads reach a barrier phase before any proceed.
 
-```csharp
+```typescript
 using System;
 using System.Threading;
 
@@ -169,7 +169,7 @@ public class BarrierExample
 **CountdownEvent**
 A CountdownEvent can be decremented by threads doing some portion of work. When the count hits zero, waiting threads are released.
 
-```csharp
+```typescript
 using System;
 using System.Threading;
 
@@ -206,7 +206,7 @@ In ASP.NET, there’s an ASP.NET SynchronizationContext that returns continuatio
 **Why Use It?**
 If you need to post work back to a specific thread or context (like the UI thread), you can use the SynchronizationContext APIs.
 
-```csharp
+```typescript
 var syncContext = SynchronizationContext.Current;
 
 syncContext.Post(_ =>
@@ -224,7 +224,7 @@ By default, await in GUI or ASP.NET contexts tries to marshal back to the captur
 
 ConfigureAwait(false) tells the awaited task not to capture the context, potentially improving performance in library code.
 
-```csharp
+```typescript
 public async Task SomeLibraryMethodAsync()
 {
     await Task.Delay(100).ConfigureAwait(false);
@@ -240,7 +240,7 @@ PLINQ (Parallel LINQ) parallelizes LINQ queries over multiple threads.
 
 It’s a quick way to parallelize data processing without manually dealing with tasks or threads.
 
-```csharp
+```typescript
 using System;
 using System.Linq;
 

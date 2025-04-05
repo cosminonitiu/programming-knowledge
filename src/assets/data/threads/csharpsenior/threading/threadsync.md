@@ -31,7 +31,7 @@ C# provides multiple ways to synchronize threads. Each is suited for specific sc
 
 The easiest way to synchronize access in C# is with the `lock` statement, which under the hood uses the **Monitor** class.
 
-```csharp
+```typescript
 private static readonly object _lockObject = new object();
 private static int _counter = 0;
 
@@ -51,7 +51,7 @@ Use case: Ideal for short, simple, critical sections.
 **2. Monitor Class**
 Monitor is the underlying mechanism for lock. It offers more granular control, such as Monitor.Enter, Monitor.Exit, Monitor.Pulse, and Monitor.Wait.
 
-```csharp
+```typescript
 Monitor.Enter(_lockObject);
 try
 {
@@ -70,7 +70,7 @@ Usually, the lock keyword is preferred for simplicity, but Monitor is there if y
 **3. Interlocked Class**
 Interlocked provides atomic operations for incrementing, decrementing, and exchanging values.
 
-```csharp
+```typescript
 private static int _counter = 0;
 
 public static void IncrementCounter()
@@ -85,7 +85,7 @@ Benefits: Faster than using a lock because it doesn’t have the overhead of acq
 **4. Mutex**
 A Mutex (short for mutual exclusion) is like a lock object but can also be used across processes (i.e., between different running applications).
 
-```csharp
+```typescript
 static Mutex _mutex = new Mutex();
 
 public static void UseSharedResource()
@@ -109,7 +109,7 @@ Note: Mutexes are generally heavier than lock/Monitor.
 **5. Semaphore / SemaphoreSlim**
 A Semaphore limits the number of threads that can enter a certain section of code at the same time. For instance, if you have a resource that can only be used by 3 threads simultaneously, you’d use a semaphore with an initial count of 3.
 
-```csharp
+```typescript
 private static SemaphoreSlim _semaphore = new SemaphoreSlim(3);
 
 public static void SomeMethod()
@@ -130,7 +130,7 @@ Use case: Throttling or limiting concurrency (e.g., controlling the number of si
 **6. ReaderWriterLockSlim**
 ReaderWriterLockSlim allows multiple readers to access a resource concurrently, as long as no writer has locked it for writing. Once a writer acquires the lock, all readers are blocked until the writer completes.
 
-```csharp
+```typescript
 private static ReaderWriterLockSlim _rwLock = new ReaderWriterLockSlim();
 private static int _data;
 
@@ -164,7 +164,7 @@ Use case: When your data is read more often than it’s written. This helps conc
 **7. Events (AutoResetEvent, ManualResetEvent)**
 An Event (e.g., AutoResetEvent, ManualResetEvent) is used for signaling. One thread signals an event, and waiting threads are released to continue.
 
-```csharp
+```typescript
 static AutoResetEvent _autoEvent = new AutoResetEvent(false);
 
 static void WaitForSignal()

@@ -8,7 +8,7 @@ Thread creation in C# gives you fine-grained control over how and when your code
 
 You can create a new thread by instantiating the `Thread` class from the `System.Threading` namespace and passing it a method (delegate) to run:
 
-```csharp
+```typescript
 using System;
 using System.Threading;
 
@@ -48,7 +48,7 @@ Use Join() if you want the main thread (or any thread) to wait until the other t
 Using ParameterizedThreadStart**
 If you need to pass a parameter, you can use ParameterizedThreadStart:
 
-```csharp
+```typescript
 static void Main()
 {
     Thread paramThread = new Thread(new ParameterizedThreadStart(MyThreadMethod));
@@ -62,7 +62,7 @@ static void MyThreadMethod(object data)
 ```
 However, this requires casting from object. An alternative is to use lambda expressions or local functions to capture variables directly:
 
-```csharp
+```typescript
 static void Main()
 {
     string message = "Hello, Thread!";
@@ -85,7 +85,7 @@ Background threads do not prevent the process from ending. If all foreground thr
 
 You can set a thread to background like so:
 
-```csharp
+```typescript
 Thread workerThread = new Thread(MyThreadMethod);
 workerThread.IsBackground = true;  // Now it's a background thread
 workerThread.Start();
@@ -94,7 +94,7 @@ workerThread.Start();
 **Naming Threads**
 Naming threads helps during debugging and logging:
 
-```csharp
+```typescript
 Thread namedThread = new Thread(MyThreadMethod);
 namedThread.Name = "DataProcessingThread";
 namedThread.Start();
@@ -102,7 +102,7 @@ namedThread.Start();
 **Thread Priority**
 You can set a thread’s priority to influence (but not guarantee) how the OS schedules it among other threads:
 
-```csharp
+```typescript
 Thread workerThread = new Thread(MyThreadMethod);
 workerThread.Priority = ThreadPriority.AboveNormal;
 workerThread.Start();
@@ -123,7 +123,7 @@ Avoid using Thread.Abort() in modern .NET—it’s been deprecated due to unpred
 **Graceful Termination**
 If a thread needs to end early, you typically use a shared flag or cancellation token to signal the thread to stop:
 
-```csharp
+```typescript
 private static bool _shouldStop = false;
 private static readonly object _lock = new object();
 

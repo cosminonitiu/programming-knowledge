@@ -4,7 +4,7 @@ There are several approaches to handle exceptions in tasks:
 
 **Inside the Asynchronous Method: Use a try-catch block inside the async method to catch exceptions directly.**
 
-```csharp
+```typescript
 public async Task PerformOperationAsync()
 {
     try
@@ -20,7 +20,7 @@ public async Task PerformOperationAsync()
 
 **When Awaiting the Task: Await the task inside a try-catch block to catch exceptions when the task is awaited.**
 
-```csharp
+```typescript
 try
 {
     await PerformOperationAsync();
@@ -33,7 +33,7 @@ catch (Exception ex)
 
 **Using Task.ContinueWith: Use the ContinueWith method to attach a continuation task that can handle exceptions.**
 
-```csharp
+```typescript
 PerformOperationAsync().ContinueWith(task =>
 {
     if (task.Exception != null)
@@ -45,7 +45,7 @@ PerformOperationAsync().ContinueWith(task =>
 ```
 
 **Using Task.WhenAny: Useful for handling exceptions from multiple tasks.**
-```csharp
+```typescript
 var task = PerformOperationAsync();
 await Task.WhenAny(task); // Wait for task to complete
 
@@ -57,7 +57,7 @@ if (task.IsFaulted)
 ```
 
 **Here is an example demonstrating handling exceptions for a method that returns a Task:**
-```csharp
+```typescript
 public async Task<int> DivideAsync(int numerator, int denominator)
 {
     return await Task.Run(() =>

@@ -1,15 +1,15 @@
 <div class="layout">
-    <app-sidebar></app-sidebar>
+    <app-sidebar [isOpen]="isOpen" (sidebarToggle)="toggleSidebar()"></app-sidebar>
     <main>
         <div class="router-container">
-          <!-- {isMobile && (
-            <button
-              onClick={toggleSidebar}
-              className="mb-4 p-2 bg-white rounded shadow text-gray-700 hover:bg-gray-100"
-            >
-              {sidebarOpen ? "Close Menu" : "Open Menu"}
-            </button>
-          )} -->
+          @if(isOpen === false){
+            <div class="mobile-only">
+              <div (click)="toggleSidebar()" class="toggle-button">
+                Open
+              </div>
+            </div>
+          }
+
           <router-outlet></router-outlet>
         </div>
     </main>

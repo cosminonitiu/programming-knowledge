@@ -21,7 +21,7 @@ When multiple threads need to coordinate their work, they must communicate. In C
 
 A simple way to communicate is by **sharing variables**—but you must synchronize access to these variables. Otherwise, you risk **race conditions**.
 
-```csharp
+```typescript
 private static bool _isDataAvailable = false;
 private static readonly object _lock = new object();
 
@@ -55,7 +55,7 @@ Both producer and consumer threads lock on the same object to ensure one thread 
 **2. Monitor Methods: Wait / Pulse**
 The Monitor class (used by the lock keyword) offers built-in methods like Wait, Pulse, and PulseAll to handle complex coordination. This is common in producer-consumer scenarios.
 
-```csharp
+```typescript
 private static readonly object _locker = new object();
 private static Queue<int> _queue = new Queue<int>();
 
@@ -108,7 +108,7 @@ When signaled, it reacquires the lock and continues where it left off.
 **3. Signaling with Events**
 AutoResetEvent or ManualResetEvent are mechanisms for one thread to signal one or more waiting threads that a condition has occurred:
 
-```csharp
+```typescript
 static AutoResetEvent _autoEvent = new AutoResetEvent(false);
 
 static void WaitingThread()
@@ -134,7 +134,7 @@ ManualResetEvent stays signaled until you manually call Reset(), potentially rel
 **4. Thread-Safe Collections**
 Sometimes the simplest way to communicate is via collections designed for concurrency, such as ConcurrentQueue<T>, BlockingCollection<T>, or other System.Collections.Concurrent types.
 
-```csharp
+```typescript
 using System.Collections.Concurrent;
 
 static ConcurrentQueue<int> _safeQueue = new ConcurrentQueue<int>();

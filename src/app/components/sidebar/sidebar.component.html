@@ -3,9 +3,11 @@
     <h1 [ngClass]="[isOpen ? 'open' : 'close']">
       <span class="blue-to-purple-text">DevKnowledge</span>
     </h1>
-    <button (click)="toggleSidebar()" hover-class="text-white" class="text-sidebar-foreground">
-      {{ isOpen ? '×' : '☰' }}
-    </button>
+    <div class="mobile-only">
+      <div (click)="toggleSidebar()" hover-class="text-white" class="text-sidebar-foreground cursor-pointer">
+        {{ isOpen ? '×' : '☰' }}
+      </div>
+    </div>
   </div>
 
   <nav>

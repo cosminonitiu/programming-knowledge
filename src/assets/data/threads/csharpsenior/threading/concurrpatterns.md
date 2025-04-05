@@ -15,7 +15,7 @@ Concurrency patterns are high-level approaches or “blueprints” that help str
 
 ### Example with `BlockingCollection<T>`
 
-```csharp
+```typescript
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
@@ -78,7 +78,7 @@ Simplifies large tasks by breaking them into smaller, reusable components.
 **Conceptual Example**
 
 RawData -> [ Stage1: Parse ] -> ParsedData -> [ Stage2: Transform ] -> TransformedData -> [ Stage3: Write ] -> ...
-```csharp
+```typescript
 // Pseudocode for Pipeline with TPL Dataflow
 using System;
 using System.Threading.Tasks;
@@ -138,7 +138,7 @@ Allows you to exploit multiple CPU cores or threads to speed up processing for C
 Aggregation can simplify combining partial results.
 
 **Example with Parallel.Invoke**
-```csharp
+```typescript
 using System;
 using System.Threading.Tasks;
 
@@ -170,7 +170,7 @@ A single writer can exclusively update data without interference.
 Efficient when reads are more frequent than writes (which is common in many applications).
 
 **Example with ReaderWriterLockSlim**
-```csharp
+```typescript
 using System;
 using System.Threading;
 
@@ -223,7 +223,7 @@ Eliminates shared state, reducing or removing the need for locks.
 Scales well in distributed systems (e.g., Akka.NET).
 
 Example (Conceptual)
-```csharp
+```typescript
 // Pseudocode, using Akka.NET for example
 public class MyActor : ReceiveActor
 {
@@ -259,7 +259,7 @@ Eliminates concurrency issues around mutable state.
 
 Particularly useful in functional programming paradigms and high-concurrency scenarios.
 
-```csharp
+```typescript
 // Immutable record in C# 9+
 public record Person(string Name, int Age);
 
@@ -283,7 +283,7 @@ However, can lead to higher memory usage due to extra allocations.
 **7. Async/Await Pattern**
 Though not always called a “pattern,” async/await is a programming model in C# that drastically simplifies asynchronous code:
 
-```csharp
+```typescript
 public class AsyncAwaitExample
 {
     public static async Task RunAsync()

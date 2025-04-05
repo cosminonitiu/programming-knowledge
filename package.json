@@ -28,6 +28,7 @@
     "lucide-angular": "^0.487.0",
     "marked": "^15.0.7",
     "mermaid": "^11.6.0",
+    "ngx-device-detector": "^9.0.0",
     "ngx-markdown": "^19.1.1",
     "postcss": "^8.5.3",
     "prismjs": "^1.30.0",

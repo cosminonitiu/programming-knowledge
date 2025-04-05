@@ -10,15 +10,6 @@
             <lucide-angular [img]="ArrowLeft" [size]="20"></lucide-angular>
             <div>Back to {{topic.title}}</div>
         </div>
-        <div class="navigation-container">
-            <span class="cursor-pointer" (click)="categoryClick()">{{category.name}}</span>
-            <span>/</span>
-            <span class="cursor-pointer" (click)="subcategoryClick()">{{subcategory.name}}</span>
-            <span>/</span>
-            <span class="cursor-pointer" (click)="topicClick()">{{topic.title}}</span>
-            <span>/</span>
-            <span class="current">{{thread.title}}</span>
-        </div>
     </div>
     <div class="scroll-wrapper">
         @if(loadingDone === true){

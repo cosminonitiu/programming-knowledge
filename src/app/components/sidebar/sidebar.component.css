@@ -44,6 +44,9 @@
 .sidebar .header h1 span { 
     background-clip: text; 
 }
+.sidebar .header .mobile-only {
+    display: block;
+}
 
 .sidebar nav {
     padding: 0.5rem; 
@@ -128,7 +131,7 @@
     .sidebar .header h1.close {
         opacity: 1; 
     }
-    .sidebar .header button {
+    .sidebar .header .mobile-only {
         display: none;
     }
     .sidebar nav .main-list li .sidebar-button .category-name.close {

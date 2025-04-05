@@ -86,6 +86,10 @@
     line-height: 1.25rem; 
     color: #6B7280; 
 }
+.scroll-container {
+    height: 82vh;
+    overflow-y: scroll;
+}
 
 
 @media (min-width: 768px) { 

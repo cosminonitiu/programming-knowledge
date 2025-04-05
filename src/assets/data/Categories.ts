@@ -8,17 +8,11 @@ export const categories_mock: Category[] = [
       icon: BookIcon,
       subcategories: [
         {
-          id: "react",
-          name: "React",
-          description: "A JavaScript library for building user interfaces",
+          id: "generalfrontend",
+          name: "General Frontend",
+          description: "General Native Frontend Concepts",
           topics: []
-        },
-        {
-          id: "css",
-          name: "CSS",
-          description: "Cascading Style Sheets for web design",
-          topics: []
-        },
+        }
       ],
     },
     {
@@ -1494,14 +1488,356 @@ export const categories_mock: Category[] = [
           id: "docker",
           name: "Docker",
           description: "Platform for developing, shipping, and running applications",
-          topics: []
+          topics: [
+            {
+              id: "dockerintroduction",
+              title: "Baiscs of Docker",
+              description: "Introduction, Components and running your first container",
+              threads: [
+                {
+                  id: "introduction",
+                  title: "Introduction to Docker and Containerization",
+                  contentPreview: "Docker is a platform that enables you to build, ship, and run applications in lightweight, isolated environments called containers. It abstracts the underlying infrastructure, allowing developers to focus on writing code without worrying about deployment environments.",
+                  contentPath: "docker/dockerintroduction/introduction"
+                },
+                {
+                  id: "dockerarchi",
+                  title: "Understanding Docker Architecture",
+                  contentPreview: "",
+                  contentPath: "docker/dockerintroduction/dockerarchi"
+                },
+                {
+                  id: "installing",
+                  title: "Installing Docker",
+                  contentPreview: "",
+                  contentPath: "docker/dockerintroduction/installing"
+                },
+                {
+                  id: "basiccommands",
+                  title: "Basic Docker Commands",
+                  contentPreview: "",
+                  contentPath: "docker/dockerintroduction/basiccommands"
+                },
+                {
+                  id: "buildimage",
+                  title: "Building Docker Images with Dockerfile",
+                  contentPreview: "A Dockerfile consists of a set of instructions that Docker reads sequentially to build an image. Each instruction creates a new layer in the image, which makes it easier to cache and update parts of the build process.",
+                  contentPath: "docker/dockerintroduction/buildimage"
+                },
+                {
+                  id: "workwithcontainer",
+                  title: "Working with Docker Containers",
+                  contentPreview: "A Docker container is an isolated runtime environment that encapsulates your application and its dependencies, ensuring consistency across development, testing, and production environments.",
+                  contentPath: "docker/dockerintroduction/workwithcontainer"
+                },
+                {
+                  id: "networkbasics",
+                  title: "Docker Networking Basics",
+                  contentPreview: "Docker uses different network drivers to provide various connectivity options. ",
+                  contentPath: "docker/dockerintroduction/networkbasics"
+                }
+              ]
+            },
+            {
+              id: "dockeradvanced",
+              title: "Docker Advanced",
+              description: "Docker's role in Infrastructures, Kubernetes and Networking",
+              threads: [
+                {
+                  id: "multicontainer",
+                  title: "Docker Compose for Multi-Container Applications",
+                  contentPreview: "Docker Compose allows you to define multiple containers and their configurations in a single YAML file (docker-compose.yml). This file specifies how containers interact, share networks, and manage persistent data.",
+                  contentPath: "docker/dockeradvanced/multicontainer"
+                },
+                {
+                  id: "registries",
+                  title: "Docker Registries and Image Management",
+                  contentPreview: "A Docker registry is a storage and distribution system for Docker images. It allows you to store, share, and manage container images, enabling collaboration and deployment across different environments.",
+                  contentPath: "docker/dockeradvanced/registries"
+                },
+                {
+                  id: "advanceddockerfile",
+                  title: "Advanced Dockerfile Techniques",
+                  contentPreview: "Multistage, build cache and image size",
+                  contentPath: "docker/dockeradvanced/advanceddockerfile"
+                },
+                {
+                  id: "debugcontainer",
+                  title: "Debugging and Troubleshooting Containers",
+                  contentPreview: "",
+                  contentPath: "docker/dockeradvanced/debugcontainer"
+                },
+                {
+                  id: "volumespersistence",
+                  title: "Docker Volumes and Data Persistence",
+                  contentPreview: "Docker volumes provide persistent storage for containers. Unlike container file systems, volumes exist outside the lifecycle of individual containers and can be shared among multiple containers.",
+                  contentPath: "docker/dockeradvanced/volumespersistence"
+                },
+                {
+                  id: "securitypractices",
+                  title: "Security Best Practices in Docker",
+                  contentPreview: "",
+                  contentPath: "docker/dockeradvanced/securitypractices"
+                },
+                {
+                  id: "orchestrationswarm",
+                  title: "Container Orchestration with Docker Swarm",
+                  contentPreview: "Docker Swarm is a container orchestration tool that allows you to manage a cluster of Docker engines, called a swarm, as a single virtual system. It provides built-in clustering, service discovery, and load balancing for containers.",
+                  contentPath: "docker/dockeradvanced/orchestrationswarm"
+                },
+                {
+                  id: "kubedocker",
+                  title: "Introduction to Kubernetes",
+                  contentPreview: "Kubernetes, often abbreviated as K8s, is a container orchestration system that manages clusters of containerized applications. It was originally developed by Google and is now maintained by the Cloud Native Computing Foundation (CNCF).",
+                  contentPath: "docker/dockeradvanced/kubedocker"
+                },
+                {
+                  id: "kubeorche",
+                  title: "Advanced Kubernetes Orchestration",
+                  contentPreview: "",
+                  contentPath: "docker/dockeradvanced/kubeorche"
+                },
+                {
+                  id: "cicddocker",
+                  title: "CI/CD Integration with Docker",
+                  contentPreview: "Automate the build and testing process every time code changes are committed. Docker ensures that your application runs consistently across development, testing, and production environments by packaging it into a container.",
+                  contentPath: "docker/dockeradvanced/cicddocker"
+                },
+                {
+                  id: "performdocker",
+                  title: "Performance Optimization and Resource Management",
+                  contentPreview: "",
+                  contentPath: "docker/dockeradvanced/performdocker"
+                },
+                {
+                  id: "advanceddockernetwork",
+                  title: "Advanced Docker Networking",
+                  contentPreview: "",
+                  contentPath: "docker/dockeradvanced/advanceddockernetwork"
+                },
+                {
+                  id: "dockersecurity",
+                  title: "Docker Security and Compliance",
+                  contentPreview: "",
+                  contentPath: "docker/dockeradvanced/dockersecurity"
+                },
+                {
+                  id: "multiclouddocker",
+                  title: "Multi-Cloud and Hybrid Deployments with Docker",
+                  contentPreview: "Deploying containerized applications across two or more public cloud providers (e.g., AWS, Azure, GCP) to achieve redundancy, performance optimization, and vendor diversification.",
+                  contentPath: "docker/dockeradvanced/multiclouddocker"
+                },
+                {
+                  id: "dockerenterprise",
+                  title: "Docker Enterprise Solutions and Management Tools",
+                  contentPreview: "Docker Enterprise is a comprehensive container management platform designed for large-scale, production environments. It provides a secure and robust framework for building, deploying, and managing containers across clusters.",
+                  contentPath: "docker/dockeradvanced/dockerenterprise"
+                }
+              ]
+            }
+          ]
         },
         {
           id: "kubernetes",
           name: "Kubernetes",
           description: "Container orchestration system for automating deployment",
-          topics: []
+          topics: [
+            {
+              id: "baseresources",
+              title: "Overview and Built-in Resources",
+              description: "Get started with kubernetes",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Overview",
+                  contentPreview: "",
+                  contentPath: "kubernetes/baseresources/overview"
+                },
+                {
+                  id: "standardinterfaces",
+                  title: "Standard Interfaces",
+                  contentPreview: "",
+                  contentPath: "kubernetes/baseresources/standardinterfaces"
+                },
+                {
+                  id: "testenv",
+                  title: "Setting Up a Test Environment",
+                  contentPreview: "",
+                  contentPath: "kubernetes/baseresources/testenv"
+                },
+                {
+                  id: "builtinresources",
+                  title: "Built-in Kubernetes Resources",
+                  contentPreview: "",
+                  contentPath: "kubernetes/baseresources/builtinresources"
+                }
+              ]
+            },
+            {
+              id: "helm",
+              title: "Helm and Helm Charts",
+              description: "De-facto standard for distributing software for Kube Combination of: Package Manager and Template Engine",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Overview of Helm",
+                  contentPreview: "",
+                  contentPath: "kubernetes/helm/overview"
+                }
+              ]
+            }
+          ]
         },
+        {
+          id: "terraform",
+          name: "Terraform",
+          description: "Most popular Infrastructure as Code platform",
+          topics: [
+            {
+              id: "introduction",
+              title: "Introduction to Terraform",
+              description: "",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Overview",
+                  contentPreview: "",
+                  contentPath: "terraform/introduction/overview"
+                },
+                {
+                  id: "usage",
+                  title: "Usage",
+                  contentPreview: "",
+                  contentPath: "terraform/introduction/usage"
+                },
+                {
+                  id: "variables",
+                  title: "Variables",
+                  contentPreview: "",
+                  contentPath: "terraform/introduction/variables"
+                },
+                {
+                  id: "projectorg",
+                  title: "Project Organization + Modules",
+                  contentPreview: "",
+                  contentPath: "terraform/introduction/projectorg"
+                },
+                {
+                  id: "testterra",
+                  title: "Testing Terraform Code",
+                  contentPreview: "",
+                  contentPath: "terraform/introduction/testterra"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "grpc",
+          name: "gRPC",
+          description: "gRPC is a modern, high-performance framework for Remote Procedure Calls (RPCs). It allows programs to communicate with each other as if they were calling local functions, even when they run on different machines",
+          topics: [
+            {
+              id: "beginnergrpc",
+              title: "gRPC Beginner - Introduction, Protobuf, vs REST",
+              description: "",
+              threads: [
+                {
+                  id: "whatisgrpc",
+                  title: "What is gRPC?",
+                  contentPreview: "gRPC is a modern, high-performance framework for Remote Procedure Calls (RPCs). It allows programs to communicate with each other as if they were calling local functions, even when they run on different machines. ",
+                  contentPath: "grpc/beginnergrpc/whatisgrpc"
+                },
+                {
+                  id: "protobuf",
+                  title: "Understanding Protocol Buffers (Protobuf)",
+                  contentPreview: "Protocol Buffers are a language-neutral, platform-neutral way of encoding structured data into a compact binary format.",
+                  contentPath: "grpc/beginnergrpc/protobuf"
+                },
+                {
+                  id: "vsrest",
+                  title: "gRPC vs. REST",
+                  contentPreview: "Both gRPC and REST are popular approaches for enabling communication between services, but they have fundamental differences in design, performance, and use cases.",
+                  contentPath: "grpc/beginnergrpc/vsrest"
+                }
+              ]
+            },
+            {
+              id: "intermediategrpc",
+              title: "gRPC Intermediate - Services, Clients",
+              description: "",
+              threads: [
+                {
+                  id: "servicedef",
+                  title: "Service Definition and Stubs",
+                  contentPreview: "In gRPC, the service definition and stubs are at the heart of how clients and servers communicate. This section explains how to define a service using Protocol Buffers, generate code stubs, and use these stubs in your application.",
+                  contentPath: "grpc/intermediategrpc/servicedef"
+                },
+                {
+                  id: "servicetypes",
+                  title: "gRPC Service Types",
+                  contentPreview: "gRPC supports various service types that allow you to choose the communication pattern that best suits your application's needs.",
+                  contentPath: "grpc/intermediategrpc/servicetypes"
+                },
+                {
+                  id: "defineservice",
+                  title: "Building a Basic gRPC Service in .NET",
+                  contentPreview: "Building a basic gRPC service in .NET is straightforward, thanks to built-in templates and tools.",
+                  contentPath: "grpc/intermediategrpc/defineservice"
+                },
+                {
+                  id: "grpcnet",
+                  title: "gRPC Client in .NET",
+                  contentPreview: "A gRPC client in .NET is used to call remote methods defined in a gRPC service. Once you have a running gRPC service and generated client code from your .proto definitions, creating a client is straightforward. ",
+                  contentPath: "grpc/intermediategrpc/grpcnet"
+                }
+              ]
+            },
+            {
+              id: "advancedgrpc",
+              title: "gRPC Advanced - Streaming, Error handling, Integration, Security",
+              description: "",
+              threads: [
+                {
+                  id: "streampatterns",
+                  title: "Streaming Advanced Patterns",
+                  contentPreview: "Advanced streaming patterns in gRPC build upon the basic streaming models by addressing challenges such as flow control, error handling, backpressure, and efficient resource management. ",
+                  contentPath: "grpc/advancedgrpc/streampatterns"
+                },
+                {
+                  id: "grpcmiddleware",
+                  title: "Interceptors and Middleware",
+                  contentPreview: "In gRPC, interceptors can be applied on both the client and server sides to perform tasks like logging, authentication, monitoring, or modifying requests/responses.",
+                  contentPath: "grpc/advancedgrpc/grpcmiddleware"
+                },
+                {
+                  id: "grpcerrorhandle",
+                  title: "Error Handling and Status Codes",
+                  contentPreview: "Error handling in gRPC is built into the protocol itself, providing a standardized way to report and manage errors across client-server boundaries. ",
+                  contentPath: "grpc/advancedgrpc/grpcerrorhandle"
+                },
+                {
+                  id: "grpcsecurity",
+                  title: "Security and Authentication",
+                  contentPreview: "Securing gRPC communication is essential in production environments. gRPC offers robust security mechanisms primarily through TLS for transport security and various approaches for authentication. Below is a comprehensive guide on securing gRPC services.",
+                  contentPath: "grpc/advancedgrpc/grpcsecurity"
+                },
+                {
+                  id: "grpcdapr",
+                  title: "Integrating gRPC with Dapr",
+                  contentPreview: "Integrating gRPC with Dapr allows you to leverage both the high-performance, strongly-typed communication offered by gRPC and Dapr’s powerful abstractions for service invocation, state management, and observability in microservices architectures.",
+                  contentPath: "grpc/advancedgrpc/grpcdapr"
+                },
+                {
+                  id: "grpckubeazure",
+                  title: "Advanced gRPC in Kubernetes & Azure",
+                  contentPreview: "Deploying gRPC services in production often means dealing with challenges like scalability, security, observability, and integration with cloud-native features. ",
+                  contentPath: "grpc/advancedgrpc/grpckubeazure"
+                }
+              ]
+            }
+          ]
+        }
       ],
     },
     {
@@ -1529,17 +1865,199 @@ export const categories_mock: Category[] = [
       icon: Database,
       subcategories: [
         {
-          id: "mysql",
-          name: "MySQL",
-          description: "Open-source relational database management system",
-          topics: []
+          id: "efcore",
+          name: "EF Core",
+          description: "Entity Framework Core ORM",
+          topics: [
+            {
+              id: "fundamentals",
+              title: "Fundamentals and Core Concepts",
+              description: "Introduction and Key Components",
+              threads: [
+                {
+                  id: "introduction",
+                  title: "Introduction to EF Core",
+                  contentPreview: "EF Core (Entity Framework Core) is a modern, lightweight, and cross-platform Object-Relational Mapper (ORM) for .NET. It enables developers to work with databases using .NET objects, abstracting away much of the boilerplate code associated with database access.",
+                  contentPath: "efcore/fundamentals/introduction"
+                },
+                {
+                  id: "dbcontext",
+                  title: "DbContext and DbSet",
+                  contentPreview: "Understanding DbContext and DbSet<T> is central to effectively using EF Core. These components are the backbone of the EF Core data access layer.",
+                  contentPath: "efcore/fundamentals/dbcontext"
+                },
+                {
+                  id: "entitymodelling",
+                  title: "Entity Modeling",
+                  contentPreview: "Entity modeling is at the core of using EF Core effectively. It involves defining your domain classes (entities) and how they relate to each other, as well as configuring how these entities map to the database schema.",
+                  contentPath: "efcore/fundamentals/entitymodelling"
+                },
+                {
+                  id: "changetracking",
+                  title: "Change Tracking",
+                  contentPreview: "Change tracking is a core feature of EF Core that automatically detects modifications made to entities retrieved from the database. This mechanism allows EF Core to determine what changes need to be persisted when you call SaveChanges(), without requiring you to manually specify the state of each entity.",
+                  contentPath: "efcore/fundamentals/changetracking"
+                }
+              ]
+            },
+            {
+              id: "underhood",
+              title: "Under-the-Hood Mechanisms",
+              description: "SQL Generation, Transactions and LINQ",
+              threads: [
+                {
+                  id: "querytranslation",
+                  title: "Query Translation and Execution Pipeline",
+                  contentPreview: "EF Core transforms your LINQ queries into SQL statements through a multi-step process that involves parsing expression trees, compiling queries, and executing them efficiently. This pipeline is crucial for bridging the gap between the high-level abstraction of LINQ and the underlying relational database.",
+                  contentPath: "efcore/underhood/querytranslation"
+                },
+                {
+                  id: "sqlgen",
+                  title: "SQL Generation",
+                  contentPreview: "EF Core’s SQL generation process is a critical part of how your LINQ queries are transformed into efficient SQL commands that run against your database. This process involves several steps, from translating expression trees to applying optimizations and finally logging the generated SQL for debugging purposes.",
+                  contentPath: "efcore/underhood/sqlgen"
+                },
+                {
+                  id: "cachingcompile",
+                  title: "Caching and Compiled Queries",
+                  contentPreview: "EF Core employs several caching mechanisms and compiled query strategies to enhance performance by reducing the overhead associated with query translation and execution. This section explores these techniques in depth.",
+                  contentPath: "efcore/underhood/cachingcompile"
+                },
+                {
+                  id: "transacmanage",
+                  title: "Concurrency and Transaction Management",
+                  contentPreview: "EF Core provides robust support for handling concurrency and transactions. Understanding these mechanisms is key to ensuring data consistency and integrity, especially in high-load or distributed systems.",
+                  contentPath: "efcore/underhood/transacmanage"
+                }
+              ]
+            },
+            {
+              id: "advanced",
+              title: "Advanced Features and Customizations",
+              description: "Advanced Queries, Diagnostics, Providers and Testing",
+              threads: [
+                {
+                  id: "migrations",
+                  title: "Migrations and Model Snapshots",
+                  contentPreview: "EF Core migrations provide a systematic way to evolve your database schema as your model changes over time. They enable you to update your database in a controlled manner while keeping track of historical changes and supporting deployment strategies that minimize downtime.",
+                  contentPath: "efcore/advanced/migrations"
+                },
+                {
+                  id: "advancequery",
+                  title: "Advanced Querying",
+                  contentPreview: "Advanced querying in EF Core covers several techniques for retrieving data in complex scenarios. This includes executing raw SQL commands, calling stored procedures, using interpolated SQL, writing complex LINQ queries and projections, and addressing common performance pitfalls like N+1 query issues through query splitting.",
+                  contentPath: "efcore/advanced/advancequery"
+                },
+                {
+                  id: "interceptor",
+                  title: "Interceptors and Diagnostics",
+                  contentPreview: "EF Core provides powerful mechanisms to inspect, log, and modify the behavior of database operations through interceptors and diagnostics. These features allow you to capture detailed information about queries, commands, and other operations, and integrate with external monitoring systems like Application Insights.",
+                  contentPath: "efcore/advanced/interceptor"
+                },
+                {
+                  id: "providerexte",
+                  title: "Provider Extensibility",
+                  contentPreview: "EF Core is designed with extensibility in mind, allowing developers to support a variety of databases through providers. Providers are libraries that implement EF Core’s abstractions for a specific database system. ",
+                  contentPath: "efcore/advanced/providerexte"
+                },
+                {
+                  id: "testingefcore",
+                  title: "Testing with EF Core",
+                  contentPreview: "Testing data access code is crucial to ensure your application behaves as expected, and EF Core provides several strategies to support effective testing. Here we discuss different testing approaches and best practices for working with DbContext in tests.",
+                  contentPath: "efcore/advanced/testingefcore"
+                }
+              ]
+            },
+            {
+              id: "performance",
+              title: "Edge Scenarios and Performance Tuning",
+              description: "Using EF Core in High Performance Low Latency Scenarios",
+              threads: [
+                {
+                  id: "bulkoperations",
+                  title: "Bulk Operations and Batch Processing",
+                  contentPreview: "When working with large volumes of data, performing bulk operations (inserts, updates, and deletes) efficiently is critical. EF Core’s default behavior issues individual SQL commands for each entity operation, which can lead to performance bottlenecks.",
+                  contentPath: "efcore/performance/bulkoperations"
+                },
+                {
+                  id: "handlelargedata",
+                  title: "Handling Large Data Volumes",
+                  contentPreview: "Working with large datasets requires careful design to ensure efficient data retrieval and minimal memory overhead. EF Core offers several techniques to handle such scenarios, including pagination, streaming, and performance tuning.",
+                  contentPath: "efcore/performance/handlelargedata"
+                },
+                {
+                  id: "concurrency",
+                  title: "Concurrency in Distributed Systems",
+                  contentPreview: "Handling concurrency in distributed systems is challenging due to the possibility of multiple users or services modifying the same data simultaneously. ",
+                  contentPath: "efcore/performance/concurrency"
+                },
+                {
+                  id: "advancedconnection",
+                  title: "Advanced Connection and Resiliency Strategies",
+                  contentPreview: "When building robust applications, it's essential to design data access layers that gracefully handle connectivity issues and transient faults. EF Core provides several built-in features, and you can also integrate with external libraries like Polly to enhance resiliency.",
+                  contentPath: "efcore/performance/advancedconnection"
+                },
+                {
+                  id: "custombehavior",
+                  title: "Customizing EF Core Behavior",
+                  contentPreview: "EF Core is highly extensible, allowing you to tailor its default behavior to suit your application's specific needs. This customization can be achieved by overriding default conventions, using advanced Fluent API configurations, and extending EF Core with your own custom logic.",
+                  contentPath: "efcore/performance/custombehavior"
+                }
+              ]
+            },
+            {
+              id: "efcoremicros",
+              title: "EF Core in Microservices and Cloud Environments",
+              description: "Patterns and Usage in a Microservices Environment",
+              threads: [
+                {
+                  id: "patterns",
+                  title: "Patterns for Microservices",
+                  contentPreview: "In a microservices architecture, data management is decentralized, and each service typically operates within its own bounded context. EF Core plays a crucial role in this environment by providing an ORM that can be tailored to each microservice’s domain. ",
+                  contentPath: "efcore/efcoremicros/patterns"
+                }
+              ]
+            }
+          ]
         },
         {
-          id: "postgresql",
-          name: "PostgreSQL",
-          description: "Advanced open-source relational database",
-          topics: []
-        },
+          id: 'query',
+          name: 'Querying in Depth',
+          description: 'Optimizations, transactions, analyzers of data retrieval',
+          topics: [
+            {
+              id: "optimization",
+              title: "Query Optimization",
+              description: "",
+              threads: [
+                {
+                  id: "optimizing",
+                  title: "Optimizing Queries",
+                  contentPreview: "Optimizing SQL queries involving multiple table joins and filtering is crucial for improving database performance. Poorly optimized queries can lead to slow response times, high resource usage, and scalability issues. Below are strategies and best practices for optimizing such queries.",
+                  contentPath: "query/optimization/optimizing"
+                },
+                {
+                  id: "transactionisolation",
+                  title: "Transaction Isolation",
+                  contentPreview: "Transaction isolation is a critical concept in database management systems (DBMS) that determines how transactions interact with each other and how changes made by one transaction are visible to others. Proper isolation ensures data integrity and consistency while balancing performance and concurrency.",
+                  contentPath: "query/optimization/transactionisolation"
+                },
+                {
+                  id: "optimizingretrieval",
+                  title: "Optimizing Data Retrieval",
+                  contentPreview: "When dealing with large datasets (e.g., millions of records), it's crucial to optimize data retrieval and processing to ensure performance, scalability, and memory efficiency. Two key techniques for handling such datasets are pagination and yield return.",
+                  contentPath: "query/optimization/optimizingretrieval"
+                },
+                {
+                  id: "queryanalyzer",
+                  title: "Query Analyzers",
+                  contentPreview: "Query analyzers are tools or features provided by database management systems (DBMS) to help developers and database administrators (DBAs) understand and optimize the performance of SQL queries. ",
+                  contentPath: "query/optimization/queryanalyzer"
+                }
+              ]
+            }
+          ]
+        }
       ],
     },
   ];

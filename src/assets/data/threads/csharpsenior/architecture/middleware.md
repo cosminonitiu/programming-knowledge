@@ -24,7 +24,7 @@ c. **Map Method**
 Branches the middleware pipeline based on the request path.
 
 **Example**
-```csharp
+```typescript
 public class CustomMiddleware
 {
     private readonly RequestDelegate _next;

@@ -28,7 +28,7 @@ A **thread** is the smallest unit of execution that an operating system can sche
 
 You can create and start a new thread in C# using the `Thread` class from `System.Threading`:
 
-```csharp
+```typescript
 using System;
 using System.Threading;
 

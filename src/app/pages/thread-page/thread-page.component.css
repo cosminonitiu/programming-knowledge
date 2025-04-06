@@ -8,8 +8,8 @@ blockquote {
     display: block;
     line-height: 1.8;  
     padding-bottom: 3rem;
+    max-width: 50rem;
 }
-
 .not-found {
     padding-top: 5rem;
     padding-bottom: 5rem; 
@@ -49,11 +49,10 @@ blockquote {
     font-size: 1.875rem;
     line-height: 2.25rem; 
     font-weight: 700; 
-    color: #111827; 
 }
 .navigation p {
     margin-top: 0.5rem; 
-    color: #4B5563; 
+    color: var(--gray-500); 
 }
 
 .no-items {
@@ -62,5 +61,5 @@ blockquote {
     text-align: center; 
 }
 .no-items p {
-    color: #4B5563; 
+    color: var(--gray-500); 
 }

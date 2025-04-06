@@ -3,8 +3,9 @@ html, :host {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-feature-settings: normal!important;
+    font-optical-sizing: auto;
     font-variation-settings: normal!important;
     -webkit-tap-highlight-color: transparent!important;
 }

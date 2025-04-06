@@ -8,6 +8,7 @@ import { categories_mock } from '../../../assets/data/Categories';
 import { LucideAngularModule, ArrowLeft } from 'lucide-angular';
 import { MarkdownComponent  } from 'ngx-markdown';
 import { ThreadContentService } from '../../services/thread-content.service';
+import { SidebarContentStore } from '../../services/sidebar-content.store';
 
 @Component({
   selector: 'app-thread-page',
@@ -28,7 +29,8 @@ export class ThreadPageComponent {
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
-    private threadContentService: ThreadContentService
+    private threadContentService: ThreadContentService,
+    private sidebarContentStore: SidebarContentStore
   ) {
     this.route.params.subscribe(params => {
       this.categoryId = params['categoryId'];
@@ -48,6 +50,7 @@ export class ThreadPageComponent {
               const thread = topic.threads.find(t => t.id === this.threadId);
               if(thread) {
                 this.thread = thread;
+                this.sidebarContentStore.switchToThreadMode(category.id, subcategory.id, topic.id, topic.threads);
                 this.loadThreadContent(thread.contentPath);
               }
             }

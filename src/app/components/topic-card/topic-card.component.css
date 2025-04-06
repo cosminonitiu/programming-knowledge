@@ -25,4 +25,5 @@
 .subcard .body p {
     font-size: 0.875rem;
     line-height: 1.25rem; 
+    color: var(--gray-500); 
 }

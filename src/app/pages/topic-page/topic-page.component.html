@@ -6,18 +6,18 @@
 } @else {
     <div class="navigation ">
         <div class="navigation-container">
-          <span class="cursor-pointer" (click)="categoryClick()">{{category.name}}</span>
+          <span class="cursor-pointer" (click)="categoryClick()">Home</span>
           <span>/</span>
           <span class="cursor-pointer" (click)="subcategoryClick()">{{subcategory.name}}</span>
           <span>/</span>
           <span class="current">{{topic.title}}</span>
         </div>
-        <h1>{{subcategory.name}}</h1>
-        <p>{{subcategory.description}}</p>
+        <h1>{{topic.title}}</h1>
+        <p>{{topic.description}}</p>
     </div>
     <div class="scroll-container">
-        @if(threads.length > 0) {
-            <app-thread-grid [threads]="threads" [category]="category" [subcategory]="subcategory" [topic]="topic"></app-thread-grid>
+        @if(sidebarContentStore.currentThreads().length > 0) {
+            <app-thread-grid [threads]="sidebarContentStore.currentThreads()" [category]="category" [subcategory]="subcategory" [topic]="topic"></app-thread-grid>
         } @else {
             <div class="no-items">
                 <p>No threads available yet.</p>

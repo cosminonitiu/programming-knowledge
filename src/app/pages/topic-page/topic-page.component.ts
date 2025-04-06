@@ -6,6 +6,7 @@ import { Category } from '../../../shared/models/Category ';
 import { Subcategory } from '../../../shared/models/Subcategory';
 import { Topic } from '../../../shared/models/Topic';
 import { Thread } from '../../../shared/models/Thread';
+import { SidebarContentStore } from '../../services/sidebar-content.store';
 
 @Component({
   selector: 'app-topic-page',
@@ -20,9 +21,12 @@ export class TopicPageComponent {
   public category!: Category;
   public subcategory!: Subcategory;
   public topic!: Topic;
-  public threads: Thread[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router,
+    public sidebarContentStore: SidebarContentStore
+  ) {
     this.route.params.subscribe(params => {
       this.categoryId = params['categoryId'];
       this.subcategoryId = params['subcategoryId'];
@@ -37,7 +41,7 @@ export class TopicPageComponent {
             const topic = subcategory.topics.find(t => t.id === this.topicId);
             if(topic) {
               this.topic = topic;
-              this.threads = topic.threads;
+              this.sidebarContentStore.switchToThreadMode(category.id, subcategory.id, topic.id, topic.threads);
             }
           }
         }

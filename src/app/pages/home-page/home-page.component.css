@@ -8,7 +8,6 @@
     line-height: 2.5rem; 
     font-weight: 700; 
     letter-spacing: -0.025em; 
-    color: #111827; 
 }
 .home-page-header h1 span {
     background-clip: text; 
@@ -40,7 +39,6 @@
     margin-bottom: 0.5rem; 
     margin-top: 0.375rem; 
     flex-direction: column; 
-    color: #ffffff; 
 }
 .home-page-grid .card .card-header .card-header-container {
     display: flex; 
@@ -78,13 +76,12 @@
 }
 .home-page-grid .card .card-body ul li .subcategory-button .name {
     font-weight: 500; 
-    color: #111827; 
 }
 .home-page-grid .card .card-body ul li .subcategory-button .description {
     margin-top: 0.25rem; 
     font-size: 0.875rem;
     line-height: 1.25rem; 
-    color: #6B7280; 
+    color: var(--gray-500); 
 }
 .scroll-container {
     height: calc(100vh - 18rem);

@@ -1,10 +1,10 @@
-<div class="bg-sidebar text-sidebar-foreground sidebar" [ngClass]="[isOpen ? 'full' : 'semi']">
+<div class="sidebar" [ngClass]="[isOpen ? 'full' : 'semi']">
   <div class="header border-sidebar-border">
     <h1 [ngClass]="[isOpen ? 'open' : 'close']">
       <span class="blue-to-purple-text">DevKnowledge</span>
     </h1>
     <div class="mobile-only">
-      <div (click)="toggleSidebar()" hover-class="text-white" class="text-sidebar-foreground cursor-pointer">
+      <div (click)="toggleSidebar()" hover-class="text-white" class="cursor-pointer">
         {{ isOpen ? '×' : '☰' }}
       </div>
     </div>
@@ -12,38 +12,63 @@
 
   <nav>
     <ul class="main-list">
-      <li *ngFor="let category of categories">
-        <div (click)="toggleCategory(category.id)" class="sidebar-button cursor-pointer" [ngClass]="[expandedCategories[category.id] ? 'bg-sidebar-accent' : '']">
-          <span class="category-icon text-sidebar-foreground">
-            <lucide-angular [img]="category.icon" [size]="20"></lucide-angular>
-          </span>
-          <span class="category-name" [ngClass]="[isOpen ? 'open' : 'close']">
-            {{ category.name }}
-          </span>
-          <span class="category-controller" [ngClass]="[isOpen ? 'open' : 'close']">
-            <ng-container *ngIf="expandedCategories[category.id]; else chevronRight">
-                <lucide-angular [img]="ChevronDown" [size]="16"></lucide-angular>
-            </ng-container>
-            <ng-template #chevronRight>
-                <lucide-angular [img]="ChevronRight" [size]="16"></lucide-angular>
-            </ng-template>
-          </span>
-        </div>
-
-        <ul  *ngIf="expandedCategories[category.id] && isOpen"class="sub-list">
-          <li *ngFor="let subcategory of category.subcategories">
-            <div (click)="navigateToSubcategory(category.id, subcategory.id)" class="cursor-pointer sidebar-subtton"
-              [ngClass]="[
-                isActive('/' + category.id + '/' + subcategory.id)
-                  ? 'bg-sidebar-primary text-sidebar-primary-foreground'
-                  : ''
-              ]"
-            >
-              {{ subcategory.name }}
+      @if(sidebarConentStore.currentMode === "categories") {
+        @for(category of sidebarConentStore.currentCategories(); track category.id) {
+          <li>
+            <div (click)="toggleCategory(category.id)" class="sidebar-button cursor-pointer" [ngClass]="[expandedCategories[category.id] ? 'bg-sidebar-accent' : '']">
+              <span class="category-icon text-sidebar-foreground">
+                <lucide-angular [img]="category.icon" [size]="20"></lucide-angular>
+              </span>
+              <span class="category-name" [ngClass]="[isOpen ? 'open' : 'close']">
+                {{ category.name }}
+              </span>
+              <span class="category-controller" [ngClass]="[isOpen ? 'open' : 'close']">
+                <ng-container *ngIf="expandedCategories[category.id]; else chevronRight">
+                    <lucide-angular [img]="ChevronDown" [size]="16"></lucide-angular>
+                </ng-container>
+                <ng-template #chevronRight>
+                    <lucide-angular [img]="ChevronRight" [size]="16"></lucide-angular>
+                </ng-template>
+              </span>
+            </div>
+    
+            <ul  *ngIf="expandedCategories[category.id] && isOpen"class="sub-list">
+              <li *ngFor="let subcategory of category.subcategories">
+                <div (click)="navigateToSubcategory(category.id, subcategory.id)" class="cursor-pointer sidebar-subtton"
+                  [ngClass]="[
+                    isActive('/' + category.id + '/' + subcategory.id)
+                      ? 'bg-sidebar-primary text-sidebar-primary-foreground'
+                      : ''
+                  ]"
+                >
+                  {{ subcategory.name }}
+                </div>
+              </li>
+            </ul>
+          </li>
+        }
+        
+      } @else if(sidebarConentStore.currentMode === "topics") {
+        @for(topic of sidebarConentStore.currentTopics(); track topic.id) {
+          <li>
+            <div (click)="navigateToTopic(topic.id)" class="sidebar-button cursor-pointer">
+              <span class="topic-name">
+                {{ topic.title }}
+              </span>
             </div>
           </li>
-        </ul>
-      </li>
+        }
+      } @else if(sidebarConentStore.currentMode === "threads") {
+        @for(thread of sidebarConentStore.currentThreads(); track thread.id) {
+          <li>
+            <div (click)="navigateToThread(thread.id)" class="sidebar-button cursor-pointer">
+              <span class="topic-name" [ngClass]="[isActiveThread(thread.id) ? 'active' : '']">
+                {{ thread.title }}
+              </span>
+            </div>
+          </li>
+        }
+      }
     </ul>
   </nav>
 </div>

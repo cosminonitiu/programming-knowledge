@@ -11,7 +11,7 @@
 }
 .not-found p {
     margin-top: 1rem; 
-    color: #4B5563; 
+    color: var(--gray-500); 
 }
 
 .navigation {
@@ -28,17 +28,16 @@
 }
 .navigation .navigation-container .current{
     font-weight: 500; 
-    color: #374151; 
+    color: var(--primary-contrast); 
 }
 .navigation h1 {
     font-size: 1.875rem;
     line-height: 2.25rem; 
     font-weight: 700; 
-    color: #111827; 
 }
 .navigation p {
     margin-top: 0.5rem; 
-    color: #4B5563; 
+    color: var(--gray-500); 
 }
 
 .no-items {
@@ -47,7 +46,7 @@
     text-align: center; 
 }
 .no-items p {
-    color: #4B5563; 
+    color: var(--gray-500); 
 }
 .scroll-container {
     height: calc(100vh - 15rem);

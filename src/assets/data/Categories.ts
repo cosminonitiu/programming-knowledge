@@ -16,8 +16,28 @@ export const categories_mock: Category[] = [
         {
           id: "angular",
           name: "Angular",
-          description: "Angular 19 Udpated Knowledge",
+          description: "Angular 19 Updated Knowledge",
           topics: [
+            {
+              id: "components",
+              title: "Components",
+              description: "Angular Building Blocks",
+              threads: [
+                {
+                  id: "componentanatomy",
+                  title: "Anatomy of a component",
+                  contentPreview: "Metadata passed to the component and Basic Usage",
+                  contentPath: "angular/components/componentanatomy"
+                },
+                {
+                  id: "componentselectors",
+                  title: "Component Selectors",
+                  contentPreview: "Angular matches selectors statically at compile-time. Changing the DOM at run-time, either via Angular bindings or with DOM APIs, does not affect the components rendered.",
+                  contentPath: "angular/components/componentselectors"
+                },
+                
+              ]
+            },
             {
               id: "architecture",
               title: "Architecture",
@@ -28,12 +48,6 @@ export const categories_mock: Category[] = [
                   title: "NgModule",
                   contentPreview: "Basic aggregation of Angular components and imports",
                   contentPath: "angular/architecture/ngmodule"
-                },
-                {
-                  id: "loadflow",
-                  title: "Angular Loading Flow",
-                  contentPreview: "",
-                  contentPath: "angular/architecture/loadflow"
                 },
                 {
                   id: "entrypoint",
@@ -52,12 +66,6 @@ export const categories_mock: Category[] = [
                   title: "Eager and Lazy Loading",
                   contentPreview: "",
                   contentPath: "angular/architecture/eagerlazyloading"
-                },
-                {
-                  id: "resolvers",
-                  title: "Resolvers",
-                  contentPreview: "A resolver is a service that implements the Resolve<T> interface. It is used to retrieve data or perform computations prior to route activation.",
-                  contentPath: "angular/architecture/resolvers"
                 }
               ]
             },
@@ -71,18 +79,6 @@ export const categories_mock: Category[] = [
                   title: "What is Dependency Injection",
                   contentPreview: "Dependency Injection (DI) is a design pattern in Angular that allows objects (services, components, directives, etc.) to receive dependencies from an external source rather than creating them manually. This enhances modularity, maintainability, and testability.",
                   contentPath: "angular/dependencyinjection/whatisdi"
-                },
-                {
-                  id: "registerservice",
-                  title: "Registering Services in Angular",
-                  contentPreview: "Services must be registered before they can be injected. Angular provides different ways to do this.",
-                  contentPath: "angular/dependencyinjection/registerservice"
-                },
-                {
-                  id: "injectionhierarchy",
-                  title: "Injection Hierarchy",
-                  contentPreview: "",
-                  contentPath: "angular/dependencyinjection/injectionhierarchy"
                 },
                 {
                   id: "providers",
@@ -114,12 +110,6 @@ export const categories_mock: Category[] = [
                   title: "OnPush ",
                   contentPreview: "OnPush Strategy (Check Only When Inputs Change) Components only check for changes when input properties change (@Input()).",
                   contentPath: "angular/changedetection/onpush"
-                },
-                {
-                  id: "cdprocess",
-                  title: "The Change Detection Process",
-                  contentPreview: "",
-                  contentPath: "angular/changedetection/cdprocess"
                 },
                 {
                   id: "ngzone",
@@ -181,12 +171,6 @@ export const categories_mock: Category[] = [
                   title: "ViewChild",
                   contentPreview: "Both @ViewChild and @ViewChildren allow a component to query its view (the template) for elements, components, or directives.",
                   contentPath: "angular/basics/viewchild"
-                },
-                {
-                  id: "smartdumbcomp",
-                  title: "Smart and Dumb Components",
-                  contentPreview: "State vs stateless components",
-                  contentPath: "angular/basics/smartdumbcomp"
                 },
                 {
                   id: "asyncpipe",
@@ -339,25 +323,31 @@ export const categories_mock: Category[] = [
             {
               id: "signals",
               title: "Signals",
-              description: "New meta of Reactive Programming in Angular",
+              description: "Angular Signals is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize rendering updates.",
               threads: [
                 {
                   id: "signalintroduction",
                   title: "Introduction to Angular Signals",
-                  contentPreview: "",
+                  contentPreview: "A signal is a wrapper around a value that notifies interested consumers when that value changes. Signals can contain any value, from primitives to complex data structures.",
                   contentPath: "angular/signals/signalintroduction"
                 },
                 {
-                  id: "interactionwithcd",
-                  title: "Integrations with Angular Change Detection",
-                  contentPreview: "",
-                  contentPath: "angular/signals/interactionwithcd"
+                  id: "linkedsignal",
+                  title: "Dependent state with linkedSignal",
+                  contentPreview: "The linkedSignal function lets you create a signal to hold some state that is intrinsically linked to some other state. ",
+                  contentPath: "angular/signals/linkedsignal"
                 },
                 {
-                  id: "underhood",
-                  title: "Under the hood",
-                  contentPreview: "",
-                  contentPath: "angular/signals/underhood"
+                  id: "asyncreactivity",
+                  title: "Async reactivity with resources",
+                  contentPreview: "Most signal APIs are synchronous— signal, computed, input, etc. However, applications often need to deal with data that is available asynchronously. A Resource gives you a way to incorporate async data into your application's signal-based code.",
+                  contentPath: "angular/signals/asyncreactivity"
+                },
+                {
+                  id: "signalswithrxjs",
+                  title: "Using signals with RxJs",
+                  contentPreview: "The @angular/rxjs-interop package offers APIs that help you integrate RxJS and Angular signals.",
+                  contentPath: "angular/signals/signalswithrxjs"
                 }
               ]
             },

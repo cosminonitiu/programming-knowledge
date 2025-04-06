@@ -9,6 +9,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms; 
     transition-duration: 300ms; 
+    background-color: var(--gray-1000);
 }
 
 .sidebar.semi {
@@ -16,6 +17,7 @@
 }
 .sidebar.full {
     width: 16rem; 
+    border-right: 1px solid var(--gray-800);
 }
 
 .sidebar .header {
@@ -49,10 +51,10 @@
 }
 
 .sidebar nav {
-    padding: 0.5rem; 
+    padding: 1rem; 
 }
 .sidebar nav .main-list {
-    margin-top: 0.25rem; 
+    margin: 0.25rem 0 0 0; 
 }
 .sidebar nav .main-list li .sidebar-button {
     display: flex; 
@@ -69,6 +71,7 @@
 }
 .sidebar nav .main-list li .sidebar-button:hover {
     background-color: var(--sidebar-accent);
+    color: var(--primary-contrast)
 }
 
 .sidebar nav .main-list li .sidebar-button .category-icon { 
@@ -77,11 +80,28 @@
 .sidebar nav .main-list li .sidebar-button .category-name { 
     flex: 1 1 0%; 
     text-align: left; 
-    color: white;
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms; 
     transition-duration: 300ms; 
+    font-size: 0.9rem;
+    color: var(--primary-contrast);
+}
+.sidebar nav .main-list li .sidebar-button .topic-name {
+    flex: 1 1 0%; 
+    text-align: left; 
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; 
+    transition-duration: 300ms; 
+    font-size: 0.9rem;
+    color: var(--gray-400);
+}
+.sidebar nav .main-list li .sidebar-button .topic-name:hover {
+    color: var(--primary-contrast)
+}
+.sidebar nav .main-list li .sidebar-button .topic-name.active {
+    color: var(--primary-contrast)
 }
 .sidebar nav .main-list li .sidebar-button .category-name.open {
     opacity: 1;
@@ -91,7 +111,6 @@
 }
 .sidebar nav .main-list li .sidebar-button .category-controller {
     transition-property: opacity;
-    color: white;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms; 
     transition-duration: 300ms; 
@@ -110,6 +129,7 @@
 }
 .sidebar nav .main-list li .sub-list li .sidebar-subtton{
     padding: 0.5rem; 
+    font-size: 0.85rem;
     border-radius: 0.375rem; 
     width: 100%; 
     text-align: left; 

@@ -1,7 +1,8 @@
 .layout {
     display: flex; 
     min-height: 100vh; 
-    background-color: #F9FAFB; 
+    background-color: var(--gray-1000);
+    color: var(--primary-contrast);
 }
 .layout main {
     padding: 1.5rem; 

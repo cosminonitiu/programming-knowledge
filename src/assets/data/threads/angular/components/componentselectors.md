@@ -1,5 +1,5 @@
 ## Component selectors  
-Every component defines a CSS selector that determines how the component is used:  
+Every component defines a <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors" alt="CSS Selectors">CSS selector</a> that determines how the component is used:  
 ```typescript
 @Component({
   selector: 'profile-photo',
@@ -48,7 +48,7 @@ For attribute values, Angular supports matching an exact attribute value with th
 Angular component selectors do not support combinators, including the descendant combinator or child combinator.  
 <br>
 
-Angular component selectors do not support specifying namespaces.  
+Angular component selectors do not support specifying <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/Namespaces_crash_course" alt="Namespaces">namespaces</a>.  
 <br>
 
 ### The :not pseudo-class  
@@ -87,7 +87,7 @@ Angular creates a component for each element that matches any of the selectors i
 The vast majority of components should use a custom element name as their selector. All custom element names should include a hyphen as described by the HTML specification. By default, Angular reports an error if it encounters a custom tag name that does not match any available components, preventing bugs due to mistyped component names.  
 <br>
 
-See Advanced component configuration for details on using native custom elements in Angular templates.  
+See Advanced component configuration for details on using <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" alt="Native Custom Elements">native custom elements</a> in Angular templates.  
 <br>
 
 ### Selector prefixes  

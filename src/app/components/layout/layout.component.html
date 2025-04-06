@@ -1,11 +1,11 @@
 <div class="layout">
-    <app-sidebar [isOpen]="isOpen" (sidebarToggle)="toggleSidebar()"></app-sidebar>
+    <app-sidebar></app-sidebar>
     <main>
         <div class="router-container">
-          @if(isOpen === false){
+          @if(sidebarContentStore.isSidebarOpen() === false){
             <div class="mobile-only">
-              <div (click)="toggleSidebar()" class="toggle-button">
-                Open
+              <div (click)="sidebarContentStore.toggleSidebar()" class="toggle-button">
+                <lucide-angular [img]="ChevronRight" [size]="24"></lucide-angular>
               </div>
             </div>
           }

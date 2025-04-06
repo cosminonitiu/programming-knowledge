@@ -22,14 +22,6 @@ export class SidebarComponent {
   readonly ChevronDown = ChevronDown;
   readonly ChevronRight = ChevronRight;
 
-  @Input({required: true}) isOpen!: boolean;
-  @Output() sidebarToggle = new EventEmitter<boolean>(true);
-
-  toggleSidebar(): void {
-    this.isOpen = !this.isOpen;
-    this.sidebarToggle.next(this.isOpen);
-  }
-
   expandedCategories: { [key: string]: boolean } = {};
 
   toggleCategory(categoryId: string): void {
@@ -38,12 +30,14 @@ export class SidebarComponent {
 
   navigateToSubcategory(categoryId: string, subcategoryId: string): void {
     this.router.navigate([`/${categoryId}/${subcategoryId}`]);
+    this.sidebarConentStore.toggleSidebar()
   }
   navigateToTopic(topicId: string,): void {
     const categoryId = this.sidebarConentStore.currentCategoryId();
     const subcategoryId = this.sidebarConentStore.currentSubcategoryId();
     if(categoryId && subcategoryId){
       this.router.navigate([`/${categoryId}/${subcategoryId}/${topicId}`]);
+      this.sidebarConentStore.toggleSidebar()
     }
   }
   navigateToThread(threadId: string): void {
@@ -52,6 +46,7 @@ export class SidebarComponent {
     const topicId = this.sidebarConentStore.currentTopicId();
     if(categoryId && subcategoryId && topicId){
       this.router.navigate([`/${categoryId}/${subcategoryId}/${topicId}/${threadId}`]);
+      this.sidebarConentStore.toggleSidebar()
     }
   }
 

@@ -5,7 +5,7 @@ Every component must have:
 &nbsp;&nbsp;- A CSS selector that defines how the component is used in HTML  
 <br>
 
-You provide Angular-specific information for a component by adding a @Component decorator on top of the TypeScript class:  
+You provide Angular-specific information for a component by adding a @Component <a target="_blank" href="https://www.typescriptlang.org/docs/handbook/decorators.html" alt="Decorator Handbook">decorator</a> on top of the TypeScript class:  
 ```typescript
 @Component({
   selector: 'profile-photo',

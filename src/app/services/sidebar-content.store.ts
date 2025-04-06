@@ -18,6 +18,11 @@ export class SidebarContentStore {
 
     public currentMode = "categories";
 
+    public isSidebarOpen: WritableSignal<boolean> = signal(true);
+    toggleSidebar(): void {
+        this.isSidebarOpen.set(!this.isSidebarOpen());
+    }
+
     public switchToCategoryMode() {
         this.currentMode = "categories";
         this.currentCategories.set(categories_mock);

@@ -35,12 +35,580 @@ export const categories_mock: Category[] = [
                   contentPreview: "Angular matches selectors statically at compile-time. Changing the DOM at run-time, either via Angular bindings or with DOM APIs, does not affect the components rendered.",
                   contentPath: "angular/components/componentselectors"
                 },
-                
+                {
+                  id: "stylingcomponents",
+                  title: "Styling Components",
+                  contentPreview: "When Angular compiles your component, these styles are emitted with your component's JavaScript output. This means that component styles participate in the JavaScript module system.",
+                  contentPath: "angular/components/stylingcomponents"
+                },
+                {
+                  id: "inputproperties",
+                  title: "Accepting data with input properties",
+                  contentPreview: "When you use a component, you commonly want to pass some data to it. A component specifies the data that it accepts by declaring inputs",
+                  contentPath: "angular/components/inputproperties"
+                },
+                {
+                  id: "eventsoutputs",
+                  title: "Custom events with outputs",
+                  contentPreview: "Angular refers to properties initialized with the output function as outputs. You can use outputs to raise custom events, similar to native browser events like click.",
+                  contentPath: "angular/components/eventsoutputs"
+                },
+                {
+                  id: "ngcontent",
+                  title: "Content projection with ng-content",
+                  contentPreview: "You often need to create components that act as containers for different types of content. For example, you may want to create a custom card component:",
+                  contentPath: "angular/components/ngcontent"
+                },
+                {
+                  id: "hostelements",
+                  title: "Component host elements",
+                  contentPreview: "Angular creates an instance of a component for every HTML element that matches the component's selector. The DOM element that matches a component's selector is that component's host element. The contents of a component's template are rendered inside its host element.",
+                  contentPath: "angular/components/hostelements"
+                },
+                {
+                  id: "lifecycle",
+                  title: "Component Lifecycle",
+                  contentPreview: "A component's lifecycle is the sequence of steps that happen between the component's creation and its destruction. Each step represents a different part of Angular's process for rendering components and checking them for updates over time.",
+                  contentPath: "angular/components/lifecycle"
+                },
+                {
+                  id: "referencingcomponents",
+                  title: "Referencing component children with queries",
+                  contentPreview: "ll query functions return signals that reflect the most up-to-date results. You can read the result by calling the signal function, including in reactive contexts like computed and effect.",
+                  contentPath: "angular/components/referencingcomponents"
+                },
+                {
+                  id: "usingdomapi",
+                  title: "Using DOM APIs",
+                  contentPreview: "Angular handles most DOM creation, updates, and removals for you. However, you might rarely need to directly interact with a component's DOM. Components can inject ElementRef to get a reference to the component's host element",
+                  contentPath: "angular/components/usingdomapi"
+                },
+                {
+                  id: "inheritance",
+                  title: "Inheritance",
+                  contentPreview: "Angular components are TypeScript classes and participate in standard JavaScript inheritance semantics.",
+                  contentPath: "angular/components/inheritance"
+                },
+                {
+                  id: "programaticalrendering",
+                  title: "Programmatically rendering components",
+                  contentPreview: "In addition to using a component directly in a template, you can also dynamically render components. There are two main ways to dynamically render a component: in a template with NgComponentOutlet, or in your TypeScript code with ViewContainerRef.",
+                  contentPath: "angular/components/programaticalrendering"
+                },
+                {
+                  id: "advancedconfiguration",
+                  title: "Advanced component configuration",
+                  contentPreview: "Advanced component configuration",
+                  contentPath: "angular/components/advancedconfiguration"
+                },
+                {
+                  id: "customelements",
+                  title: "Angular elements overview",
+                  contentPreview: "Angular elements are Angular components packaged as custom elements (also called Web Components), a web standard for defining new HTML elements in a framework-agnostic way.",
+                  contentPath: "angular/components/customelements"
+                },
+              ]
+            },
+            {
+              id: "templates",
+              title: "Templates",
+              description: "Every Angular component has a template that defines the DOM that the component renders onto the page. By using templates, Angular is able to automatically keep your page up-to-date as data changes.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Overview",
+                  contentPreview: "Every Angular component has a template that defines the DOM that the component renders onto the page. By using templates, Angular is able to automatically keep your page up-to-date as data changes.",
+                  contentPath: "angular/templates/overview"
+                },
+                {
+                  id: "bindingdynamic",
+                  title: "Binding dynamic text, properties and attributes",
+                  contentPreview: "In Angular, a binding creates a dynamic connection between a component's template and its data. This connection ensures that changes to the component's data automatically update the rendered template.",
+                  contentPath: "angular/templates/bindingdynamic"
+                },
+                {
+                  id: "addingevenliste",
+                  title: "Adding event listeners",
+                  contentPreview: "Angular supports defining event listeners on an element in your template by specifying the event name inside parentheses along with a statement that runs every time the event occurs.",
+                  contentPath: "angular/templates/addingevenliste"
+                },
+                {
+                  id: "twowaybinding",
+                  title: "Two-way binding",
+                  contentPreview: "Two way binding is a shorthand to simultaneously bind a value into an element, while also giving that element the ability to propagate changes back through this binding.",
+                  contentPath: "angular/templates/twowaybinding"
+                },
+                {
+                  id: "controlflow",
+                  title: "Control flow",
+                  contentPreview: "Angular templates support control flow blocks that let you conditionally show, hide, and repeat elements.",
+                  contentPath: "angular/templates/controlflow"
+                },
+                {
+                  id: "pipes",
+                  title: "Pipes",
+                  contentPreview: "Pipes are a special operator in Angular template expressions that allows you to transform data declaratively in your template. Pipes let you declare a transformation function once and then use that transformation across multiple templates. Angular pipes use the vertical bar character (|), inspired by the Unix pipe.",
+                  contentPath: "angular/templates/pipes"
+                },
+                {
+                  id: "slottingchilds",
+                  title: "Render templates from a parent component with ng-content",
+                  contentPreview: "<ng-content> is a special element that accepts markup or a template fragment and controls how components render content. It does not render a real DOM element.",
+                  contentPath: "angular/templates/slottingchilds"
+                },
+                {
+                  id: "createtemplatefragments",
+                  title: "Create template fragments with ng-template",
+                  contentPreview: "Inspired by the native <template> element, the <ng-template> element lets you declare a template fragment – a section of content that you can dynamically or programmatically render.",
+                  contentPath: "angular/templates/createtemplatefragments"
+                },
+                {
+                  id: "groupingelements",
+                  title: "Grouping elements with ng-container",
+                  contentPreview: "<ng-container> is a special element in Angular that groups multiple elements together or marks a location in a template without rendering a real element in the DOM.",
+                  contentPath: "angular/templates/groupingelements"
+                },
+                {
+                  id: "variablesintemplates",
+                  title: "Variables in templates",
+                  contentPreview: "Angular has two types of variable declarations in templates: local template variables and template reference variables.",
+                  contentPath: "angular/templates/variablesintemplates"
+                },
+                {
+                  id: "defferedloading",
+                  title: "Deferred loading with @defer",
+                  contentPreview: "Deferrable views, also known as @defer blocks, reduce the initial bundle size of your application by deferring the loading of code that is not strictly necessary for the initial rendering of a page. This often results in a faster initial load and improvement in Core Web Vitals (CWV), primarily Largest Contentful Paint (LCP) and Time to First Byte (TTFB).",
+                  contentPath: "angular/templates/defferedloading"
+                },
+                {
+                  id: "expressionsyntax",
+                  title: "Expression Syntax",
+                  contentPreview: "Angular expressions are based on JavaScript, but differ in some key ways. This guide walks through the similarities and differences between Angular expressions and standard JavaScript.",
+                  contentPath: "angular/templates/expressionsyntax"
+                },
+                {
+                  id: "whitespaceintemplates",
+                  title: "Whitespace in templates",
+                  contentPreview: "By default, Angular templates do not preserve whitespace that the framework considers unnecessary. This commonly occurs in two situations: whitespace between elements, and collapsible whitespace inside of text.",
+                  contentPath: "angular/templates/whitespaceintemplates"
+                }
+              ]
+            },
+            {
+              id: "directives",
+              title: "Directives",
+              description: "Component, Attribute and Structural Directives",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Built-in directives",
+                  contentPreview: "Directives are classes that add additional behavior to elements in your Angular applications.",
+                  contentPath: "angular/directives/overview"
+                },
+                {
+                  id: "attributedirectives",
+                  title: "Attribute directives",
+                  contentPreview: "Change the appearance or behavior of DOM elements and Angular components with attribute directives.",
+                  contentPath: "angular/directives/attributedirectives"
+                },
+                {
+                  id: "structuraldirectives",
+                  title: "Structural directives",
+                  contentPreview: "Structural directives are directives applied to an <ng-template> element that conditionally or repeatedly render the content of that <ng-template>.",
+                  contentPath: "angular/directives/structuraldirectives"
+                },
+                {
+                  id: "directivecompapi",
+                  title: "Directive composition API",
+                  contentPreview: "Angular directives offer a great way to encapsulate reusable behaviors— directives can apply attributes, CSS classes, and event listeners to an element.",
+                  contentPath: "angular/directives/directivecompapi"
+                },
+                {
+                  id: "ngoptimizedimage",
+                  title: "Getting started with NgOptimizedImage",
+                  contentPreview: "The NgOptimizedImage directive makes it easy to adopt performance best practices for loading images.",
+                  contentPath: "angular/directives/ngoptimizedimage"
+                }
+              ]
+            },
+            {
+              id: "depinjection",
+              title: "Dependency Injection",
+              description: "Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them. Angular supports this design pattern and you can use it in your applications to increase flexibility and modularity.",
+              threads: [
+                {
+                  id: "understandingdi",
+                  title: "Understanding dependency injection",
+                  contentPreview: "Dependency injection, or DI, is one of the fundamental concepts in Angular. DI is wired into the Angular framework and allows classes with Angular decorators, such as Components, Directives, Pipes, and Injectables, to configure dependencies that they need.",
+                  contentPath: "angular/depinjection/understandingdi"
+                },
+                {
+                  id: "createinjservice",
+                  title: "Creating an injectable service",
+                  contentPreview: "Service is a broad category encompassing any value, function, or feature that an application needs. A service is typically a class with a narrow, well-defined purpose. A component is one type of class that can use DI.",
+                  contentPath: "angular/depinjection/createinjservice"
+                },
+                {
+                  id: "definingproviders",
+                  title: "Configuring dependency providers",
+                  contentPreview: "The previous sections described how to use class instances as dependencies. Aside from classes, you can also use values such as boolean, string, Date, and objects as dependencies. Angular provides the necessary APIs to make the dependency configuration flexible, so you can make those values available in DI.",
+                  contentPath: "angular/depinjection/definingproviders"
+                },
+                {
+                  id: "injectioncontext",
+                  title: "Injection context",
+                  contentPreview: "The dependency injection (DI) system relies internally on a runtime context where the current injector is available. This means that injectors can only work when code is executed in such a context.",
+                  contentPath: "angular/depinjection/injectioncontext"
+                },
+                {
+                  id: "hierarchicalinjectors",
+                  title: "Hierarchical injectors",
+                  contentPreview: "Injectors in Angular have rules that you can leverage to achieve the desired visibility of injectables in your applications. By understanding these rules, you can determine whether to declare a provider at the application level, in a Component, or in a Directive.",
+                  contentPath: "angular/depinjection/hierarchicalinjectors"
+                },
+                {
+                  id: "optimizinginjectiontokens",
+                  title: "Optimizing client application size with lightweight injection tokens",
+                  contentPreview: "This page provides a conceptual overview of a dependency injection technique that is recommended for library developers. Designing your library with lightweight injection tokens helps optimize the bundle size of client applications that use your library.",
+                  contentPath: "angular/depinjection/optimizinginjectiontokens"
+                },
+                {
+                  id: "diinaction",
+                  title: "DI in action",
+                  contentPreview: "This guide explores additional features of dependency injection in Angular.",
+                  contentPath: "angular/depinjection/diinaction"
+                }
+              ]
+            },
+            {
+              id: "routing",
+              title: "Routing",
+              description: "In a single-page app, you change what the user sees by showing or hiding portions of the display that correspond to particular components, rather than going out to the server to get a new page.",
+              threads: [
+                {
+                  id: "commonrouting",
+                  title: "Common Routing Tasks",
+                  contentPreview: "This topic describes how to implement many of the common tasks associated with adding the Angular router to your application.",
+                  contentPath: "angular/routing/commonrouting"
+                },
+                {
+                  id: "routingspa",
+                  title: "Using Angular routes in a single-page application",
+                  contentPreview: "In a Single Page Application (SPA), all of your application's functions exist in a single HTML page. As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page. This pattern can significantly improve your application's user experience.",
+                  contentPath: "angular/routing/routingspa"
+                },
+                {
+                  id: "customroutematches",
+                  title: "Creating custom route matches",
+                  contentPreview: "The Angular Router supports a powerful matching strategy that you can use to help users navigate your application. This matching strategy supports static routes, variable routes with parameters, wildcard routes, and so on. Also, build your own custom pattern matching for situations in which the URLs are more complicated.",
+                  contentPath: "angular/routing/customroutematches"
+                },
+                {
+                  id: "routerreference",
+                  title: "Router reference",
+                  contentPreview: "Advanced topics on routing",
+                  contentPath: "angular/routing/routerreference"
+                }
+              ]
+            },
+            {
+              id: "forms",
+              title: "Forms",
+              description: "Angular provides two different approaches to handling user input through forms: reactive and template-driven. Both capture user input events from the view, validate the user input, create a form model and data model to update, and provide a way to track changes.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Forms in Angular",
+                  contentPreview: "Applications use forms to enable users to log in, to update a profile, to enter sensitive information, and to perform many other data-entry tasks.",
+                  contentPath: "angular/forms/overview"
+                },
+                {
+                  id: "reactiveforms",
+                  title: "Reactive forms",
+                  contentPreview: "Reactive forms provide a model-driven approach to handling form inputs whose values change over time.",
+                  contentPath: "angular/forms/reactiveforms"
+                },
+                {
+                  id: "strictlytypedreactiveforms",
+                  title: "Typed Forms",
+                  contentPreview: "With Angular reactive forms, you explicitly specify a form model. ",
+                  contentPath: "angular/forms/strictlytypedreactiveforms"
+                },
+                {
+                  id: "templatedrivenforms",
+                  title: "Building a template-driven form",
+                  contentPreview: "Template-driven forms use two-way data binding to update the data model in the component as changes are made in the template and vice versa.",
+                  contentPath: "angular/forms/templatedrivenforms"
+                },
+                {
+                  id: "validateforminput",
+                  title: "Validating form input",
+                  contentPreview: "You can improve overall data quality by validating user input for accuracy and completeness. This page shows how to validate user input from the UI and display useful validation messages, in both reactive and template-driven forms.",
+                  contentPath: "angular/forms/validateforminput"
+                },
+                {
+                  id: "dynamicforms",
+                  title: "Building dynamic forms",
+                  contentPreview: "Many forms, such as questionnaires, can be very similar to one another in format and intent. To make it faster and easier to generate different versions of such a form, you can create a dynamic form template based on metadata that describes the business object model. Then, use the template to generate new forms automatically, according to changes in the data model.",
+                  contentPath: "angular/forms/dynamicforms"
+                }
+              ]
+            },
+            {
+              id: "httpclient",
+              title: "HTTP Client",
+              description: "Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services. Angular provides a client HTTP API for Angular applications, the HttpClient service class in @angular/common/http.",
+              threads: [
+                {
+                  id: "settingup",
+                  title: "Setting up HttpClient",
+                  contentPreview: "HttpClient is provided using the provideHttpClient helper function, which most apps include in the application providers in app.config.ts.",
+                  contentPath: "angular/httpclient/settingup"
+                },
+                {
+                  id: "makingrequests",
+                  title: "Making HTTP requests",
+                  contentPreview: "HttpClient has methods corresponding to the different HTTP verbs used to make requests, both to load data and to apply mutations on the server. Each method returns an RxJS Observable which, when subscribed, sends the request and then emits the results when the server responds.",
+                  contentPath: "angular/httpclient/makingrequests"
+                },
+                {
+                  id: "interceptingrequests",
+                  title: "Interceptors",
+                  contentPreview: "HttpClient supports two kinds of interceptors: functional and DI-based. Our recommendation is to use functional interceptors because they have more predictable behavior, especially in complex setups. Our examples in this guide use functional interceptors, and we cover DI-based interceptors in their own section at the end.",
+                  contentPath: "angular/httpclient/interceptingrequests"
+                },
+                {
+                  id: "testing",
+                  title: "Test requests",
+                  contentPreview: "s for any external dependency, you must mock the HTTP backend so your tests can simulate interaction with a remote server. The @angular/common/http/testing library provides tools to capture requests made by the application, make assertions about them, and mock the responses to emulate your backend's behavior.",
+                  contentPath: "angular/httpclient/testing"
+                }
+              ]
+            },
+            {
+              id: "serverside",
+              title: "Server-side & hybrid rendering",
+              description: "One of the top priorities of any developer is ensuring that their application is as performant as possible. These guides are here to help you follow best practices for building performant applications by taking advantage of different rendering strategies.",
+              threads: [
+                {
+                  id: "ssr",
+                  title: "Server-side rendering",
+                  contentPreview: "Server-side rendering (SSR) is a process that involves rendering pages on the server, resulting in initial HTML content which contains initial page state. Once the HTML content is delivered to a browser, Angular initializes the application and utilizes the data contained within the HTML.",
+                  contentPath: "angular/serverside/ssr"
+                },
+                {
+                  id: "buildtimeprerender",
+                  title: "Prerendering (SSG)",
+                  contentPreview: "Prerendering, commonly referred to as Static Site Generation (SSG), represents the method by which pages are rendered to static HTML files during the build process.",
+                  contentPath: "angular/serverside/buildtimeprerender"
+                },
+                {
+                  id: "hybridrender",
+                  title: "Hybrid rendering",
+                  contentPreview: "Hybrid rendering combines the benefits of server-side rendering (SSR), pre-rendering (also known as static site generation or SSG) and client-side rendering (CSR) to optimize your Angular application. It allows you to render different parts of your application using different strategies, giving you fine-grained control over how your app is delivered to users.",
+                  contentPath: "angular/serverside/hybridrender"
+                },
+                {
+                  id: "hydration",
+                  title: "Hydration",
+                  contentPreview: "Hydration is the process that restores the server-side rendered application on the client. This includes things like reusing the server rendered DOM structures, persisting the application state, transferring application data that was retrieved already by the server, and other processes.",
+                  contentPath: "angular/serverside/hydration"
+                },
+                {
+                  id: "incrementalhydration",
+                  title: "Incremental Hydration",
+                  contentPreview: "Incremental hydration is an advanced type of hydration that can leave sections of your application dehydrated and incrementally trigger hydration of those sections as they are needed.",
+                  contentPath: "angular/serverside/incrementalhydration"
+                }
+              ]
+            },
+            {
+              id: "test",
+              title: "Testing",
+              description: "Testing your Angular application helps you check that your application is working as you expect.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Testing",
+                  contentPreview: "The Angular CLI downloads and installs everything you need to test an Angular application with Jasmine testing framework.",
+                  contentPath: "angular/test/overview"
+                },
+                {
+                  id: "codecoverage",
+                  title: "Find out how much code you're testing",
+                  contentPreview: "The Angular CLI can run unit tests and create code coverage reports. Code coverage reports show you any parts of your code base that might not be properly tested by your unit tests.",
+                  contentPath: "angular/test/codecoverage"
+                },
+                {
+                  id: "testingservices",
+                  title: "Testing services",
+                  contentPreview: "Services are often the smoothest files to unit test. Here are some synchronous and asynchronous unit tests of the ValueService written without assistance from Angular testing utilities.",
+                  contentPath: "angular/test/testingservices"
+                },
+                {
+                  id: "componbasictest",
+                  title: "Basics of testing components",
+                  contentPreview: "A component, unlike all other parts of an Angular application, combines an HTML template and a TypeScript class. The component truly is the template and the class working together. To adequately test a component, you should test that they work together as intended.",
+                  contentPath: "angular/test/componbasictest"
+                },
+                {
+                  id: "compotestscenarios",
+                  title: "Component testing scenarios",
+                  contentPreview: "Compilation of all component testing scenarios",
+                  contentPath: "angular/test/compotestscenarios"
+                },
+                {
+                  id: "testattributedirect",
+                  title: "Testing Attribute Directives",
+                  contentPreview: "An attribute directive modifies the behavior of an element, component or another directive. Its name reflects the way the directive is applied: as an attribute on a host element.",
+                  contentPath: "angular/test/testattributedirect"
+                },
+                {
+                  id: "testpipes",
+                  title: "Testing Pipes",
+                  contentPreview: "A pipe class has one method, transform, that manipulates the input value into a transformed output value. The transform implementation rarely interacts with the DOM. Most pipes have no dependence on Angular other than the @Pipe metadata and an interface.",
+                  contentPath: "angular/test/testpipes"
+                },
+                {
+                  id: "debugtests",
+                  title: "Debugging tests",
+                  contentPreview: "Debug specs in the browser in the same way that you debug an application.",
+                  contentPath: "angular/test/debugtests"
+                },
+                {
+                  id: "testutiltiyapi",
+                  title: "Testing Utility APIs",
+                  contentPreview: "The Angular testing utilities include the TestBed, the ComponentFixture, and a handful of functions that control the test environment. The TestBed and ComponentFixture classes are covered separately.",
+                  contentPath: "angular/test/testutiltiyapi"
+                },
+                {
+                  id: "componentharness",
+                  title: "Component harnesses overview",
+                  contentPreview: "A component harness is a class that allows tests to interact with components the way an end user does via a supported API. You can create test harnesses for any component, ranging from small reusable widgets to full pages.",
+                  contentPath: "angular/test/componentharness"
+                },
+                {
+                  id: "harnessintest",
+                  title: "Using component harnesses in tests",
+                  contentPreview: "The Component Dev Kit (CDK) is a set of behavior primitives for building components. To use the component harnesses, first install @angular/cdk from npm. You can do this from your terminal using the Angular CLI",
+                  contentPath: "angular/test/harnessintest"
+                },
+                {
+                  id: "harnessfortype",
+                  title: "Creating harnesses for your components",
+                  contentPreview: "The Angular team recommends creating component test harnesses for shared components that are used in many places and have some user interactivity. ",
+                  contentPath: "angular/test/harnessfortype"
+                },
+                {
+                  id: "harnesssupport",
+                  title: "Adding harness support for additional testing environments",
+                  contentPreview: "Adding harness support for additional testing environments",
+                  contentPath: "angular/test/harnesssupport"
+                }
+              ]
+            },
+            {
+              id: "internalization",
+              title: "Angular Internationalization",
+              description: "Internationalization, sometimes referenced as i18n, is the process of designing and preparing your project for use in different locales around the world.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Angular Internationalization",
+                  contentPreview: "nternationalization, sometimes referenced as i18n, is the process of designing and preparing your project for use in different locales around the world. Localization is the process of building versions of your project for different locales. The localization process includes the following actions.",
+                  contentPath: "angular/internalization/overview"
+                },
+                {
+                  id: "localizepackage",
+                  title: "Add the localize package",
+                  contentPreview: "To take advantage of the localization features of Angular, use the Angular CLI to add the @angular/localize package to your project.",
+                  contentPath: "angular/internalization/localizepackage"
+                },
+                {
+                  id: "referlocalesid",
+                  title: "Refer to locales by ID",
+                  contentPreview: "Angular uses the Unicode locale identifier (Unicode locale ID) to find the correct locale data for internationalization of text strings.",
+                  contentPath: "angular/internalization/referlocalesid"
+                },
+                {
+                  id: "formatdateonlocale",
+                  title: "Format data based on locale",
+                  contentPreview: "Angular provides the following built-in data transformation pipes. The data transformation pipes use the LOCALE_ID token to format data based on rules of each locale.",
+                  contentPath: "angular/internalization/formatdateonlocale"
+                },
+                {
+                  id: "preparecomponent",
+                  title: "Prepare component for translation",
+                  contentPreview: "Prepare component for translation",
+                  contentPath: "angular/internalization/preparecomponent"
+                },
+                {
+                  id: "workwithtransfile",
+                  title: "Work with translation files",
+                  contentPreview: "After you prepare a component for translation, use the extract-i18n Angular CLI command to extract the marked text in the component into a source language file.",
+                  contentPath: "angular/internalization/workwithtransfile"
+                },
+                {
+                  id: "mergetranslations",
+                  title: "Merge translations into the application",
+                  contentPreview: "Merge translations into the application",
+                  contentPath: "angular/internalization/mergetranslations"
+                },
+                {
+                  id: "deploymultiplelocales",
+                  title: "Deploy multiple locales",
+                  contentPreview: "If myapp is the directory that contains the distributable files of your project, you typically make different versions available for different locales in locale directories. ",
+                  contentPath: "angular/internalization/deploymultiplelocales"
+                },
+                {
+                  id: "importglobalvariants",
+                  title: "Import global variants of the locale data",
+                  contentPreview: "The Angular CLI automatically includes locale data if you run the ng build command with the --localize option.",
+                  contentPath: "angular/internalization/importglobalvariants"
+                },
+                {
+                  id: "managemarkedtext",
+                  title: "Manage marked text with custom IDs",
+                  contentPreview: "The Angular extractor generates a file with a translation unit entry",
+                  contentPath: "angular/internalization/managemarkedtext"
+                },
+                {
+                  id: "exampleangularapp",
+                  title: "Example Angular Internationalization application",
+                  contentPreview: "Example Angular Internationalization application",
+                  contentPath: "angular/internalization/exampleangularapp"
+                }
+              ]
+            },
+            {
+              id: "experimentalfeatures",
+              title: "Experimental Features",
+              description: "Zoneless focus",
+              threads: [
+                {
+                  id: "zoneless",
+                  title: "Angular without ZoneJS (Zoneless)",
+                  contentPreview: "The API for enabling Zoneless is currently experimental. Neither the shape, nor the underlying behavior is stable and can change in patch versions. ",
+                  contentPath: "angular/experimentalfeatures/zoneless"
+                }
+              ]
+            },
+            {
+              id: "ngmodules",
+              title: "NgModules",
+              description: "An NgModule is a class marked by the @NgModule decorator. This decorator accepts metadata that tells Angular how to compile component templates and configure dependency injection.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Overview",
+                  contentPreview: "An NgModule is a class marked by the @NgModule decorator. This decorator accepts metadata that tells Angular how to compile component templates and configure dependency injection.",
+                  contentPath: "angular/ngmodules/overview"
+                }
               ]
             },
             {
               id: "architecture",
-              title: "Architecture",
+              title: "Architecture (Deprecated)",
               description: "Architecture topics",
               threads: [
                 {
@@ -71,7 +639,7 @@ export const categories_mock: Category[] = [
             },
             {
               id: "dependencyinjection",
-              title: "Dependency Injection in Angular",
+              title: "Dependency Injection in Angular (Deprecated)",
               description: "",
               threads: [
                 {
@@ -96,7 +664,7 @@ export const categories_mock: Category[] = [
             },
             {
               id: "changedetection",
-              title: "Change Detection",
+              title: "Change Detection (Deprecated)",
               description: "Change Detection in Angular ensures the synchronization of the application state with the UI.",
               threads: [
                 {
@@ -116,12 +684,6 @@ export const categories_mock: Category[] = [
                   title: "Angular ngZone",
                   contentPreview: "Angular’s change detection is powered by Zone.js through the NgZone service. NgZone provides an execution context that automatically detects and responds to asynchronous events—ensuring that your view stays in sync with your data without manual intervention.",
                   contentPath: "angular/changedetection/ngzone"
-                },
-                {
-                  id: "viewencaps",
-                  title: "View Encapsulation",
-                  contentPreview: "To scope CSS styles to a specific component, preventing style leakage and conflicts across the application.",
-                  contentPath: "angular/changedetection/viewencaps"
                 },
                 {
                   id: "dominangular",
@@ -145,7 +707,7 @@ export const categories_mock: Category[] = [
             },
             {
               id: "basics",
-              title: "Basics",
+              title: "Basics (Deprecated)",
               description: "Base components of Angular",
               threads: [
                 {
@@ -353,7 +915,7 @@ export const categories_mock: Category[] = [
             },
             {
               id: "testing",
-              title: "Testing",
+              title: "Testing (Deprecated)",
               description: "Testing in Angular",
               threads: [
                 {
@@ -402,7 +964,7 @@ export const categories_mock: Category[] = [
             },
             {
               id: "buildingblocks",
-              title: "Building Blocks",
+              title: "Building Blocks (Deprecated)",
               description: "",
               threads: [
                 {
@@ -427,7 +989,7 @@ export const categories_mock: Category[] = [
             },
             {
               id: "tooling",
-              title: "Tooling",
+              title: "Tooling (Deprecated)",
               description: "",
               threads: [
                 {

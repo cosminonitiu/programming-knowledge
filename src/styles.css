@@ -50,6 +50,7 @@
     --gray-100: oklch(97.12% .002 325.59);
     --gray-50: oklch(98.81% 0 0);
     --vivid-pink: color-mix(in srgb, oklch(69.02% .277 332.77), var(--full-contrast) 70%);
+    --link-color: hsl(231, 66%, 58%);
 
     --full-contrast: white;
     --primary-contrast: var(--gray-50);
@@ -93,12 +94,16 @@
 }
 
 :root pre {
-    background-color: var(--gray-800)!important;
+    background-color: hsl(215, 13%, 18%)!important;
     border: 1px solid var(--gray-600)!important;
     margin: 1rem 0 1rem 0!important;
 }
-:root pre h1,h2,h3{
+:root pre h1,h2,h3,h4{
     padding-bottom: 1rem!important;
+}
+:root .variable-binding a {
+    color: var(--link-color)!important;
+    text-decoration: underline!important;
 }
 :root .variable-binding hr {
     border-color: var(--gray-1000)!important;

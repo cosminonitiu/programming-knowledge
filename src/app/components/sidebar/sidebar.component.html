@@ -1,11 +1,11 @@
-<div class="sidebar" [ngClass]="[isOpen ? 'full' : 'semi']">
+<div class="sidebar" [ngClass]="[sidebarConentStore.isSidebarOpen() ? 'full' : 'semi']">
   <div class="header border-sidebar-border">
-    <h1 [ngClass]="[isOpen ? 'open' : 'close']">
+    <h1 [ngClass]="[sidebarConentStore.isSidebarOpen() ? 'open' : 'close']">
       <span class="blue-to-purple-text">DevKnowledge</span>
     </h1>
     <div class="mobile-only">
-      <div (click)="toggleSidebar()" hover-class="text-white" class="cursor-pointer">
-        {{ isOpen ? '×' : '☰' }}
+      <div (click)="sidebarConentStore.toggleSidebar()" hover-class="text-white" class="cursor-pointer">
+        {{ sidebarConentStore.isSidebarOpen() ? '×' : '☰' }}
       </div>
     </div>
   </div>
@@ -19,10 +19,10 @@
               <span class="category-icon text-sidebar-foreground">
                 <lucide-angular [img]="category.icon" [size]="20"></lucide-angular>
               </span>
-              <span class="category-name" [ngClass]="[isOpen ? 'open' : 'close']">
+              <span class="category-name" [ngClass]="[sidebarConentStore.isSidebarOpen() ? 'open' : 'close']">
                 {{ category.name }}
               </span>
-              <span class="category-controller" [ngClass]="[isOpen ? 'open' : 'close']">
+              <span class="category-controller" [ngClass]="[sidebarConentStore.isSidebarOpen() ? 'open' : 'close']">
                 <ng-container *ngIf="expandedCategories[category.id]; else chevronRight">
                     <lucide-angular [img]="ChevronDown" [size]="16"></lucide-angular>
                 </ng-container>
@@ -32,7 +32,7 @@
               </span>
             </div>
     
-            <ul  *ngIf="expandedCategories[category.id] && isOpen"class="sub-list">
+            <ul  *ngIf="expandedCategories[category.id] && sidebarConentStore.isSidebarOpen()"class="sub-list">
               <li *ngFor="let subcategory of category.subcategories">
                 <div (click)="navigateToSubcategory(category.id, subcategory.id)" class="cursor-pointer sidebar-subtton"
                   [ngClass]="[

@@ -107,6 +107,18 @@ export const categories_mock: Category[] = [
                   contentPreview: "Angular elements are Angular components packaged as custom elements (also called Web Components), a web standard for defining new HTML elements in a framework-agnostic way.",
                   contentPath: "angular/components/customelements"
                 },
+                {
+                  id: "interceptors",
+                  title: "Interceptors",
+                  contentPreview: "Interceptors are middleware-like services that implement Angular's HttpInterceptor interface. ",
+                  contentPath: "angular/components/interceptors"
+                },
+                {
+                  id: "observables",
+                  title: "Observables",
+                  contentPreview: "An Observable is a stream of data that can emit multiple values over time. It is a core concept in reactive programming, especially in libraries like RxJS, which Angular heavily relies on.",
+                  contentPath: "angular/components/observables"
+                }
               ]
             },
             {
@@ -169,6 +181,12 @@ export const categories_mock: Category[] = [
                   contentPath: "angular/templates/groupingelements"
                 },
                 {
+                  id: "asyncpipe",
+                  title: "Async pipe",
+                  contentPreview: "When you use the async pipe in a template expression (e.g., {{ data$ | async }}), Angular automatically subscribes to the Observable or Promise. When the data changes (a new value is emitted), Angular updates the view with the latest value.",
+                  contentPath: "angular/templates/asyncpipe"
+                },
+                {
                   id: "variablesintemplates",
                   title: "Variables in templates",
                   contentPreview: "Angular has two types of variable declarations in templates: local template variables and template reference variables.",
@@ -179,18 +197,6 @@ export const categories_mock: Category[] = [
                   title: "Deferred loading with @defer",
                   contentPreview: "Deferrable views, also known as @defer blocks, reduce the initial bundle size of your application by deferring the loading of code that is not strictly necessary for the initial rendering of a page. This often results in a faster initial load and improvement in Core Web Vitals (CWV), primarily Largest Contentful Paint (LCP) and Time to First Byte (TTFB).",
                   contentPath: "angular/templates/defferedloading"
-                },
-                {
-                  id: "expressionsyntax",
-                  title: "Expression Syntax",
-                  contentPreview: "Angular expressions are based on JavaScript, but differ in some key ways. This guide walks through the similarities and differences between Angular expressions and standard JavaScript.",
-                  contentPath: "angular/templates/expressionsyntax"
-                },
-                {
-                  id: "whitespaceintemplates",
-                  title: "Whitespace in templates",
-                  contentPreview: "By default, Angular templates do not preserve whitespace that the framework considers unnecessary. This commonly occurs in two situations: whitespace between elements, and collapsible whitespace inside of text.",
-                  contentPath: "angular/templates/whitespaceintemplates"
                 }
               ]
             },
@@ -222,6 +228,12 @@ export const categories_mock: Category[] = [
                   title: "Directive composition API",
                   contentPreview: "Angular directives offer a great way to encapsulate reusable behaviors— directives can apply attributes, CSS classes, and event listeners to an element.",
                   contentPath: "angular/directives/directivecompapi"
+                },
+                {
+                  id: "decorators",
+                  title: "Decorators",
+                  contentPreview: "Decorators are a fundamental concept in TypeScript, and because Angular heavily relies on TypeScript, decorators have become an important element of Angular as well.",
+                  contentPath: "angular/directives/decorators"
                 },
                 {
                   id: "ngoptimizedimage",
@@ -261,12 +273,6 @@ export const categories_mock: Category[] = [
                   contentPath: "angular/depinjection/injectioncontext"
                 },
                 {
-                  id: "hierarchicalinjectors",
-                  title: "Hierarchical injectors",
-                  contentPreview: "Injectors in Angular have rules that you can leverage to achieve the desired visibility of injectables in your applications. By understanding these rules, you can determine whether to declare a provider at the application level, in a Component, or in a Directive.",
-                  contentPath: "angular/depinjection/hierarchicalinjectors"
-                },
-                {
                   id: "optimizinginjectiontokens",
                   title: "Optimizing client application size with lightweight injection tokens",
                   contentPreview: "This page provides a conceptual overview of a dependency injection technique that is recommended for library developers. Designing your library with lightweight injection tokens helps optimize the bundle size of client applications that use your library.",
@@ -292,23 +298,17 @@ export const categories_mock: Category[] = [
                   contentPath: "angular/routing/commonrouting"
                 },
                 {
-                  id: "routingspa",
-                  title: "Using Angular routes in a single-page application",
-                  contentPreview: "In a Single Page Application (SPA), all of your application's functions exist in a single HTML page. As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page. This pattern can significantly improve your application's user experience.",
-                  contentPath: "angular/routing/routingspa"
-                },
-                {
-                  id: "customroutematches",
-                  title: "Creating custom route matches",
-                  contentPreview: "The Angular Router supports a powerful matching strategy that you can use to help users navigate your application. This matching strategy supports static routes, variable routes with parameters, wildcard routes, and so on. Also, build your own custom pattern matching for situations in which the URLs are more complicated.",
-                  contentPath: "angular/routing/customroutematches"
-                },
-                {
                   id: "routerreference",
                   title: "Router reference",
                   contentPreview: "Advanced topics on routing",
                   contentPath: "angular/routing/routerreference"
-                }
+                },
+                {
+                  id: "entrypoint",
+                  title: "Angular Entry Point",
+                  contentPreview: "Every Angular app consists of a file named angular.json. This file will contain all the configurations of the app.",
+                  contentPath: "angular/routing/entrypoint"
+                },
               ]
             },
             {
@@ -504,6 +504,48 @@ export const categories_mock: Category[] = [
                   title: "Adding harness support for additional testing environments",
                   contentPreview: "Adding harness support for additional testing environments",
                   contentPath: "angular/test/harnesssupport"
+                },
+                {
+                  id: "testintro",
+                  title: "Introduction to Angular Testing",
+                  contentPreview: "Catch errors early in development, which reduces the risk of regressions.",
+                  contentPath: "angular/test/testintro"
+                },
+                {
+                  id: "unittest",
+                  title: "Unit Testing",
+                  contentPreview: "To test a component, you need to create a testing module that declares the component and any dependencies (like pipes, directives, and sub-components).",
+                  contentPath: "angular/test/unittest"
+                },
+                {
+                  id: "reactivecode",
+                  title: "Reactive Code and RxJS",
+                  contentPreview: "",
+                  contentPath: "angular/test/reactivecode"
+                },
+                {
+                  id: "integrationtest",
+                  title: "Integration Testing",
+                  contentPreview: "Unlike isolated unit tests, integration tests load real templates, resolve dependencies through Angular’s dependency injection, and simulate user interactions to validate the overall behavior.",
+                  contentPath: "angular/test/integrationtest"
+                },
+                {
+                  id: "e2etest",
+                  title: "End-to-End (E2E) Testing",
+                  contentPreview: "E2E tests simulate complete user journeys, ensuring that all parts of your application (components, services, routing, and backend interactions) work together correctly.",
+                  contentPath: "angular/test/e2etest"
+                },
+                {
+                  id: "bestpract",
+                  title: "Best Practices and Patterns",
+                  contentPreview: "",
+                  contentPath: "angular/test/bestpract"
+                },
+                {
+                  id: "tools",
+                  title: "Tools and Resources",
+                  contentPreview: "",
+                  contentPath: "angular/test/tools"
                 }
               ]
             },
@@ -594,77 +636,8 @@ export const categories_mock: Category[] = [
               ]
             },
             {
-              id: "ngmodules",
-              title: "NgModules",
-              description: "An NgModule is a class marked by the @NgModule decorator. This decorator accepts metadata that tells Angular how to compile component templates and configure dependency injection.",
-              threads: [
-                {
-                  id: "overview",
-                  title: "Overview",
-                  contentPreview: "An NgModule is a class marked by the @NgModule decorator. This decorator accepts metadata that tells Angular how to compile component templates and configure dependency injection.",
-                  contentPath: "angular/ngmodules/overview"
-                }
-              ]
-            },
-            {
-              id: "architecture",
-              title: "Architecture (Deprecated)",
-              description: "Architecture topics",
-              threads: [
-                {
-                  id: "ngmodule",
-                  title: "NgModule",
-                  contentPreview: "Basic aggregation of Angular components and imports",
-                  contentPath: "angular/architecture/ngmodule"
-                },
-                {
-                  id: "entrypoint",
-                  title: "Angular Entry Point",
-                  contentPreview: "Every Angular app consists of a file named angular.json. This file will contain all the configurations of the app.",
-                  contentPath: "angular/architecture/entrypoint"
-                },
-                {
-                  id: "aotjit",
-                  title: "Ahead of Time and Just in Time Compilation",
-                  contentPreview: "",
-                  contentPath: "angular/architecture/aotjit"
-                },
-                {
-                  id: "eagerlazyloading",
-                  title: "Eager and Lazy Loading",
-                  contentPreview: "",
-                  contentPath: "angular/architecture/eagerlazyloading"
-                }
-              ]
-            },
-            {
-              id: "dependencyinjection",
-              title: "Dependency Injection in Angular (Deprecated)",
-              description: "",
-              threads: [
-                {
-                  id: "whatisdi",
-                  title: "What is Dependency Injection",
-                  contentPreview: "Dependency Injection (DI) is a design pattern in Angular that allows objects (services, components, directives, etc.) to receive dependencies from an external source rather than creating them manually. This enhances modularity, maintainability, and testability.",
-                  contentPath: "angular/dependencyinjection/whatisdi"
-                },
-                {
-                  id: "providers",
-                  title: "Providers",
-                  contentPreview: "",
-                  contentPath: "angular/dependencyinjection/providers"
-                },
-                {
-                  id: "testingdiffscenarios",
-                  title: "Testing and Different Scenarios",
-                  contentPreview: "",
-                  contentPath: "angular/dependencyinjection/testingdiffscenarios"
-                }
-              ]
-            },
-            {
               id: "changedetection",
-              title: "Change Detection (Deprecated)",
+              title: "Change Detection",
               description: "Change Detection in Angular ensures the synchronization of the application state with the UI.",
               threads: [
                 {
@@ -702,61 +675,6 @@ export const categories_mock: Category[] = [
                   title: "Ivy",
                   contentPreview: "Ivy is Angular’s modern rendering engine and compilation pipeline. It transforms Angular templates and components into highly optimized JavaScript code that directly manipulates the DOM.",
                   contentPath: "angular/changedetection/ivy"
-                }
-              ]
-            },
-            {
-              id: "basics",
-              title: "Basics (Deprecated)",
-              description: "Base components of Angular",
-              threads: [
-                {
-                  id: "structuraldirectives",
-                  title: "Structural Directives",
-                  contentPreview: "Structural Directives modify the DOM by adding, removing, or manipulating elements dynamically. They change the structure of the HTML at runtime.",
-                  contentPath: "angular/basics/structuraldirectives"
-                },
-                {
-                  id: "attributedirectives",
-                  title: "Attribute Directives",
-                  contentPreview: "Attribute Directives modify the appearance or behavior of an element, component, or other directives.",
-                  contentPath: "angular/basics/attributedirectives"
-                },
-                {
-                  id: "lifecycles",
-                  title: "Lifecycle of components",
-                  contentPreview: "Every Angular component follows a lifecycle that consists of creation, update, and destruction phases. Angular provides lifecycle hooks that allow you to execute custom logic at different stages.",
-                  contentPath: "angular/basics/lifecycles"
-                },
-                {
-                  id: "viewchild",
-                  title: "ViewChild",
-                  contentPreview: "Both @ViewChild and @ViewChildren allow a component to query its view (the template) for elements, components, or directives.",
-                  contentPath: "angular/basics/viewchild"
-                },
-                {
-                  id: "asyncpipe",
-                  title: "Async pipe",
-                  contentPreview: "When you use the async pipe in a template expression (e.g., {{ data$ | async }}), Angular automatically subscribes to the Observable or Promise. When the data changes (a new value is emitted), Angular updates the view with the latest value.",
-                  contentPath: "angular/basics/asyncpipe"
-                },
-                {
-                  id: "ngcontainer",
-                  title: "ng container ng template ng content",
-                  contentPreview: "Angular provides several powerful constructs to control rendering and composition in your templates. Three key features are ng-container, ng-template, and ng-content. Each serves a distinct purpose in how you build and compose your views.",
-                  contentPath: "angular/basics/ngcontainer"
-                },
-                {
-                  id: "databinding",
-                  title: "Data Binding",
-                  contentPreview: "Angular’s data binding system is a core feature that connects your component’s data (the model) with its view (the template). This powerful mechanism lets you synchronize data in both directions—from the component to the view and back—while reducing boilerplate code and helping you build dynamic, responsive applications.",
-                  contentPath: "angular/basics/databinding"
-                },
-                {
-                  id: "decorators",
-                  title: "Decorators",
-                  contentPreview: "Decorators are a fundamental concept in TypeScript, and because Angular heavily relies on TypeScript, decorators have become an important element of Angular as well.",
-                  contentPath: "angular/basics/decorators"
                 }
               ]
             },
@@ -910,105 +828,6 @@ export const categories_mock: Category[] = [
                   title: "Using signals with RxJs",
                   contentPreview: "The @angular/rxjs-interop package offers APIs that help you integrate RxJS and Angular signals.",
                   contentPath: "angular/signals/signalswithrxjs"
-                }
-              ]
-            },
-            {
-              id: "testing",
-              title: "Testing (Deprecated)",
-              description: "Testing in Angular",
-              threads: [
-                {
-                  id: "testintro",
-                  title: "Introduction to Angular Testing",
-                  contentPreview: "Catch errors early in development, which reduces the risk of regressions.",
-                  contentPath: "angular/testing/testintro"
-                },
-                {
-                  id: "unittest",
-                  title: "Unit Testing",
-                  contentPreview: "To test a component, you need to create a testing module that declares the component and any dependencies (like pipes, directives, and sub-components).",
-                  contentPath: "angular/testing/unittest"
-                },
-                {
-                  id: "reactivecode",
-                  title: "Reactive Code and RxJS",
-                  contentPreview: "",
-                  contentPath: "angular/testing/reactivecode"
-                },
-                {
-                  id: "integrationtest",
-                  title: "Integration Testing",
-                  contentPreview: "Unlike isolated unit tests, integration tests load real templates, resolve dependencies through Angular’s dependency injection, and simulate user interactions to validate the overall behavior.",
-                  contentPath: "angular/testing/integrationtest"
-                },
-                {
-                  id: "e2etest",
-                  title: "End-to-End (E2E) Testing",
-                  contentPreview: "E2E tests simulate complete user journeys, ensuring that all parts of your application (components, services, routing, and backend interactions) work together correctly.",
-                  contentPath: "angular/testing/e2etest"
-                },
-                {
-                  id: "bestpract",
-                  title: "Best Practices and Patterns",
-                  contentPreview: "",
-                  contentPath: "angular/testing/bestpract"
-                },
-                {
-                  id: "tools",
-                  title: "Tools and Resources",
-                  contentPreview: "",
-                  contentPath: "angular/testing/tools"
-                }
-              ]
-            },
-            {
-              id: "buildingblocks",
-              title: "Building Blocks (Deprecated)",
-              description: "",
-              threads: [
-                {
-                  id: "interceptors",
-                  title: "Interceptors",
-                  contentPreview: "Interceptors are middleware-like services that implement Angular's HttpInterceptor interface. ",
-                  contentPath: "angular/buildingblocks/interceptors"
-                },
-                {
-                  id: "routing",
-                  title: "Routing",
-                  contentPreview: "Angular’s routing is provided by the RouterModule, which you import into your application’s module.",
-                  contentPath: "angular/buildingblocks/routing"
-                },
-                {
-                  id: "observables",
-                  title: "Observables",
-                  contentPreview: "An Observable is a stream of data that can emit multiple values over time. It is a core concept in reactive programming, especially in libraries like RxJS, which Angular heavily relies on.",
-                  contentPath: "angular/buildingblocks/observables"
-                }
-              ]
-            },
-            {
-              id: "tooling",
-              title: "Tooling (Deprecated)",
-              description: "",
-              threads: [
-                {
-                  id: "angelements",
-                  title: "Angular Elements",
-                  contentPreview: "Angular Elements allow you to package Angular components as custom elements (web components) so they can be used in any web application—regardless of whether that application is built with Angular.",
-                  contentPath: "angular/tooling/angelements"
-                },
-                {
-                  id: "servicewebworkers",
-                  title: "Service and Web Workers",
-                  contentPreview: "Service workers are scripts that run in the background, separate from your web page, enabling features like offline support, background sync, push notifications, and caching of assets. They act as a proxy between your web application and the network.",
-                  contentPath: "angular/tooling/servicewebworkers"
-                },
-                {
-                  id: "miniuglification",
-                  title: "Minification and Uglification",
-                  contentPreview: "",
-                  contentPath: "angular/tooling/miniuglification"
                 }
               ]
             }

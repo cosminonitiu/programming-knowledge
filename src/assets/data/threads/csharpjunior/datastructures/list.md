@@ -30,6 +30,7 @@
 - **Algorithm Example:**  
   If the current capacity is 4 and a 5th element is added, a new array of size 8 is allocated, and the 4 elements are copied over. This strategy balances the trade-off between frequent resizing and memory overhead.
 
+If a value type is used for type T, the compiler generates an implementation of the List class specifically for that value type. That means a list element of a List object does not have to be boxed before the element can be used, and after about 500 list elements are created the memory saved not boxing list elements is greater than the memory used to generate the class implementation.
 ---
 
 ## 3. Performance Characteristics

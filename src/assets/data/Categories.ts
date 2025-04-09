@@ -1335,6 +1335,66 @@ export const categories_mock: Category[] = [
               description: 'Most common design patterns, and their use and implementations in C#',
               threads: [
                 {
+                  id: "arh_pipesandfilter",
+                  title: "Architectural (Scalability) - Pipes and Filters Pattern",
+                  contentPreview: "Software developers utilize the Pipes and Filters architectural design pattern to establish a modular and flexible system for sequentially and independently processing data or tasks.",
+                  contentPath: "csharpjunior/dpatterns/arh_pipesandfilter"
+                },
+                {
+                  id: "arh_scattergather",
+                  title: "Architectural (Scalability) - Scatter Gather Pattern",
+                  contentPreview: "The Scatter-Gather pattern is a message routing pattern that receives a request, distributes it to multiple recipients, and aggregates their responses into a single message. ",
+                  contentPath: "csharpjunior/dpatterns/arh_scattergather"
+                },
+                {
+                  id: "arh_mapreduce",
+                  title: "Architectural (Performance) - Map Reduce Pattern for Big Data Processing",
+                  contentPreview: "The MapReduce pattern is a programming model for processing large datasets in parallel across distributed systems, breaking tasks into map and reduce phases.",
+                  contentPath: "csharpjunior/dpatterns/arh_mapreduce"
+                },
+                {
+                  id: "arh_saga",
+                  title: "Architectural (Performance) - The Saga Pattern",
+                  contentPreview: "The Saga design pattern helps maintain data consistency in distributed systems by coordinating transactions across multiple services. A saga is a sequence of local transactions where each service performs its operation and initiates the next step through events or messages. ",
+                  contentPath: "csharpjunior/dpatterns/arh_saga"
+                },
+                {
+                  id: "arh_transactionaloutbox",
+                  title: "Architectural (Performance) - Transactional Outbox Pattern",
+                  contentPreview: " It ensures events are saved in a datastore (typically in an Outbox table in your database) before they're ultimately pushed to a message broker. If the business object and the corresponding events are saved within the same database transaction, it's guaranteed that no data will be lost.",
+                  contentPath: "csharpjunior/dpatterns/arh_transactionaloutbox"
+                },
+                {
+                  id: "arh_cqrs",
+                  title: "Architectural (Performance) - CQRS Pattern (Combined with Materialized View and Event Sourcing)",
+                  contentPreview: "Command Query Responsibility Segregation (CQRS) is a design pattern that segregates read and write operations for a data store into separate data models. This approach allows each model to be optimized independently and can improve the performance, scalability, and security of an application.",
+                  contentPath: "csharpjunior/dpatterns/arh_cqrs"
+                },
+                {
+                  id: "arh_eventsourcing",
+                  title: "Architectural (Performance) - Event Sourcing Pattern",
+                  contentPreview: "",
+                  contentPath: "csharpjunior/dpatterns/arh_eventsourcing"
+                },
+                {
+                  id: "arh_sidecarambassador",
+                  title: "Architectural (Extensibility) - Sidecar & Ambassador Pattern",
+                  contentPreview: "",
+                  contentPath: "csharpjunior/dpatterns/arh_sidecarambassador"
+                },
+                {
+                  id: "arh_anticorradapter",
+                  title: "Architectural (Extensibility) - Anti-Corruption Adapter Pattern",
+                  contentPreview: "",
+                  contentPath: "csharpjunior/dpatterns/arh_anticorradapter"
+                },
+                {
+                  id: "arh_backforfront",
+                  title: "Architectural (Extensibility) - Backends for Frontends Pattern",
+                  contentPreview: "",
+                  contentPath: "csharpjunior/dpatterns/arh_backforfront"
+                },
+                {
                   id: "singleton",
                   title: "Singleton Pattern",
                   contentPreview: "Guarantees that a class has a single, globally accessible instance, and restricts instantiation to one object.",

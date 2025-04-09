@@ -101,6 +101,9 @@
 :root pre h1,h2,h3,h4{
     padding-bottom: 1rem!important;
 }
+:root .variable-binding p {
+    font-size: 90%;
+}
 :root .variable-binding a {
     color: var(--link-color)!important;
     text-decoration: underline!important;
@@ -111,8 +114,12 @@
 
 :root code:not([class*="language-"]) {
     background: var(--gray-600)!important;
+    font-size: 0.85rem;
     color: var(--vivid-pink) !important;
     padding: 0.15rem;
     border-radius: 0.15rem;
     margin: 0!important;
+}
+.white-background {
+    background-color: var(--gray-50)!important;
 }

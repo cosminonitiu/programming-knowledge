@@ -147,6 +147,7 @@
     }
     .sidebar.semi {
         width: 16rem; 
+        border-right: 1px solid var(--gray-800);
     }
     .sidebar .header h1.close {
         opacity: 1; 

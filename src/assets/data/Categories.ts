@@ -1373,25 +1373,25 @@ export const categories_mock: Category[] = [
                 {
                   id: "arh_eventsourcing",
                   title: "Architectural (Performance) - Event Sourcing Pattern",
-                  contentPreview: "",
+                  contentPreview: "The Event Sourcing pattern defines an approach to handling operations on data that's driven by a sequence of events, each of which is recorded in an append-only store. Application code raises events that imperatively describe the action taken on the object.",
                   contentPath: "csharpjunior/dpatterns/arh_eventsourcing"
                 },
                 {
                   id: "arh_sidecarambassador",
                   title: "Architectural (Extensibility) - Sidecar & Ambassador Pattern",
-                  contentPreview: "",
+                  contentPreview: "Deploy components of an application into a separate process or container to provide isolation and encapsulation. This pattern can also enable applications to be composed of heterogeneous components and technologies.",
                   contentPath: "csharpjunior/dpatterns/arh_sidecarambassador"
                 },
                 {
                   id: "arh_anticorradapter",
                   title: "Architectural (Extensibility) - Anti-Corruption Adapter Pattern",
-                  contentPreview: "",
+                  contentPreview: "Implement a façade or adapter layer between different subsystems that don't share the same semantics. This layer translates requests that one subsystem makes to the other subsystem. Use this pattern to ensure that an application's design is not limited by dependencies on outside subsystems. This pattern was first described by Eric Evans in Domain-Driven Design.",
                   contentPath: "csharpjunior/dpatterns/arh_anticorradapter"
                 },
                 {
                   id: "arh_backforfront",
                   title: "Architectural (Extensibility) - Backends for Frontends Pattern",
-                  contentPreview: "",
+                  contentPreview: "Decouple backend services from the frontend implementations to tailor experiences for different client interfaces. This pattern is useful when you want to avoid customizing a backend that serves multiple interfaces.",
                   contentPath: "csharpjunior/dpatterns/arh_backforfront"
                 },
                 {
@@ -1562,6 +1562,19 @@ export const categories_mock: Category[] = [
                   title: "Contravariance",
                   contentPreview: "Contravariance is the in keyword and it denotes input types, usually in delegates. The principle is the same, it means that the delegate can accept more derived class.",
                   contentPath: "csharpmedior/covacontra/contravariance"
+                }
+              ]
+            },
+            {
+              id: "testing",
+              title: "Testing",
+              description: "This article introduces the concept of testing and illustrates how different kinds of tests can be used to validate code. Various tools are available for testing .NET applications",
+              threads: [
+                {
+                  id: "behaviordrivenspecflow",
+                  title: "Behavior Driven Testing with Specflow",
+                  contentPreview: "Behavior-Driven Development (BDD) is an agile methodology that enhances collaboration among all project participants, regardless of technical knowledge.",
+                  contentPath: "csharpmedior/testing/behaviordrivenspecflow"
                 }
               ]
             },
@@ -2266,18 +2279,6 @@ export const categories_mock: Category[] = [
                   title: "SOLID",
                   contentPreview: "The SOLID principles are a set of five design principles intended to make software more understandable, flexible, and maintainable. These principles can be applied in the context of object-oriented programming, and they align well with creating high-quality systems in .NET.",
                   contentPath: "csharpsenior/architecture/solid"
-                },
-                {
-                  id: "cqrs",
-                  title: "CQRS",
-                  contentPreview: "CQRS is an architectural pattern that separates the handling of commands (write operations) and queries (read operations).",
-                  contentPath: "csharpsenior/architecture/cqrs"
-                },
-                {
-                  id: "eventsourcing",
-                  title: "Event Sourcing",
-                  contentPreview: "Event Sourcing is an architectural pattern where state changes are captured as a sequence of events. Instead of storing just the current state of an entity in a database, the system stores all the events that lead to the current state. ",
-                  contentPath: "csharpsenior/architecture/eventsourcing"
                 },
                 {
                   id: "middleware",

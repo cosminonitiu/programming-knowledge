@@ -5,7 +5,7 @@ Angular:
 - Tests (Already topics presents)
 - Internalization
 - Formss
-- Delve deeper into documentation
+- Delve deeper into documentations
 
 C#
 -----------

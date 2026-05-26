@@ -118,6 +118,12 @@ export const categories_mock: Category[] = [
                   title: "Observables",
                   contentPreview: "An Observable is a stream of data that can emit multiple values over time. It is a core concept in reactive programming, especially in libraries like RxJS, which Angular heavily relies on.",
                   contentPath: "angular/components/observables"
+                },
+                {
+                  id: "standalonecomponents",
+                  title: "Standalone Components",
+                  contentPreview: "Standalone components declare their own dependencies directly — no NgModule required. The default architecture since Angular 17.",
+                  contentPath: "angular/components/standalonecomponents"
                 }
               ]
             },
@@ -283,6 +289,24 @@ export const categories_mock: Category[] = [
                   title: "DI in action",
                   contentPreview: "This guide explores additional features of dependency injection in Angular.",
                   contentPath: "angular/depinjection/diinaction"
+                },
+                {
+                  id: "hierarchicalinjectors",
+                  title: "Hierarchical Injectors",
+                  contentPreview: "ModuleInjector vs ElementInjector trees, @Self, @SkipSelf, @Host, @Optional — how Angular resolves dependencies and how to scope them correctly.",
+                  contentPath: "angular/depinjection/hierarchicalinjectors"
+                },
+                {
+                  id: "injectfunction",
+                  title: "The inject() Function",
+                  contentPreview: "Modern DI without constructor parameters — required for functional guards, interceptors, resolvers, and APP_INITIALIZER patterns.",
+                  contentPath: "angular/depinjection/injectfunction"
+                },
+                {
+                  id: "appinitializer",
+                  title: "APP_INITIALIZER & provideAppInitializer",
+                  contentPreview: "Run async logic before the app renders — loading remote config, silent token refresh, permission preloading. provideAppInitializer is the Angular 18+ syntax.",
+                  contentPath: "angular/depinjection/appinitializer"
                 }
               ]
             },
@@ -309,6 +333,42 @@ export const categories_mock: Category[] = [
                   contentPreview: "Every Angular app consists of a file named angular.json. This file will contain all the configurations of the app.",
                   contentPath: "angular/routing/entrypoint"
                 },
+                {
+                  id: "routeguards",
+                  title: "Route Guards",
+                  contentPreview: "CanActivate, CanDeactivate, CanMatch, CanActivateChild — protecting routes with functional and class-based guards, async guards, and redirect patterns.",
+                  contentPath: "angular/routing/routeguards"
+                },
+                {
+                  id: "resolvers",
+                  title: "Route Resolvers",
+                  contentPreview: "Pre-fetch data before a component activates — components receive guaranteed data from ActivatedRoute with no loading spinners needed.",
+                  contentPath: "angular/routing/resolvers"
+                },
+                {
+                  id: "preloadingstrategies",
+                  title: "Preloading Strategies",
+                  contentPreview: "PreloadAllModules, QuicklinkStrategy, and custom role-based preloading — download lazy modules in the background after initial load.",
+                  contentPath: "angular/routing/preloadingstrategies"
+                },
+                {
+                  id: "lazyloadingstandalone",
+                  title: "Lazy Loading with Standalone",
+                  contentPreview: "loadComponent, loadChildren with routes arrays, route-scoped providers — the modern NgModule-free lazy loading architecture.",
+                  contentPath: "angular/routing/lazyloadingstandalone"
+                },
+                {
+                  id: "auxiliaryroutes",
+                  title: "Auxiliary Routes & Named Outlets",
+                  contentPreview: "Multiple independent router-outlet elements on the same page — side panels, dialogs, and master-detail layouts that are deep-linkable.",
+                  contentPath: "angular/routing/auxiliaryroutes"
+                },
+                {
+                  id: "routerevents",
+                  title: "Router Events Lifecycle",
+                  contentPreview: "NavigationStart to NavigationEnd, guards execution order, loading indicators, scroll restoration, and analytics page-view tracking.",
+                  contentPath: "angular/routing/routerevents"
+                }
               ]
             },
             {
@@ -546,6 +606,30 @@ export const categories_mock: Category[] = [
                   title: "Tools and Resources",
                   contentPreview: "",
                   contentPath: "angular/test/tools"
+                },
+                {
+                  id: "jasminekarma",
+                  title: "Jasmine & Karma: Practical Guide",
+                  contentPreview: "Spies, mocks, fakeAsync, HttpClientTestingModule, MockStore — interview-ready Jasmine/Karma patterns for Angular components, services, and NgRx.",
+                  contentPath: "angular/test/jasminekarma"
+                },
+                {
+                  id: "testingstandalone",
+                  title: "Testing Standalone Components",
+                  contentPreview: "imports instead of declarations in TestBed, overrideComponent for stub children, route-scoped services — standalone-specific testing patterns.",
+                  contentPath: "angular/test/testingstandalone"
+                },
+                {
+                  id: "testingsignals",
+                  title: "Testing Signals & Signal Stores",
+                  contentPreview: "Signal reads are synchronous — TestBed.flushEffects(), fixture.componentRef.setInput(), computed assertions, and Signal Store testing patterns.",
+                  contentPath: "angular/test/testingsignals"
+                },
+                {
+                  id: "testarchitecturedecisions",
+                  title: "Test Architecture Decisions",
+                  contentPreview: "Testing pyramid in Angular context, what to mock vs not, data-testid over CSS selectors, async patterns, NgRx facade vs MockStore — the strategy behind good tests.",
+                  contentPath: "angular/test/testarchitecturedecisions"
                 }
               ]
             },
@@ -675,6 +759,12 @@ export const categories_mock: Category[] = [
                   title: "Ivy",
                   contentPreview: "Ivy is Angular’s modern rendering engine and compilation pipeline. It transforms Angular templates and components into highly optimized JavaScript code that directly manipulates the DOM.",
                   contentPath: "angular/changedetection/ivy"
+                },
+                {
+                  id: "onpushdeep",
+                  title: "OnPush - Architect-Level Guide",
+                  contentPreview: "The four OnPush triggers, markForCheck vs detectChanges, immutability, and signals + OnPush.",
+                  contentPath: "angular/changedetection/onpushdeep"
                 }
               ]
             },
@@ -797,6 +887,24 @@ export const categories_mock: Category[] = [
                   title: "Advanced Topics",
                   contentPreview: "",
                   contentPath: "angular/ngrx/advanced"
+                },
+                {
+                  id: "componentstore",
+                  title: "ComponentStore — Feature-Level State",
+                  contentPreview: "@ngrx/component-store: scoped, instance-per-component state management with updaters and effects. The lightweight alternative to global NgRx.",
+                  contentPath: "angular/ngrx/componentstore"
+                },
+                {
+                  id: "signalstore",
+                  title: "Signal Store (@ngrx/signals)",
+                  contentPreview: "NgRx Signal Store — signal-native state management with withState, withComputed, withMethods, withEntities, and composable custom features.",
+                  contentPath: "angular/ngrx/signalstore"
+                },
+                {
+                  id: "cvexamples",
+                  title: "CV Examples & Interview Patterns",
+                  contentPreview: "Facade pattern, lazy-loaded feature state, selector-driven KPI dashboards, and role-based UI — real-world NgRx patterns from enterprise Angular work.",
+                  contentPath: "angular/ngrx/cvexamples"
                 }
               ]
             },
@@ -828,6 +936,212 @@ export const categories_mock: Category[] = [
                   title: "Using signals with RxJs",
                   contentPreview: "The @angular/rxjs-interop package offers APIs that help you integrate RxJS and Angular signals.",
                   contentPath: "angular/signals/signalswithrxjs"
+                }
+              ]
+            },
+            {
+              id: "security",
+              title: "Security",
+              description: "Angular security: XSS prevention, authentication patterns, CSRF protection, and secure architectural patterns.",
+              threads: [
+                {
+                  id: "xssprevention",
+                  title: "XSS Prevention",
+                  contentPreview: "Angular's automatic sanitization, DomSanitizer, bypassSecurityTrust* risks, and Content Security Policy — building XSS-safe Angular apps.",
+                  contentPath: "angular/security/xssprevention"
+                },
+                {
+                  id: "authpatterns",
+                  title: "Authentication Patterns",
+                  contentPreview: "JWT storage strategies, token refresh interceptor, concurrent refresh queuing, OAuth2/OIDC with angular-oauth2-oidc — production auth architecture.",
+                  contentPath: "angular/security/authpatterns"
+                },
+                {
+                  id: "csrfprotection",
+                  title: "CSRF Protection",
+                  contentPreview: "HttpClientXsrfModule, SameSite cookies, server-side CSRF token validation — when CSRF matters and how Angular handles it.",
+                  contentPath: "angular/security/csrfprotection"
+                },
+                {
+                  id: "csp",
+                  title: "Content Security Policy",
+                  contentPreview: "CSP headers for Angular apps, nonce-based approach for component styles, nginx configuration, and the security headers every Angular app should have.",
+                  contentPath: "angular/security/csp"
+                }
+              ]
+            },
+            {
+              id: "designpatterns",
+              title: "Design Patterns",
+              description: "Architectural patterns for scalable, maintainable Angular applications: component patterns, SOLID principles, state management decisions, and error handling.",
+              threads: [
+                {
+                  id: "smartdumbcomponents",
+                  title: "Smart & Dumb Components",
+                  contentPreview: "Container/presenter pattern — the most impactful architectural decision for Angular UI scalability. Smart containers own state, dumb presenters own rendering.",
+                  contentPath: "angular/designpatterns/smartdumbcomponents"
+                },
+                {
+                  id: "solidinangular",
+                  title: "SOLID Principles in Angular",
+                  contentPreview: "SRP services, OCP via InjectionToken strategy pattern, LSP abstract services, ISP narrow interfaces, DIP with abstract classes — SOLID applied to Angular.",
+                  contentPath: "angular/designpatterns/solidinangular"
+                },
+                {
+                  id: "statemanagementdecisions",
+                  title: "State Management Decision Framework",
+                  contentPreview: "When to use component signals vs shared service vs ComponentStore vs global NgRx vs Signal Store — justified architectural choices.",
+                  contentPath: "angular/designpatterns/statemanagementdecisions"
+                },
+                {
+                  id: "errorhandling",
+                  title: "Global Error Handling Architecture",
+                  contentPreview: "ErrorHandler, HTTP error interceptor, route error boundaries, abstract LoggingService with Sentry/AppInsights — centralized error management.",
+                  contentPath: "angular/designpatterns/errorhandling"
+                },
+                {
+                  id: "facadepattern",
+                  title: "Facade Pattern for NgRx",
+                  contentPreview: "Wrapping the NgRx store behind a Facade service — components talk to the Facade, never to the store directly. Simplifies testing and decouples architecture.",
+                  contentPath: "angular/designpatterns/facadepattern"
+                },
+                {
+                  id: "projectstructure",
+                  title: "Project Structure Decisions",
+                  contentPreview: "Feature-first vs layer-first architecture, core vs shared distinction, co-locating state with features, barrel exports, and path aliases for large Angular apps.",
+                  contentPath: "angular/designpatterns/projectstructure"
+                }
+              ]
+            },
+            {
+              id: "buildtooling",
+              title: "Build & Tooling",
+              description: "Angular build configuration, environment strategy, and deployment patterns.",
+              threads: [
+                {
+                  id: "environments",
+                  title: "Environment Configuration Strategy",
+                  contentPreview: "fileReplacements, InjectionToken for config, runtime config via APP_INITIALIZER for container deployments, and build budgets in angular.json.",
+                  contentPath: "angular/buildtooling/environments"
+                },
+                {
+                  id: "esbuild",
+                  title: "esbuild in Angular 17+",
+                  contentPreview: "The new default builder replaces Webpack — 10x faster builds, Vite dev server, migration steps, and what breaks during migration.",
+                  contentPath: "angular/buildtooling/esbuild"
+                },
+                {
+                  id: "workspaceconfig",
+                  title: "Workspace Configuration & Libraries",
+                  contentPreview: "Multi-project Angular workspaces, ng-packagr for library publishing, secondary entry points, path aliases, and the Angular Package Format.",
+                  contentPath: "angular/buildtooling/workspaceconfig"
+                },
+                {
+                  id: "monorepo",
+                  title: "Monorepo Strategies: Nx vs Angular Workspace",
+                  contentPreview: "When to use Angular CLI multi-project vs Nx — build caching, affected computation, module boundary enforcement, and the 4 library types pattern.",
+                  contentPath: "angular/buildtooling/monorepo"
+                },
+                {
+                  id: "buildconfiguration",
+                  title: "Build Configuration & Optimizations",
+                  contentPreview: "Production build options, optimization flags, output hashing for caching, source map strategies, bundle analysis, and ng build configurations.",
+                  contentPath: "angular/buildtooling/buildconfiguration"
+                }
+              ]
+            },
+            {
+              id: "microfrontends",
+              title: "Micro-Frontends",
+              description: "Independent deployment of Angular feature apps using Module Federation. Shell + remote architecture, shared state strategies, and Nx tooling.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "Micro-Frontends Overview",
+                  contentPreview: "Micro-frontends extend the microservices pattern to the UI layer — independent teams own separate Angular slices, each with its own CI/CD, composed into a single shell at runtime.",
+                  contentPath: "angular/microfrontends/overview"
+                },
+                {
+                  id: "modulefederation",
+                  title: "Module Federation with Angular",
+                  contentPreview: "Webpack 5 Module Federation via @angular-architects/module-federation — remote config, shell routing with loadRemoteModule, shared singletons, and environment-driven URLs.",
+                  contentPath: "angular/microfrontends/modulefederation"
+                }
+              ]
+            },
+            {
+              id: "accessibility",
+              title: "Accessibility (a11y)",
+              description: "Building accessible Angular applications: CDK a11y tools, ARIA in templates, keyboard navigation, and WCAG compliance patterns.",
+              threads: [
+                {
+                  id: "cdka11y",
+                  title: "Angular CDK a11y Module",
+                  contentPreview: "FocusTrap for modals, LiveAnnouncer for screen readers, FocusMonitor for keyboard vs mouse detection, and ListKeyManager for custom list navigation.",
+                  contentPath: "angular/accessibility/cdka11y"
+                },
+                {
+                  id: "aria",
+                  title: "ARIA in Angular Templates",
+                  contentPreview: "Dynamic [attr.aria-*] bindings, expandable content, form validation, live regions, landmark roles, skip navigation, and router focus management.",
+                  contentPath: "angular/accessibility/aria"
+                },
+                {
+                  id: "keyboardnavigation",
+                  title: "Keyboard Navigation Patterns",
+                  contentPreview: "Tab order management, HostListener key events, CDK ListKeyManager for custom menus, focus restoration after dialogs, and the custom interactive component checklist.",
+                  contentPath: "angular/accessibility/keyboardnavigation"
+                }
+              ]
+            },
+            {
+              id: "performance",
+              title: "Performance",
+              description: "Angular performance optimization: virtual scrolling, rendering optimizations, OnPush strategy, and build-time improvements.",
+              threads: [
+                {
+                  id: "virtualscrolling",
+                  title: "CDK Virtual Scrolling",
+                  contentPreview: "Render only visible items — CdkVirtualScrollViewport, itemSize, DataSource for on-demand loading, variable-size items, scroll-to-index, and infinite scroll patterns.",
+                  contentPath: "angular/performance/virtualscrolling"
+                },
+                {
+                  id: "renderingoptimizations",
+                  title: "Rendering Optimizations",
+                  contentPreview: "trackBy and @for track to prevent DOM churn, OnPush with immutable updates, @defer for lazy rendering, pure pipes over template methods, runOutsideAngular.",
+                  contentPath: "angular/performance/renderingoptimizations"
+                }
+              ]
+            },
+            {
+              id: "cdk",
+              title: "Angular CDK",
+              description: "Component Development Kit — low-level primitives for building accessible, well-positioned custom components without Angular Material visual design.",
+              threads: [
+                {
+                  id: "overview",
+                  title: "CDK Overview",
+                  contentPreview: "All CDK modules: a11y, overlay, portal, drag-drop, scrolling, clipboard, layout, observers — what each does and when to use CDK vs Angular Material.",
+                  contentPath: "angular/cdk/overview"
+                },
+                {
+                  id: "overlayportal",
+                  title: "Overlay & Portal",
+                  contentPreview: "Building custom dialogs and tooltips — connected position strategies, scroll strategies, backdrop, focus trapping, PortalOutlet for rendering anywhere in the DOM.",
+                  contentPath: "angular/cdk/overlayportal"
+                }
+              ]
+            },
+            {
+              id: "pwa",
+              title: "Progressive Web Apps",
+              description: "Angular Service Workers for offline capability, caching strategies, app update handling, and push notifications.",
+              threads: [
+                {
+                  id: "serviceworker",
+                  title: "Angular Service Workers",
+                  contentPreview: "ng add @angular/pwa, ngsw-config.json caching strategies (freshness vs performance), VERSION_READY update flow, push notifications, and SSR compatibility.",
+                  contentPath: "angular/pwa/serviceworker"
                 }
               ]
             }

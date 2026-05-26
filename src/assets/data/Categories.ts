@@ -1,5 +1,5 @@
 import { Category } from "../../shared/models/Category ";
-import { BookIcon, ServerIcon, Cog, Network, Database } from 'lucide-angular';
+import { BookIcon, ServerIcon, Cog, Network, Database, CloudIcon } from 'lucide-angular';
 
 export const categories_mock: Category[] = [
     {
@@ -1066,6 +1066,18 @@ export const categories_mock: Category[] = [
                   title: "Module Federation with Angular",
                   contentPreview: "Webpack 5 Module Federation via @angular-architects/module-federation — remote config, shell routing with loadRemoteModule, shared singletons, and environment-driven URLs.",
                   contentPath: "angular/microfrontends/modulefederation"
+                },
+                {
+                  id: "dockerdeployment",
+                  title: "Docker Deployment",
+                  contentPreview: "Deploying each micro-frontend as an independent Docker container — nginx reverse proxy, runtime URL injection via APP_INITIALIZER, docker-compose setup, and Kubernetes deployments.",
+                  contentPath: "angular/microfrontends/docker-deployment"
+                },
+                {
+                  id: "examples",
+                  title: "Common Examples",
+                  contentPreview: "Practical micro-frontend patterns: e-commerce platform, banking dashboard, SaaS multi-tenant portal, and admin tools — with cross-MFE communication, auth sharing, and anti-patterns.",
+                  contentPath: "angular/microfrontends/examples"
                 }
               ]
             },
@@ -2671,6 +2683,655 @@ export const categories_mock: Category[] = [
               ]
             }
           ]
+        },
+        {
+          id: "python",
+          name: "Python",
+          description: "Python for backend development — from fundamentals to FastAPI, PySpark and Databricks",
+          topics: [
+            {
+              id: "pythonfundamentals",
+              title: "Python Fundamentals",
+              description: "Core language concepts for beginners",
+              threads: [
+                {
+                  id: "introduction",
+                  title: "Introduction to Python",
+                  contentPreview: "Python is a high-level, interpreted, dynamically-typed language known for its readable syntax. It supports multiple paradigms (procedural, OOP, functional) and ships with a rich standard library, making it popular for web backends, data engineering, scripting and automation.",
+                  contentPath: "python/pythonfundamentals/introduction"
+                },
+                {
+                  id: "datatypes",
+                  title: "Data Types and Variables",
+                  contentPreview: "Python's built-in types include int, float, complex, str, bool, bytes and NoneType. Variables are references to objects; type() and isinstance() help inspect them at runtime. Mutability is a key distinction: ints and strings are immutable while lists and dicts are mutable.",
+                  contentPath: "python/pythonfundamentals/datatypes"
+                },
+                {
+                  id: "controlflow",
+                  title: "Control Flow",
+                  contentPreview: "Python control flow constructs include if/elif/else, for and while loops, break, continue and pass. The for loop iterates over any iterable. Walrus operator (:=) lets you assign and test in one expression. Pattern matching (match/case) was introduced in Python 3.10.",
+                  contentPath: "python/pythonfundamentals/controlflow"
+                },
+                {
+                  id: "functions",
+                  title: "Functions, Arguments and Scope",
+                  contentPreview: "Functions are first-class objects in Python. Arguments can be positional, keyword, *args or **kwargs. Python uses LEGB scope resolution (Local → Enclosing → Global → Built-in). Closures capture variables from the enclosing scope; the global and nonlocal keywords let you mutate them.",
+                  contentPath: "python/pythonfundamentals/functions"
+                },
+                {
+                  id: "datastructures",
+                  title: "Built-in Data Structures",
+                  contentPreview: "Python ships with powerful built-in structures: list (ordered, mutable), tuple (ordered, immutable), set (unordered, unique), dict (key-value mapping). The collections module adds Counter, deque, defaultdict and OrderedDict for specialised use-cases.",
+                  contentPath: "python/pythonfundamentals/datastructures"
+                },
+                {
+                  id: "modules",
+                  title: "Modules and Packages",
+                  contentPreview: "A module is a .py file; a package is a directory with __init__.py. Python's import system resolves names through sys.path. Relative imports use dot notation. Virtual environments (venv, virtualenv) isolate dependencies per project.",
+                  contentPath: "python/pythonfundamentals/modules"
+                },
+                {
+                  id: "fileio",
+                  title: "File I/O and the open() Built-in",
+                  contentPreview: "open() returns a file object. The with statement ensures proper resource cleanup via __enter__ and __exit__. Modes include r, w, a, b (binary) and + (read-write). The pathlib module offers an object-oriented path API as an alternative to os.path.",
+                  contentPath: "python/pythonfundamentals/fileio"
+                },
+                {
+                  id: "errorhandling",
+                  title: "Error Handling and Exceptions",
+                  contentPreview: "Python's exception hierarchy derives from BaseException. try/except/else/finally lets you catch specific exception types, execute cleanup code and provide fallback logic. Raise custom exceptions by subclassing Exception. Context variables can be preserved with raise ... from.",
+                  contentPath: "python/pythonfundamentals/errorhandling"
+                },
+                {
+                  id: "stdliboverview",
+                  title: "Standard Library Highlights",
+                  contentPreview: "The standard library includes os, sys, pathlib, shutil for file system work; datetime and zoneinfo for time; json, csv, xml.etree for serialisation; logging for structured output; re for regular expressions; urllib and http.client for HTTP; and subprocess for shell commands.",
+                  contentPath: "python/pythonfundamentals/stdliboverview"
+                }
+              ]
+            },
+            {
+              id: "oop",
+              title: "Object-Oriented Python",
+              description: "Classes, inheritance, protocols and advanced OOP patterns",
+              threads: [
+                {
+                  id: "classesandobjects",
+                  title: "Classes and Objects",
+                  contentPreview: "class defines a new type. __init__ initialises instances. Instance attributes live on the instance dict; class attributes are shared. self is the conventional name for the instance reference. Python's data model means almost everything is an object with a type and identity.",
+                  contentPath: "python/oop/classesandobjects"
+                },
+                {
+                  id: "inheritance",
+                  title: "Inheritance and Polymorphism",
+                  contentPreview: "Python supports single and multiple inheritance. The Method Resolution Order (MRO) follows the C3 linearisation algorithm and is inspected via ClassName.__mro__. super() calls the next class in the MRO. Duck typing and structural subtyping mean explicit inheritance is often optional.",
+                  contentPath: "python/oop/inheritance"
+                },
+                {
+                  id: "magicmethods",
+                  title: "Magic (Dunder) Methods",
+                  contentPreview: "Dunder methods let your objects integrate with Python's built-in operators and protocols. Common examples: __repr__/__str__ for string representation, __len__/__getitem__ for sequences, __eq__/__hash__ for equality, __enter__/__exit__ for context managers, __call__ for callable instances.",
+                  contentPath: "python/oop/magicmethods"
+                },
+                {
+                  id: "abstractclasses",
+                  title: "Abstract Classes and Protocols",
+                  contentPreview: "abc.ABC and @abstractmethod enforce interface contracts at instantiation time. typing.Protocol (PEP 544) enables structural subtyping — if an object has the right methods it satisfies the protocol, regardless of inheritance. This supports duck-typed, statically-checkable code.",
+                  contentPath: "python/oop/abstractclasses"
+                },
+                {
+                  id: "dataclasses",
+                  title: "Dataclasses and NamedTuples",
+                  contentPreview: "@dataclass auto-generates __init__, __repr__ and __eq__. Fields can be frozen (immutable), have defaults via field(), or be excluded from comparison. typing.NamedTuple provides immutable, named tuples with type annotations. Both are preferable to raw classes for simple data holders.",
+                  contentPath: "python/oop/dataclasses"
+                },
+                {
+                  id: "slots",
+                  title: "__slots__ and Memory Optimisation",
+                  contentPreview: "By default each instance carries a __dict__ for attribute storage. Declaring __slots__ replaces the per-instance dict with a fixed set of descriptors, reducing memory footprint significantly for classes with many instances and preventing accidental attribute creation.",
+                  contentPath: "python/oop/slots"
+                }
+              ]
+            },
+            {
+              id: "idiomatic",
+              title: "Idiomatic Python",
+              description: "Pythonic patterns: comprehensions, decorators, generators and more",
+              threads: [
+                {
+                  id: "comprehensions",
+                  title: "Comprehensions and Generator Expressions",
+                  contentPreview: "List, dict and set comprehensions offer concise syntax for building collections: [x*2 for x in range(10) if x % 2 == 0]. Generator expressions use () instead of [] and are lazy — they yield values on demand, keeping memory usage constant regardless of input size.",
+                  contentPath: "python/idiomatic/comprehensions"
+                },
+                {
+                  id: "iteratorsprotocol",
+                  title: "Iterators and the Iteration Protocol",
+                  contentPreview: "An iterable implements __iter__ returning an iterator; an iterator implements __next__ raising StopIteration when exhausted. Generator functions use yield to produce iterators lazily. itertools (chain, islice, groupby, product) compose iterators without materialising intermediate lists.",
+                  contentPath: "python/idiomatic/iteratorsprotocol"
+                },
+                {
+                  id: "decorators",
+                  title: "Decorators",
+                  contentPreview: "A decorator is a callable that wraps another callable to add behaviour. functools.wraps preserves the wrapped function's metadata. Decorators can accept arguments by adding an outer factory function. Class-based decorators implement __call__. Common use-cases: logging, timing, caching, access control.",
+                  contentPath: "python/idiomatic/decorators"
+                },
+                {
+                  id: "contextmanagers",
+                  title: "Context Managers",
+                  contentPreview: "The with statement calls __enter__ on entry and __exit__ on exit, even if an exception occurs. contextlib.contextmanager turns a generator function into a context manager using yield. ExitStack manages a dynamic number of context managers — useful for conditionally opening resources.",
+                  contentPath: "python/idiomatic/contextmanagers"
+                },
+                {
+                  id: "typing",
+                  title: "Type Hints and Static Analysis",
+                  contentPreview: "PEP 484 introduced optional type hints. Common annotations: int, str, list[int], dict[str, Any], Optional[T], Union[A, B], Callable, TypeVar. mypy and pyright perform static type checking. TypedDict annotates dict shapes; TypeAlias gives names to complex types. Python 3.12 introduced type statement.",
+                  contentPath: "python/idiomatic/typing"
+                },
+                {
+                  id: "functionaltools",
+                  title: "Functional Programming Tools",
+                  contentPreview: "functools provides lru_cache, cache, partial, reduce and wraps. operator offers function equivalents of built-in operators. map(), filter() and zip() return lazy iterators. Python avoids true tail-call optimisation, so deep recursion should be converted to iteration.",
+                  contentPath: "python/idiomatic/functionaltools"
+                },
+                {
+                  id: "envpackaging",
+                  title: "Virtual Environments and Packaging",
+                  contentPreview: "venv creates isolated Python environments. pip manages packages; requirements.txt pins versions. pyproject.toml (PEP 517/518) is the modern project metadata standard. Poetry and Hatch are popular build tools. pip-tools and pip-compile keep lockfiles reproducible.",
+                  contentPath: "python/idiomatic/envpackaging"
+                }
+              ]
+            },
+            {
+              id: "concurrency",
+              title: "Concurrency and Async I/O",
+              description: "Threading, multiprocessing and asyncio for concurrent Python programs",
+              threads: [
+                {
+                  id: "gil",
+                  title: "The Global Interpreter Lock (GIL)",
+                  contentPreview: "CPython's GIL is a mutex that protects the interpreter's object model — only one thread executes Python bytecode at a time. This makes multithreaded CPU-bound code effectively single-threaded. The GIL does not affect multiprocessing or I/O-bound threading. Python 3.13 introduced an experimental free-threaded (no-GIL) build.",
+                  contentPath: "python/concurrency/gil"
+                },
+                {
+                  id: "threading",
+                  title: "Threading Module",
+                  contentPreview: "threading.Thread runs callables in separate OS threads. Synchronisation primitives include Lock, RLock, Semaphore, Event, Condition and Barrier. Thread-local storage is available via threading.local(). Best suited for I/O-bound tasks where threads spend most time waiting.",
+                  contentPath: "python/concurrency/threading"
+                },
+                {
+                  id: "multiprocessing",
+                  title: "Multiprocessing Module",
+                  contentPreview: "multiprocessing spawns separate interpreter processes, bypassing the GIL — ideal for CPU-bound work. Process, Pool, Queue and Pipe are the main primitives. multiprocessing.shared_memory (Python 3.8+) shares memory between processes without serialisation overhead.",
+                  contentPath: "python/concurrency/multiprocessing"
+                },
+                {
+                  id: "asyncio",
+                  title: "asyncio and the Event Loop",
+                  contentPreview: "asyncio implements cooperative multitasking via an event loop and coroutines. async def defines a coroutine; await suspends it until the awaitable completes. asyncio.run() is the canonical entry point. Tasks wrap coroutines and are scheduled on the event loop. asyncio.gather() runs tasks concurrently.",
+                  contentPath: "python/concurrency/asyncio"
+                },
+                {
+                  id: "asyncpatterns",
+                  title: "Async Patterns and Best Practices",
+                  contentPreview: "Avoid mixing blocking code with async code — use run_in_executor() to offload blocking calls. async for iterates async iterables; async with manages async context managers. Structured concurrency with TaskGroup (Python 3.11) ensures tasks are cancelled on error. aiohttp and httpx provide async HTTP clients.",
+                  contentPath: "python/concurrency/asyncpatterns"
+                },
+                {
+                  id: "concurrentfutures",
+                  title: "concurrent.futures Executors",
+                  contentPreview: "concurrent.futures provides a high-level interface over both threads and processes. ThreadPoolExecutor suits I/O-bound work; ProcessPoolExecutor suits CPU-bound work. submit() returns a Future; map() applies a function concurrently. as_completed() iterates futures in order of completion.",
+                  contentPath: "python/concurrency/concurrentfutures"
+                }
+              ]
+            },
+            {
+              id: "advancedpython",
+              title: "Advanced Python Internals",
+              description: "Metaclasses, descriptors, memory management and CPython internals",
+              threads: [
+                {
+                  id: "metaclasses",
+                  title: "Metaclasses",
+                  contentPreview: "A metaclass is the class of a class — it controls class creation. type is the default metaclass. Custom metaclasses override __new__ and __init__ to intercept and modify class definitions at creation time. Common uses: ORMs, plugin registries, enforcing interface contracts and auto-instrumentation.",
+                  contentPath: "python/advancedpython/metaclasses"
+                },
+                {
+                  id: "descriptors",
+                  title: "Descriptors Protocol",
+                  contentPreview: "A descriptor implements __get__, __set__ and/or __delete__. Data descriptors (both __get__ and __set__) take precedence over instance __dict__; non-data descriptors do not. property, classmethod and staticmethod are all implemented as descriptors in CPython.",
+                  contentPath: "python/advancedpython/descriptors"
+                },
+                {
+                  id: "memorymanagement",
+                  title: "Memory Management and Garbage Collection",
+                  contentPreview: "CPython uses reference counting as its primary memory management strategy; objects with zero references are immediately freed. A cyclic garbage collector (gc module) handles reference cycles. The gc module exposes generations, thresholds and manual collection. weakref allows references that don't increment the refcount.",
+                  contentPath: "python/advancedpython/memorymanagement"
+                },
+                {
+                  id: "profiling",
+                  title: "Profiling and Performance Optimisation",
+                  contentPreview: "cProfile and profile produce call statistics. line_profiler measures line-by-line execution time. memory_profiler tracks memory usage. timeit benchmarks small snippets. Optimisation strategies include choosing appropriate data structures, avoiding global lookups, using built-ins written in C and leveraging numpy/pandas for numeric work.",
+                  contentPath: "python/advancedpython/profiling"
+                },
+                {
+                  id: "importsystem",
+                  title: "Import System and Custom Importers",
+                  contentPreview: "Python's import system uses finders and loaders. sys.meta_path is a list of finders tried in order. importlib.import_module provides programmatic imports. Custom importers (implementing importlib.abc.Finder and Loader) can load modules from non-standard sources such as databases or remote URLs.",
+                  contentPath: "python/advancedpython/importsystem"
+                },
+                {
+                  id: "bytecodeandcpython",
+                  title: "Bytecode and CPython Internals",
+                  contentPreview: "Python compiles source to bytecode (.pyc files in __pycache__). dis module disassembles bytecode for inspection. Code objects carry constants, names, and bytecode instructions. Understanding the eval loop (ceval.c) helps explain performance characteristics. Tools like codon and Cython compile Python to native code.",
+                  contentPath: "python/advancedpython/bytecodeandcpython"
+                }
+              ]
+            },
+            {
+              id: "testingpython",
+              title: "Testing in Python",
+              description: "pytest, fixtures, mocking and test-driven development",
+              threads: [
+                {
+                  id: "unittestmodule",
+                  title: "unittest Module",
+                  contentPreview: "unittest is Python's built-in xUnit-style test framework. Test cases extend unittest.TestCase. setUp/tearDown manage per-test state; setUpClass/tearDownClass manage per-class state. Assertions: assertEqual, assertRaises, assertIn, etc. unittest.mock provides Mock, MagicMock and patch.",
+                  contentPath: "python/testingpython/unittestmodule"
+                },
+                {
+                  id: "pytest",
+                  title: "pytest Framework",
+                  contentPreview: "pytest discovers tests by convention (test_*.py, *_test.py). Plain assert statements replace verbose assertion methods. Plugins extend pytest: pytest-cov for coverage, pytest-asyncio for async tests, pytest-mock for mocking. Running: pytest -v --tb=short -x stops on first failure.",
+                  contentPath: "python/testingpython/pytest"
+                },
+                {
+                  id: "fixtures",
+                  title: "Fixtures and Parametrize",
+                  contentPreview: "@pytest.fixture defines reusable setup/teardown with scope (function, class, module, session). Fixtures can yield to provide teardown after the test. @pytest.mark.parametrize runs a test with multiple input sets. conftest.py shares fixtures across test modules without explicit imports.",
+                  contentPath: "python/testingpython/fixtures"
+                },
+                {
+                  id: "mocking",
+                  title: "Mocking with unittest.mock",
+                  contentPreview: "unittest.mock.patch replaces objects during a test. MagicMock automatically creates magic method implementations. side_effect lets you raise exceptions or return dynamic values. assert_called_once_with verifies interactions. Mock the boundary (network, DB) not the implementation details.",
+                  contentPath: "python/testingpython/mocking"
+                },
+                {
+                  id: "tdd",
+                  title: "Test-Driven Development",
+                  contentPreview: "TDD follows Red-Green-Refactor: write a failing test, write minimal code to pass it, then clean up. Benefits include design feedback, confidence during refactoring, and living documentation. Property-based testing with Hypothesis generates edge-case inputs automatically.",
+                  contentPath: "python/testingpython/tdd"
+                }
+              ]
+            },
+            {
+              id: "fastapi",
+              title: "FastAPI",
+              description: "Building high-performance async APIs with FastAPI and Pydantic",
+              threads: [
+                {
+                  id: "fastapiintro",
+                  title: "Introduction to FastAPI",
+                  contentPreview: "FastAPI is a modern, high-performance Python web framework built on Starlette (ASGI) and Pydantic. It auto-generates OpenAPI + JSON Schema docs. Benchmarks place it on par with Node.js/Go for I/O-bound workloads. Minimum viable app: from fastapi import FastAPI; app = FastAPI(); @app.get('/') async def root(): return {'hello': 'world'}.",
+                  contentPath: "python/fastapi/fastapiintro"
+                },
+                {
+                  id: "pathandquery",
+                  title: "Path Operations and Parameters",
+                  contentPreview: "Route decorators (@app.get, @app.post, etc.) map HTTP methods and URL patterns to handler functions. Path parameters are declared in the URL template {item_id} and as typed function arguments. Query parameters are plain function arguments with defaults. FastAPI validates and coerces types automatically via Pydantic.",
+                  contentPath: "python/fastapi/pathandquery"
+                },
+                {
+                  id: "requestbody",
+                  title: "Request Bodies and Pydantic Models",
+                  contentPreview: "Pydantic BaseModel subclasses define the shape, types and validation rules for request and response bodies. Field() adds metadata (title, description, constraints). Nested models and lists are supported. response_model on the decorator strips extra fields before serialisation. Model validators allow cross-field rules.",
+                  contentPath: "python/fastapi/requestbody"
+                },
+                {
+                  id: "dependency",
+                  title: "Dependency Injection System",
+                  contentPreview: "FastAPI's Depends() builds a dependency graph at startup. Dependencies can declare their own dependencies. Common use-cases: getting DB sessions, parsing common query params, verifying auth tokens. yield-based dependencies act as context managers with automatic teardown after the response is sent.",
+                  contentPath: "python/fastapi/dependency"
+                },
+                {
+                  id: "authentication",
+                  title: "Authentication and Security",
+                  contentPreview: "FastAPI has built-in OAuth2PasswordBearer and HTTPBearer security schemes. JWT tokens are validated inside a Depends() callable. python-jose or PyJWT handle encoding/decoding. Passwords are hashed with passlib. Role-based access control is implemented via additional Depends() guards.",
+                  contentPath: "python/fastapi/authentication"
+                },
+                {
+                  id: "middleware",
+                  title: "Middleware and CORS",
+                  contentPreview: "ASGI middleware wraps the entire request-response cycle. @app.middleware('http') creates custom middleware. CORSMiddleware (from starlette.middleware.cors) is added via app.add_middleware() to configure allowed origins, methods and headers. GZipMiddleware, TrustedHostMiddleware and ProxyHeadersMiddleware are common additions.",
+                  contentPath: "python/fastapi/middleware"
+                },
+                {
+                  id: "routers",
+                  title: "APIRouter and Application Structure",
+                  contentPreview: "APIRouter groups related endpoints into modules. include_router() mounts them on the main app with an optional prefix and tags. Large apps follow a feature-based directory layout: each feature folder contains router.py, schemas.py, models.py and services.py. Lifespan events replace deprecated on_event.",
+                  contentPath: "python/fastapi/routers"
+                },
+                {
+                  id: "database",
+                  title: "Database Integration",
+                  contentPreview: "SQLAlchemy 2.0 with the async engine (create_async_engine) integrates via a Depends() session factory. Alembic handles migrations. For NoSQL, Motor provides an async MongoDB driver. SQLModel combines SQLAlchemy and Pydantic into a single model definition. Repository pattern cleanly separates data access from business logic.",
+                  contentPath: "python/fastapi/database"
+                },
+                {
+                  id: "backgroundtasks",
+                  title: "Background Tasks and WebSockets",
+                  contentPreview: "BackgroundTasks schedules callables to run after the response is sent — ideal for sending emails or logging. For heavier work, offload to Celery or ARQ (async Redis queue). WebSocket endpoints accept a WebSocket parameter; await websocket.accept() then loop reading messages. Broadcasting requires an in-memory or pub/sub channel layer.",
+                  contentPath: "python/fastapi/backgroundtasks"
+                },
+                {
+                  id: "testingfastapi",
+                  title: "Testing FastAPI Applications",
+                  contentPreview: "TestClient (httpx-based) performs synchronous requests to the app in tests. For async tests use AsyncClient with ASGITransport. Override dependencies with app.dependency_overrides. Use pytest fixtures to create isolated test DB sessions or roll back transactions after each test.",
+                  contentPath: "python/fastapi/testingfastapi"
+                },
+                {
+                  id: "fastapiproduction",
+                  title: "Deployment and Production Considerations",
+                  contentPreview: "Run FastAPI with Uvicorn (single process) or Gunicorn with UvicornWorker (multi-process). Containerise with Docker; configure health-check endpoints. Use environment variables for secrets via pydantic-settings BaseSettings. Add structured logging (structlog or python-json-logger). Reverse proxy with nginx or a cloud load balancer.",
+                  contentPath: "python/fastapi/fastapiproduction"
+                }
+              ]
+            },
+            {
+              id: "restapi",
+              title: "REST API Design and Integration",
+              description: "REST principles, versioning, security patterns and frontend-backend integration",
+              threads: [
+                {
+                  id: "restprinciples",
+                  title: "REST Principles and HTTP Methods",
+                  contentPreview: "REST (Representational State Transfer) is an architectural style built on six constraints: uniform interface, statelessness, cacheability, layered system, code on demand and client-server separation. HTTP methods map to CRUD: GET (read), POST (create), PUT/PATCH (update), DELETE (remove). Idempotency: PUT and DELETE are idempotent; POST is not.",
+                  contentPath: "python/restapi/restprinciples"
+                },
+                {
+                  id: "resourcedesign",
+                  title: "Resource Design and URL Conventions",
+                  contentPreview: "Resources are nouns, never verbs: /orders not /getOrders. Use plural collection paths (/users) and singular item paths (/users/{id}). Nest sub-resources to express relationships: /users/{id}/orders. Keep URLs lowercase with hyphens. Avoid deep nesting beyond two levels.",
+                  contentPath: "python/restapi/resourcedesign"
+                },
+                {
+                  id: "versioning",
+                  title: "API Versioning Strategies",
+                  contentPreview: "Common versioning strategies: URI path versioning (/v1/users), Accept header versioning (application/vnd.api.v1+json), query parameter versioning (?version=1). URI versioning is the most visible; header versioning is the most RESTful. Semantic versioning applies: breaking changes require a major version bump.",
+                  contentPath: "python/restapi/versioning"
+                },
+                {
+                  id: "apiauthpatterns",
+                  title: "Authentication Patterns",
+                  contentPreview: "API Key: simple, but no expiry by default — suitable for server-to-server calls. Basic Auth: base64-encoded credentials in the Authorization header — never over plain HTTP. Bearer tokens (JWT): stateless, self-contained, expirable. OAuth2 + OIDC: delegated authorisation for third-party access. mTLS for high-security service meshes.",
+                  contentPath: "python/restapi/apiauthpatterns"
+                },
+                {
+                  id: "pagination",
+                  title: "Pagination, Filtering and Sorting",
+                  contentPreview: "Offset pagination (?offset=20&limit=10) is simple but skips records on concurrent inserts. Cursor/keyset pagination uses an opaque pointer to the last seen item — stable under mutations. Return total count and next/prev links in response metadata. Allow filtering via query params; sorting via ?sort=field:asc.",
+                  contentPath: "python/restapi/pagination"
+                },
+                {
+                  id: "errorcodes",
+                  title: "Error Handling and Status Codes",
+                  contentPreview: "Use semantically correct HTTP status codes: 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 422 Unprocessable Entity (FastAPI default for validation errors), 429 Too Many Requests, 500 Internal Server Error. Return a consistent error body: {error: string, detail: string, traceId: string}.",
+                  contentPath: "python/restapi/errorcodes"
+                },
+                {
+                  id: "openapi",
+                  title: "OpenAPI and Swagger Documentation",
+                  contentPreview: "OpenAPI 3.x is the de-facto standard for describing REST APIs. FastAPI auto-generates /docs (Swagger UI) and /redoc. Annotate models and endpoints with descriptions, examples and response schemas. Use operationId for SDK generation. Export the spec with app.openapi() for contract testing or code generation.",
+                  contentPath: "python/restapi/openapi"
+                },
+                {
+                  id: "ratelimiting",
+                  title: "Rate Limiting and Throttling",
+                  contentPreview: "Rate limiting protects APIs from abuse and ensures fair use. Algorithms: fixed window, sliding window, token bucket and leaky bucket. slowapi (Limits + FastAPI) or middleware-level Redis counters are common Python implementations. Return 429 with Retry-After header. Differentiate limits by API key or authenticated user.",
+                  contentPath: "python/restapi/ratelimiting"
+                },
+                {
+                  id: "integration",
+                  title: "Frontend-Backend Integration Patterns",
+                  contentPreview: "HTTP clients (fetch, axios, Angular HttpClient) consume REST APIs. The Backend-for-Frontend (BFF) pattern creates a dedicated backend per UI type to avoid over-fetching. CORS must be configured for cross-origin browser requests. Contract testing (Pact) verifies that the consumer and provider agree on the API shape without requiring both to be running.",
+                  contentPath: "python/restapi/integration"
+                }
+              ]
+            },
+            {
+              id: "dataprocessing",
+              title: "Data Processing Concepts",
+              description: "ETL/ELT, batch and streaming pipelines, Pandas and data quality",
+              threads: [
+                {
+                  id: "etlelt",
+                  title: "ETL vs ELT",
+                  contentPreview: "ETL (Extract-Transform-Load) transforms data before loading into the target — suited for legacy data warehouses with limited compute. ELT (Extract-Load-Transform) loads raw data first then transforms inside the warehouse (e.g., Snowflake, BigQuery, Databricks) — leverages the warehouse's distributed compute for transformation, enabling schema-on-read and easier re-processing.",
+                  contentPath: "python/dataprocessing/etlelt"
+                },
+                {
+                  id: "batchprocessing",
+                  title: "Batch Processing Fundamentals",
+                  contentPreview: "Batch jobs process bounded datasets on a schedule. Key concerns: idempotency (re-runnable without duplicates), atomicity (all-or-nothing writes), partitioning strategy (date, region) and checkpoint/restart capability. Tools: Apache Spark, dbt, Pandas, Python scripts orchestrated by Airflow, Prefect or Databricks Workflows.",
+                  contentPath: "python/dataprocessing/batchprocessing"
+                },
+                {
+                  id: "streamprocessing",
+                  title: "Stream Processing Fundamentals",
+                  contentPreview: "Stream processing handles unbounded, continuously arriving data. Paradigms: micro-batch (PySpark Structured Streaming, Spark Streaming) and true streaming (Apache Flink, Kafka Streams). Key concepts: event time vs processing time, watermarks for late data, windowing (tumbling, sliding, session), exactly-once semantics.",
+                  contentPath: "python/dataprocessing/streamprocessing"
+                },
+                {
+                  id: "datapipelinepatterns",
+                  title: "Data Pipeline Design Patterns",
+                  contentPreview: "Common patterns: Fan-out (one source to many sinks), Fan-in (many sources to one sink), Saga / two-phase commit for distributed transactions, Dead-letter queues for failed messages, Idempotent consumers. Medallion architecture (Bronze → Silver → Gold) organises data by quality layer. Think about lineage, observability and SLA from the start.",
+                  contentPath: "python/dataprocessing/datapipelinepatterns"
+                },
+                {
+                  id: "pandas",
+                  title: "Data Manipulation with Pandas",
+                  contentPreview: "Pandas DataFrame is the workhorse for in-memory tabular data. Core operations: read_csv/read_parquet, merge/join, groupby/agg, apply, pivot_table, melt/stack. Use vectorised operations over loops. For large datasets chunked reading and Dask provide out-of-core processing. Polars is a Rust-based alternative with a lazy evaluation API similar to Spark.",
+                  contentPath: "python/dataprocessing/pandas"
+                },
+                {
+                  id: "datavalidation",
+                  title: "Data Validation and Quality",
+                  contentPreview: "Data quality dimensions: completeness, accuracy, consistency, timeliness and uniqueness. Tools: Great Expectations (rule-based expectations with profiling), Pandera (Pandas schema validation), Pydantic for per-record validation, dbt tests for SQL transformations. Build quality checks into every pipeline stage, not just at the end.",
+                  contentPath: "python/dataprocessing/datavalidation"
+                },
+                {
+                  id: "serialisationformats",
+                  title: "Serialisation Formats",
+                  contentPreview: "JSON: human-readable, universal. Parquet: columnar, highly compressed, Spark/Pandas native — best for analytics. Avro: row-oriented with schema evolution support — popular in Kafka pipelines. ORC: columnar, Hive-optimised. Delta Lake uses Parquet as the underlying storage format with a transaction log for ACID guarantees.",
+                  contentPath: "python/dataprocessing/serialisationformats"
+                },
+                {
+                  id: "orchestration",
+                  title: "Pipeline Orchestration and Scheduling",
+                  contentPreview: "Orchestrators manage execution order, retries, alerting and observability. Apache Airflow uses Python-defined DAGs. Prefect and Dagster offer a more modern, code-first experience. Databricks Workflows is a built-in orchestrator for notebook and task-based pipelines. Key concerns: backfill strategy, SLA alerting, idempotent task design.",
+                  contentPath: "python/dataprocessing/orchestration"
+                }
+              ]
+            },
+            {
+              id: "pysparkfundamentals",
+              title: "PySpark Fundamentals",
+              description: "Apache Spark with Python for distributed large-scale data processing",
+              threads: [
+                {
+                  id: "sparkarchitecture",
+                  title: "Spark Architecture Overview",
+                  contentPreview: "Spark runs in a master-worker topology: a Driver program creates a SparkContext, splits work into Tasks and sends them to Executors on Worker nodes via a Cluster Manager (YARN, Kubernetes, Databricks). The Directed Acyclic Graph (DAG) scheduler optimises execution plans into Stages separated by shuffle boundaries.",
+                  contentPath: "python/pysparkfundamentals/sparkarchitecture"
+                },
+                {
+                  id: "rdd",
+                  title: "Resilient Distributed Datasets (RDDs)",
+                  contentPreview: "RDD is Spark's low-level distributed collection: immutable, fault-tolerant and partitioned. Transformations (map, filter, flatMap) are lazy; actions (collect, count, saveAsTextFile) trigger execution. Lineage graph enables recomputation on node failure. DataFrame/Dataset APIs are preferred over RDDs for most use-cases due to Catalyst optimisation.",
+                  contentPath: "python/pysparkfundamentals/rdd"
+                },
+                {
+                  id: "dataframes",
+                  title: "Spark DataFrames and Datasets",
+                  contentPreview: "DataFrame is a distributed collection of rows with a named, typed schema. Built on top of RDDs but optimised by the Catalyst query planner. Created from files (spark.read.parquet), databases (jdbc), streaming sources or RDDs. Common operations: select, filter, withColumn, groupBy, agg, join, union. Dataset API (Scala/Java only) adds compile-time type safety.",
+                  contentPath: "python/pysparkfundamentals/dataframes"
+                },
+                {
+                  id: "transformationsactions",
+                  title: "Transformations vs Actions",
+                  contentPreview: "Transformations are lazy — they build up a logical plan without executing: map, filter, select, join, groupBy. Actions trigger execution of the plan: count(), show(), collect(), write. Calling collect() on large datasets transfers all data to the driver — avoid it in production. Use take(n) or write directly to storage instead.",
+                  contentPath: "python/pysparkfundamentals/transformationsactions"
+                },
+                {
+                  id: "sparksql",
+                  title: "Spark SQL and Temporary Views",
+                  contentPreview: "Spark SQL allows querying DataFrames using standard SQL. createOrReplaceTempView registers a DataFrame as a SQL table scoped to the SparkSession. spark.sql() returns a DataFrame. The Catalog API (spark.catalog) lists databases, tables and columns. SparkSession.builder.enableHiveSupport() enables Hive metastore integration.",
+                  contentPath: "python/pysparkfundamentals/sparksql"
+                },
+                {
+                  id: "partitioning",
+                  title: "Partitioning and Shuffling",
+                  contentPreview: "Partitioning controls data distribution across cluster nodes. Too few partitions under-utilise the cluster; too many create scheduling overhead. repartition() performs a full shuffle; coalesce() merges partitions without a full shuffle. Shuffle is the most expensive operation — triggered by joins, groupBy and repartition. spark.sql.shuffle.partitions defaults to 200.",
+                  contentPath: "python/pysparkfundamentals/partitioning"
+                },
+                {
+                  id: "joinstrategies",
+                  title: "Join Strategies in Spark",
+                  contentPreview: "Broadcast join (hint or automatic for small tables): the smaller table is sent to all executors — avoids shuffle entirely. Sort-Merge join (default for large tables): both sides sorted and merged partition by partition. Skew join: uneven data distribution causes hot partitions — mitigate with salting or AQE skew join hints. Adaptive Query Execution (AQE) dynamically picks the best join strategy at runtime.",
+                  contentPath: "python/pysparkfundamentals/joinstrategies"
+                },
+                {
+                  id: "caching",
+                  title: "Caching and Persistence",
+                  contentPreview: "cache() stores a DataFrame in memory using the default MEMORY_AND_DISK storage level. persist(StorageLevel) allows choosing MEMORY_ONLY, DISK_ONLY, OFF_HEAP, etc. Cached DataFrames speed up iterative algorithms but consume executor memory. Always unpersist() when no longer needed. Checkpointing breaks lineage and writes to reliable storage.",
+                  contentPath: "python/pysparkfundamentals/caching"
+                },
+                {
+                  id: "sparktuning",
+                  title: "Spark Performance Tuning",
+                  contentPreview: "Key tuning levers: executor memory (spark.executor.memory), cores per executor, parallelism (spark.default.parallelism), shuffle partitions. Use Spark UI to identify slow stages, skew and spill. Prefer DataFrames over RDDs for Catalyst optimisation. Avoid UDFs where native Spark functions exist — UDFs bypass the optimiser and require Python serialisation.",
+                  contentPath: "python/pysparkfundamentals/sparktuning"
+                }
+              ]
+            },
+            {
+              id: "structuredstreaming",
+              title: "Structured Streaming",
+              description: "Real-time data processing with PySpark Structured Streaming",
+              threads: [
+                {
+                  id: "streamingconcepts",
+                  title: "Streaming Concepts and Micro-Batch Model",
+                  contentPreview: "Structured Streaming treats a live data stream as an unbounded table. New data arrives as new rows; queries run incrementally. By default it uses micro-batch processing (minimum latency ~100 ms). Continuous processing mode (experimental) achieves ~1 ms latency. Output modes: Append, Update, Complete.",
+                  contentPath: "python/structuredstreaming/streamingconcepts"
+                },
+                {
+                  id: "readingstreams",
+                  title: "Reading from Streaming Sources",
+                  contentPreview: "spark.readStream supports Kafka (subscribe/assign options), file sources (auto-Loader for cloud storage), Delta Lake and socket/rate sources for testing. Kafka integration requires the spark-sql-kafka connector. Auto Loader (Databricks) uses file notifications for efficient incremental file ingestion from cloud storage.",
+                  contentPath: "python/structuredstreaming/readingstreams"
+                },
+                {
+                  id: "outputmodes",
+                  title: "Output Modes and Sinks",
+                  contentPreview: "Append mode: only new rows are written — safe for stateless aggregations and raw ingestion. Update mode: only changed rows are written — for stateful aggregations. Complete mode: entire result table is rewritten each trigger — for small aggregations. Sinks: console (debugging), Kafka, Delta Lake, Parquet, JDBC, foreachBatch (custom logic).",
+                  contentPath: "python/structuredstreaming/outputmodes"
+                },
+                {
+                  id: "statemanagement",
+                  title: "Stateful Operations and Watermarking",
+                  contentPreview: "Stateful operations (groupBy + agg, dropDuplicates, stream-stream joins) maintain state across micro-batches in a state store. Watermarking sets the threshold for late data: withWatermark('eventTime', '10 minutes') tells Spark to discard state for events more than 10 minutes behind the maximum seen event time.",
+                  contentPath: "python/structuredstreaming/statemanagement"
+                },
+                {
+                  id: "checkpointing",
+                  title: "Checkpointing and Fault Tolerance",
+                  contentPreview: "Checkpointing writes the query's progress (offsets) and state to a durable location (DBFS, S3, ADLS). On restart the query resumes from the checkpoint without reprocessing old data. option('checkpointLocation', path) is mandatory for stateful queries. State store can also be backed by RocksDB for lower memory usage in large-scale deployments.",
+                  contentPath: "python/structuredstreaming/checkpointing"
+                },
+                {
+                  id: "eventtime",
+                  title: "Event Time and Late Data Handling",
+                  contentPreview: "Event time is the timestamp embedded in the data itself; processing time is when Spark receives it. Using event time with windowing and watermarks gives correct results regardless of out-of-order arrival. Tumbling windows (non-overlapping), sliding windows (overlapping) and session windows (activity-based gaps) are all supported.",
+                  contentPath: "python/structuredstreaming/eventtime"
+                }
+              ]
+            },
+            {
+              id: "databricks",
+              title: "Databricks and Delta Lake",
+              description: "Databricks platform, Delta Lake, data governance and production pipeline patterns",
+              threads: [
+                {
+                  id: "databricksoverview",
+                  title: "Databricks Platform Overview",
+                  contentPreview: "Databricks is a unified analytics platform built on Apache Spark, providing managed clusters, collaborative notebooks, MLflow integration and a built-in scheduler. It runs on major cloud providers (AWS, Azure, GCP). Unity Catalog provides a unified governance layer. The Lakehouse paradigm combines the flexibility of a data lake with the reliability of a data warehouse.",
+                  contentPath: "python/databricks/databricksoverview"
+                },
+                {
+                  id: "clusters",
+                  title: "Clusters: Types, Configuration and Autoscaling",
+                  contentPreview: "All-Purpose clusters are interactive and persistent; Job clusters are ephemeral and created per job run (cheaper). SQL Warehouses are optimised for SQL analytics. Autoscaling adds/removes workers based on load. Cluster policies enforce cost controls. Instance profiles (AWS) or managed identities (Azure) grant data access without storing credentials in notebooks.",
+                  contentPath: "python/databricks/clusters"
+                },
+                {
+                  id: "notebooks",
+                  title: "Databricks Notebooks and Workflows",
+                  contentPreview: "Databricks notebooks support Python, SQL, Scala and R in the same notebook using %language magic commands. dbutils.fs provides file system utilities; dbutils.widgets manages notebook parameters. Notebooks can be chained into multi-task Workflows with dependency edges, retry policies and notification alerts.",
+                  contentPath: "python/databricks/notebooks"
+                },
+                {
+                  id: "deltalakeintro",
+                  title: "Introduction to Delta Lake",
+                  contentPreview: "Delta Lake is an open-source storage layer on top of Parquet that adds ACID transactions, schema enforcement and scalable metadata handling. Every write creates a new version in the _delta_log transaction log. delta.io is the open-source project; Databricks Runtime includes optimised proprietary enhancements.",
+                  contentPath: "python/databricks/deltalakeintro"
+                },
+                {
+                  id: "deltacrud",
+                  title: "Delta Lake CRUD Operations",
+                  contentPreview: "DeltaTable.forPath(spark, path) or spark.read.format('delta') accesses a Delta table. MERGE INTO (upsert) handles CDC patterns — insert new records, update existing ones, delete removed ones in a single atomic statement. UPDATE and DELETE also support full predicate pushdown. COPY INTO and Auto Loader handle incremental ingestion.",
+                  contentPath: "python/databricks/deltacrud"
+                },
+                {
+                  id: "timetraveldelta",
+                  title: "Time Travel and Data Versioning",
+                  contentPreview: "Delta Lake retains historical versions of data in the transaction log. Query a past snapshot: spark.read.format('delta').option('versionAsOf', 5).load(path) or option('timestampAsOf', '2024-01-01'). RESTORE TABLE rolls back to a prior version. DESCRIBE HISTORY shows the full audit trail. Retention is controlled by delta.logRetentionDuration.",
+                  contentPath: "python/databricks/timetraveldelta"
+                },
+                {
+                  id: "optimisedreads",
+                  title: "OPTIMIZE, Z-ORDER and VACUUM",
+                  contentPreview: "OPTIMIZE compacts many small Parquet files into larger ones, improving read performance. Z-ORDER BY co-locates related data in the same files to enable aggressive data skipping on filter predicates. VACUUM removes old Parquet files that are no longer referenced by the transaction log. Default retention is 7 days; do not reduce below 7 days when using streaming readers.",
+                  contentPath: "python/databricks/optimisedreads"
+                },
+                {
+                  id: "unitycatalog",
+                  title: "Unity Catalog and Data Governance",
+                  contentPreview: "Unity Catalog provides a centralised, cloud-agnostic metastore for Databricks. It uses a three-level namespace: catalog.schema.table. Fine-grained access control (column masking, row filtering) is enforced at query time. Data lineage is tracked automatically. Shares enable secure cross-workspace and cross-cloud data sharing via Delta Sharing protocol.",
+                  contentPath: "python/databricks/unitycatalog"
+                },
+                {
+                  id: "medallionarchitecture",
+                  title: "Medallion Architecture (Bronze / Silver / Gold)",
+                  contentPreview: "Bronze layer: raw, unvalidated data ingested as-is from the source (append-only). Silver layer: cleansed, deduplicated and conformed data — business entities are recognisable. Gold layer: aggregated, business-specific datasets optimised for reporting and ML feature stores. Each layer is a Delta table; movement between layers is driven by Spark jobs or DLT pipelines.",
+                  contentPath: "python/databricks/medallionarchitecture"
+                },
+                {
+                  id: "dlt",
+                  title: "Delta Live Tables (DLT)",
+                  contentPreview: "DLT is a declarative framework for building reliable batch and streaming pipelines on Databricks. Pipelines are defined using @dlt.table and @dlt.view decorators. Expectations (@dlt.expect, @dlt.expect_or_drop) enforce data quality inline. DLT manages dependencies, retries and incremental processing automatically. Development, staging and production pipeline modes control SLA and restart behaviour.",
+                  contentPath: "python/databricks/dlt"
+                },
+                {
+                  id: "cdc",
+                  title: "Change Data Capture (CDC) with Delta",
+                  contentPreview: "CDC captures row-level changes (INSERT, UPDATE, DELETE) from transactional databases and applies them to a Delta target. Debezium + Kafka is a common CDC source. APPLY CHANGES INTO (DLT) or MERGE INTO (PySpark) are used to apply CDC events. SCD Type 1 (overwrite) and Type 2 (keep history with effective dates) are both achievable with Delta MERGE.",
+                  contentPath: "python/databricks/cdc"
+                }
+              ]
+            }
+          ]
         }
       ],
     },
@@ -3248,6 +3909,138 @@ export const categories_mock: Category[] = [
                   title: "Query Analyzers",
                   contentPreview: "Query analyzers are tools or features provided by database management systems (DBMS) to help developers and database administrators (DBAs) understand and optimize the performance of SQL queries. ",
                   contentPath: "query/optimization/queryanalyzer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+    },
+    {
+      id: "cloud",
+      name: "Cloud",
+      icon: CloudIcon,
+      subcategories: [
+        {
+          id: "azure",
+          name: "Azure",
+          description: "Microsoft Azure cloud platform — services, architecture, and data engineering tools",
+          topics: [
+            {
+              id: "azurefundamentals",
+              title: "Azure Fundamentals",
+              description: "Core concepts of the Microsoft Azure cloud platform",
+              threads: [
+                {
+                  id: "azureoverview",
+                  title: "Azure Overview",
+                  contentPreview: "Microsoft Azure is a cloud computing platform offering over 200 products and services across compute, storage, networking, databases, analytics, AI, and DevOps. It supports IaaS, PaaS, and SaaS deployment models.",
+                  contentPath: "azure/fundamentals/azureoverview"
+                },
+                {
+                  id: "azureregions",
+                  title: "Regions, Availability Zones & Resource Groups",
+                  contentPreview: "Azure organises infrastructure into geographic regions, paired regions for disaster recovery, availability zones for high availability within a region, and resource groups as logical containers for managing related resources.",
+                  contentPath: "azure/fundamentals/azureregions"
+                },
+                {
+                  id: "azureiam",
+                  title: "Identity & Access Management (Azure AD / Entra ID)",
+                  contentPreview: "Microsoft Entra ID (formerly Azure Active Directory) is the cloud-based identity and access management service. Core concepts: tenants, users, groups, service principals, managed identities, RBAC roles, and Conditional Access policies.",
+                  contentPath: "azure/fundamentals/azureiam"
+                }
+              ]
+            },
+            {
+              id: "adls",
+              title: "Azure Data Lake Storage",
+              description: "Azure Data Lake Storage Gen2 — scalable, hierarchical big-data storage on top of Azure Blob Storage",
+              threads: [
+                {
+                  id: "adlsoverview",
+                  title: "ADLS Gen2 Overview",
+                  contentPreview: "Azure Data Lake Storage Gen2 combines the scalability and cost-effectiveness of Azure Blob Storage with a Hadoop-compatible file system. It uses a hierarchical namespace to organise data into directories and files, enabling efficient analytics workloads at petabyte scale.",
+                  contentPath: "azure/adls/adlsoverview"
+                },
+                {
+                  id: "adlssecurity",
+                  title: "Security & Access Control",
+                  contentPreview: "ADLS Gen2 supports POSIX-like Access Control Lists (ACLs) at the file and directory level in addition to Azure RBAC. Managed identities and service principals are the recommended way to grant workloads (Databricks, ADF, Synapse) access without storing credentials.",
+                  contentPath: "azure/adls/adlssecurity"
+                },
+                {
+                  id: "adlstiers",
+                  title: "Storage Tiers & Lifecycle Management",
+                  contentPreview: "ADLS Gen2 inherits Blob Storage access tiers: Hot (frequent access), Cool (infrequent access, lower storage cost), Cold, and Archive. Lifecycle management policies automatically transition or delete blobs based on age or last-modified date, optimising cost.",
+                  contentPath: "azure/adls/adlstiers"
+                },
+                {
+                  id: "adlsintegration",
+                  title: "Integration with Azure Services",
+                  contentPreview: "ADLS Gen2 is the landing zone for most Azure data engineering pipelines. Azure Data Factory and Synapse Pipelines use it as source and sink. Azure Databricks mounts it via ABFSS or Unity Catalog External Locations. Synapse Analytics accesses it directly through serverless SQL pools.",
+                  contentPath: "azure/adls/adlsintegration"
+                }
+              ]
+            },
+            {
+              id: "azuredatabricks",
+              title: "Azure Databricks",
+              description: "Managed Apache Spark platform on Azure — notebooks, clusters, Delta Lake, MLflow, and Unity Catalog",
+              threads: [
+                {
+                  id: "databricksoverview",
+                  title: "Azure Databricks Overview",
+                  contentPreview: "Azure Databricks is a first-party Microsoft service that provides a fully managed Apache Spark environment. It integrates natively with ADLS Gen2, Azure DevOps, Azure Active Directory, and other Azure services. The Lakehouse paradigm unifies data lake flexibility with data warehouse reliability via Delta Lake.",
+                  contentPath: "azure/azuredatabricks/databricksoverview"
+                },
+                {
+                  id: "clusters",
+                  title: "Clusters & Compute",
+                  contentPreview: "Databricks supports All-Purpose clusters (interactive notebooks), Job clusters (single-run automation), and SQL Warehouses (BI / SQL analytics). Cluster policies enforce cost controls. Photon engine accelerates SQL and ETL workloads. Instance pools reduce startup latency by pre-warming VMs.",
+                  contentPath: "azure/azuredatabricks/clusters"
+                },
+                {
+                  id: "notebooks",
+                  title: "Notebooks & Collaboration",
+                  contentPreview: "Databricks notebooks support Python, Scala, SQL, and R in the same notebook using %language magic commands. Real-time co-authoring, version history, and Git integration (Repos) enable collaborative data engineering. Widgets parameterise notebooks for reusable pipelines.",
+                  contentPath: "azure/azuredatabricks/notebooks"
+                },
+                {
+                  id: "deltalake",
+                  title: "Delta Lake",
+                  contentPreview: "Delta Lake is an open-source storage layer that brings ACID transactions, schema enforcement, time travel (versioning), and scalable metadata to data lakes. It is the default table format in Azure Databricks. Key operations: MERGE (upsert), OPTIMIZE (compaction), VACUUM (cleanup), DESCRIBE HISTORY.",
+                  contentPath: "azure/azuredatabricks/deltalake"
+                },
+                {
+                  id: "unitycatalog",
+                  title: "Unity Catalog",
+                  contentPreview: "Unity Catalog is the unified governance layer for Databricks, providing a three-level namespace (catalog.schema.table), fine-grained access control, column masking, row filtering, and automatic data lineage. External Locations and Storage Credentials abstract ADLS Gen2 paths behind governed access.",
+                  contentPath: "azure/azuredatabricks/unitycatalog"
+                },
+                {
+                  id: "workflowsjobs",
+                  title: "Workflows & Jobs",
+                  contentPreview: "Databricks Workflows is the native orchestration service. A Job can be a single notebook, a Python script, a JAR, a Delta Live Tables pipeline, or a dbt task. Multi-task jobs define DAGs with dependencies, retry policies, timeouts, and conditional task execution.",
+                  contentPath: "azure/azuredatabricks/workflowsjobs"
+                },
+                {
+                  id: "databrickssecurity",
+                  title: "Security & Integration with Azure",
+                  contentPreview: "Azure Databricks integrates with Entra ID for SSO and SCIM-based user provisioning. Managed identities and service principals authenticate to ADLS Gen2, Key Vault, and Event Hubs without embedded credentials. Private Link and VNet injection isolate the control and data planes inside a customer-managed virtual network.",
+                  contentPath: "azure/azuredatabricks/databrickssecurity"
+                }
+              ]
+            },
+            {
+              id: "azuredevops",
+              title: "Azure DevOps for Data",
+              description: "CI/CD pipelines, Git branching strategies, and Infrastructure-as-Code for Azure data workloads",
+              threads: [
+                {
+                  id: "cicdnotebooks",
+                  title: "CI/CD for Notebooks & Pipelines",
+                  contentPreview: "Databricks Asset Bundles (DAB) or the legacy dbx tool package notebooks, jobs, and cluster configs into version-controlled bundles deployed via Azure DevOps YAML pipelines. Separate environments (dev, test, prod) map to separate Databricks workspaces with environment-specific variable groups in Azure DevOps.",
+                  contentPath: "azure/azuredevops/cicdnotebooks"
                 }
               ]
             }
